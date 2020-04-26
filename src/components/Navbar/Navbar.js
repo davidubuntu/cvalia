@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import NavbarLinks from "./NavbarLinks"
 import Logo from "./Logo"
-import { Social } from "../../components"
 
 const Navigation = styled.nav`
   height: 12vh;
@@ -110,7 +109,6 @@ const Navbar = () => {
       {navbarOpen ? (
         <Navbox>
           <NavbarLinks />
-          <Social />
         </Navbox>
       ) : (
         <Navbox open>
