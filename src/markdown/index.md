@@ -1,4 +1,6 @@
 ---
+title: About Home Page
+image: /images/bg-home.jpg
 mainheader:
   title: HELLO ! I AM CLAUDIA  PEREZ VALIA
   description: >

@@ -6,22 +6,22 @@ import { Layout, SEO, Image } from "../components"
 
 const Section = styled.section``
 const DescriptionWrapper = styled.div`
-display: flex;
-flex-wrap: wrap;
-flex-direction: column;
-align-items: center;
-padding: 7.5rem 25vw calc((.4rem + .5vw) * 13.5);
-text-align: center;
-line-height: 2;
-${media.laptop`
-   padding: 6rem 10vw calc((.4rem + .5vw) * 12);
-`}
-${media.tablet`
-   padding: 5rem 5vw calc((.4rem + .5vw) * 12);
-`}
-${media.mobileL`
-   padding: 5rem 11vw calc((.4rem + .5vw) * 12);
-`}
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  padding: 7.5rem 25vw calc((.4rem + .5vw) * 13.5);
+  text-align: center;
+  line-height: 2;
+  ${media.laptop`
+    padding: 6rem 10vw calc((.4rem + .5vw) * 12);
+  `}
+  ${media.tablet`
+    padding: 5rem 5vw calc((.4rem + .5vw) * 12);
+  `}
+  ${media.mobileL`
+    padding: 5rem 11vw calc((.4rem + .5vw) * 12);
+  `}
 `
 const Description = styled.p`
   font-size: 14px;
@@ -40,7 +40,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO title="About" />
       <div style={{ maxWidth: `100vw` }}>
-        <Image />
+        <Image alt="home-image" filename="bg-home.jpg" />
       </div>
       <Section>
         <DescriptionWrapper>
@@ -49,6 +49,11 @@ const IndexPage = ({ data }) => {
             {mainheader.description}
           </Description>
         </DescriptionWrapper>
+      </Section>
+      <Section>
+        <div style={{ maxWidth: `300px` }}>
+          <Image alt="home-image" filename="linkedin.jpg" />
+        </div>
       </Section>
       <Link to="/projects/">Go to page 2</Link>
     </Layout>
@@ -63,6 +68,7 @@ export const query = graphql`
         node {
           id
           frontmatter {
+            image
             mainheader {
               description
               title

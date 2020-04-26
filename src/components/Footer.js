@@ -1,17 +1,9 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
-
+import { useSiteMetadata } from "../components"
 const Footer = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          author
-        }
-      }
-    }
-  `)
+  const { author } = useSiteMetadata()
 
   const FooterWrap = styled.footer`
     p {
@@ -22,7 +14,7 @@ const Footer = () => {
   return (
     <FooterWrap>
       <p>
-        Made by {data.site.siteMetadata.author}, {new Date().getFullYear()}
+        Made by {author}, {new Date().getFullYear()}
       </p>
     </FooterWrap>
   )
