@@ -1,9 +1,21 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import styled from "styled-components"
 
 import { Navbar, Footer } from "../components"
 import "../styles/index.scss"
+
+const MainWrapper = styled.div`
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: var(--textNormal);
+  flex-grow: 1;
+  justify-content: space-around;
+`
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -19,15 +31,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Navbar />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-      </div>
+      <MainWrapper>{children}</MainWrapper>
       <Footer />
     </>
   )
