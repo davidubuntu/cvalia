@@ -14,8 +14,16 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `files`,
+        path: `${__dirname}/src/markdown`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    "gatsby-transformer-remark",
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -33,7 +41,7 @@ module.exports = {
       options: {
         height: 3,
         prependToBody: false,
-        excludePaths: ["/contact", "/blog"],
+        excludePaths: ["/contact", "/news"],
         color: `#f48593`,
       },
     },
