@@ -1,13 +1,25 @@
 html {
-  font-family: sans-serif;
+  font-family: "Lato-Light";
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 body {
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-size: 1rem;
+  --bg: #fff;
+  --textNormal: #222;
+  --textTitle: #222;
+  --textLink: #aea8a9;
+  --accent: #404040;
+  --hr: #00000033;
+  background-color: var(--bg);
+  --bgCode: #cccccc;
 }
+
+::selection {
+  background: var(--textLink);
+  color: var(--textNormal);
+}
+
 article,
 aside,
 details,
@@ -42,10 +54,13 @@ template {
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  color: var(--textNormal);
 }
-a:active,
+// a:active,
 a:hover {
   outline-width: 0;
+  color: var(--textLink);
+  text-decoration: none;
 }
 abbr[title] {
   border-bottom: none;
@@ -89,13 +104,6 @@ img {
 }
 svg:not(:root) {
   overflow: hidden;
-}
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
 }
 figure {
   margin: 1em 40px;
@@ -185,7 +193,7 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em georgia, serif;
+  font: 112.5%/1.45em lato, serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -199,8 +207,11 @@ html {
   box-sizing: inherit;
 }
 body {
-  color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  color: var(--textNormal);
+  font-family: lato;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -208,7 +219,9 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
+  transition: all 0.3s;
 }
+
 img {
   max-width: 100%;
   margin-left: 0;
@@ -228,13 +241,10 @@ h1 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin: 1.45rem 0;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 2.25rem;
+  font-size: 2.2rem;
   line-height: 1.1;
 }
 h2 {
@@ -244,14 +254,11 @@ h2 {
   padding-bottom: 0;
   padding-left: 0;
   padding-right: 0;
-  padding-top: 0;
+  padding-top: 1.45rem;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 1.62671rem;
+  font-size: 1.8rem;
   line-height: 1.1;
 }
 h3 {
@@ -264,11 +271,9 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
+
   text-rendering: optimizeLegibility;
-  font-size: 1.38316rem;
+  font-size: 1.6rem;
   line-height: 1.1;
 }
 h4 {
@@ -281,9 +286,6 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
   line-height: 1.1;
@@ -298,9 +300,6 @@ h5 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.85028rem;
   line-height: 1.1;
@@ -315,9 +314,6 @@ h6 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.78405rem;
   line-height: 1.1;
@@ -401,9 +397,9 @@ pre {
   margin-right: 0;
   margin-top: 0;
   margin-bottom: 1.45rem;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   line-height: 1.42;
-  background: hsla(0, 0%, 0%, 0.04);
+  background: var(--bgCode);
   border-radius: 3px;
   overflow: auto;
   word-wrap: normal;
@@ -412,12 +408,12 @@ pre {
 table {
   margin-left: 0;
   margin-right: 0;
-  margin-top: 0;
+  margin-top: 1rem;
   padding-bottom: 0;
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 2.45rem;
   font-size: 1rem;
   line-height: 1.45rem;
   border-collapse: collapse;
@@ -482,7 +478,7 @@ hr {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: calc(1.45rem - 1px);
-  background: hsla(0, 0%, 0%, 0.2);
+  background: var(--bgCode);
   border: none;
   height: 1px;
 }
@@ -539,10 +535,10 @@ p *:last-child {
 li > p {
   margin-bottom: calc(1.45rem / 2);
 }
-code {
-  font-size: 0.85rem;
-  line-height: 1.45rem;
-}
+// code {
+//   font-size: 0.85rem;
+//   line-height: 1.45rem;
+// }
 kbd {
   font-size: 0.85rem;
   line-height: 1.45rem;
@@ -570,7 +566,7 @@ thead {
 td,
 th {
   text-align: left;
-  border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
+  border-bottom: 2px solid var(--bgCode);
   font-feature-settings: "tnum";
   -moz-font-feature-settings: "tnum";
   -ms-font-feature-settings: "tnum";
@@ -590,7 +586,7 @@ td:last-child {
 }
 tt,
 code {
-  background-color: hsla(0, 0%, 0%, 0.04);
+  background-color: var(--bgCode);
   border-radius: 3px;
   font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
     "Liberation Mono", Menlo, Courier, monospace;
@@ -600,14 +596,6 @@ code {
 }
 pre code {
   background: none;
-  line-height: 1.42;
-}
-code:before,
-code:after,
-tt:before,
-tt:after {
-  letter-spacing: -0.2em;
-  content: " ";
 }
 pre code:before,
 pre code:after,
