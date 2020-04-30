@@ -33,9 +33,10 @@ const DescriptionTitle = styled.span`
   font-weight: bold;
 `
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.allMarkdownRemark.edges[0].node
+  console.log(data)
+  const { frontmatter } = data.markdownRemark
   const { mainheader } = frontmatter
-
+  console.log(frontmatter)
   return (
     <Layout>
       <SEO title="About" />
@@ -63,17 +64,13 @@ export default IndexPage
 
 export const query = graphql`
   query {
-    allMarkdownRemark {
-      edges {
-        node {
-          id
-          frontmatter {
-            image
-            mainheader {
-              description
-              title
-            }
-          }
+    markdownRemark(frontmatter: { pageKey: { eq: "index" } }) {
+      id
+      frontmatter {
+        image
+        mainheader {
+          description
+          title
         }
       }
     }

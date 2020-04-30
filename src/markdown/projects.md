@@ -1,4 +1,5 @@
 ---
+pageKey: projects
 title: Projects
 image: /img/jumbotron.jpg
 heading: Great coffee with a conscience
