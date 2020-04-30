@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "claudia-valia-web",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Interior Designer Portfolio Web",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "David Díez <d.diezr@gmail.com>",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
     "@fortawesome/free-brands-svg-icons": "^5.13.0",
