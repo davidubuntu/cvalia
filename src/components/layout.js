@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
-import { Navbar, Footer } from "../components"
+import { Navbar, Footer } from "."
 import "../styles/index.scss"
 
 const MainWrapper = styled.div`
