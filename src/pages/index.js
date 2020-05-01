@@ -35,10 +35,8 @@ const DescriptionTitle = styled.span`
   font-weight: bold;
 `
 const IndexPage = ({ data }) => {
-  console.log(data)
   const { frontmatter } = data.markdownRemark
   const { mainheader } = frontmatter
-  console.log(frontmatter)
   return (
     <Layout>
       <SEO title="About" />
