@@ -43,7 +43,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO title="About" />
       <div style={{ maxWidth: `100vw` }}>
-        <Image alt="home-image" filename="bg-home.jpg" />
+        <Image />
       </div>
       <Section>
         <DescriptionWrapper>
@@ -55,7 +55,7 @@ const IndexPage = ({ data }) => {
       </Section>
       <Section>
         <div style={{ maxWidth: `300px` }}>
-          <Image alt="home-image" filename="linkedin.jpg" />
+          {/* <Image alt="home-image" filename="linkedin.jpg" /> */}
         </div>
       </Section>
       <Link to="/projects/">Go to page 2</Link>
