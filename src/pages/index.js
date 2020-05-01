@@ -2,8 +2,8 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import styled from "styled-components"
 import media from "../styles/media"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/Layout"
+import SEO from "../components/Seo"
 import Image from "../components/Image"
 
 const Section = styled.section``
