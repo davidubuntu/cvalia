@@ -77,7 +77,7 @@ const IndexPage = ({ data }) => {
           <MapTitle>{map.title}</MapTitle>
           <MapDescription>{map.description}</MapDescription>
         </MapText>
-        <Map width={"100%"} height={"400px"} />
+        <Map width={"100%"} height={"550px"} />
       </SectionMap>
       <Link to="/projects/">Go to page 2</Link>
     </Layout>

@@ -606,3 +606,7 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+.mapboxgl-ctrl {
+  display: none !important;
+}

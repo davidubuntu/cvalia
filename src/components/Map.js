@@ -5,17 +5,17 @@ import "mapbox-gl/dist/mapbox-gl.css"
 const Map = ({ width, height }) => {
   useEffect(() => {
     mapboxgl.accessToken =
-      "pk.eyJ1IjoiZGRpZXpyIiwiYSI6ImNqb3ZuMGZ3cjFqa2YzcWxrYjBtNjJzaG4ifQ.cCFZkl39Hov3D-Ujeq74Cg"
+      "pk.eyJ1IjoiZGRpZXpyIiwiYSI6ImNrOW9pZzJjNjAweXYzbHJ0dDRiaGIxNWYifQ.Zycu3HxkIv6JOwJiab4tiQ"
     createMap()
   })
   const createMap = () => {
-    const zoom = 2
+    const zoom = 0.7
     const iconSize = 0.5
     const coordinates = [13.404954, 52.520007]
     const map = new mapboxgl.Map({
       center: coordinates,
       container: "map",
-      style: "mapbox://styles/mapbox/light-v10",
+      style: "mapbox://styles/ddiezr/ck9ojaa353zg21ipdmolkfgg9?fresh=true",
       zoom: zoom,
     })
     map.scrollZoom.disable()
