@@ -1,7 +1,6 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
-import { useSiteMetadata } from "../components"
+import useSiteMetadata from "./useSiteMetadata"
 const Footer = () => {
   const { author } = useSiteMetadata()
 
