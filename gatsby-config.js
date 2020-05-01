@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Claduia Valia`,
+    title: `Claduia Valia Portfolio`,
     description: `Interior Designer Portfolio`,
     author: `David Diez`,
   },
@@ -25,10 +25,10 @@ module.exports = {
     `gatsby-plugin-sharp`,
     "gatsby-transformer-remark",
     {
-      resolve: `portfolio-interior-design`,
+      resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,
-        short_name: `designer`,
+        short_name: `starter`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
