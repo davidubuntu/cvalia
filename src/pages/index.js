@@ -10,7 +10,6 @@ import Map from "../components/Map"
 const Section = styled.section``
 const SectionMap = styled.section`
   display: flex;
-  justify-content: space-between;
   padding: 3rem;
 `
 const DescriptionWrapper = styled.div`
@@ -40,12 +39,15 @@ const Description = styled.p`
 const DescriptionTitle = styled.span`
   font-weight: bold;
 `
-const MapText = styled.div`
+const MapTextContainer = styled.div`
   display: flex;
   flex-direction: column;
 `
-const MapDescription = styled.div`
-  width: 30%;
+const MapDescription = styled.p`
+  font-family: "Lato-Light";
+  margin-top: 3em;
+  padding: 2em 2em 2em 0;
+  font-weight: 200;
 `
 const MapTitle = styled.div`
   font-weight: bold;
@@ -73,11 +75,11 @@ const IndexPage = ({ data }) => {
         </DescriptionWrapper>
       </Section>
       <SectionMap>
-        <MapText>
+        <MapTextContainer>
           <MapTitle>{map.title}</MapTitle>
           <MapDescription>{map.description}</MapDescription>
-        </MapText>
-        <Map width={"100%"} height={"550px"} />
+        </MapTextContainer>
+        <Map width={"100%"} height={"570px"} />
       </SectionMap>
       <Link to="/projects/">Go to page 2</Link>
     </Layout>
