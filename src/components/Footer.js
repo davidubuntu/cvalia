@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import useSiteMetadata from "./useSiteMetadata"
+import useSiteMetadata from "../hooks/useSiteMetadata"
 const Footer = () => {
   const { author } = useSiteMetadata()
 
