@@ -4,7 +4,7 @@ import styled from "styled-components"
 import media from "../styles/media"
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
-import Image from "../components/Image"
+import Image from "../components/Image_Fluid"
 
 const Section = styled.section``
 const DescriptionWrapper = styled.div`
@@ -36,12 +36,12 @@ const DescriptionTitle = styled.span`
 `
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-  const { mainheader } = frontmatter
+  const { image, mainheader } = frontmatter
   return (
     <Layout>
       <SEO title="About" />
       <div style={{ maxWidth: `100vw` }}>
-        <Image />
+        <Image alt="home-image" filename={image} />
       </div>
       <Section>
         <DescriptionWrapper>
@@ -53,7 +53,7 @@ const IndexPage = ({ data }) => {
       </Section>
       <Section>
         <div style={{ maxWidth: `300px` }}>
-          {/* <Image alt="home-image" filename="linkedin.jpg" /> */}
+          <Image alt="linkedin-image" filename="linkedin.jpg" />
         </div>
       </Section>
       <Link to="/projects/">Go to page 2</Link>

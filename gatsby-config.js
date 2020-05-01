@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Claduia Valia Portfolio`,
+    title: `Claduia Valia`,
     description: `Interior Designer Portfolio`,
     author: `David Diez`,
   },
@@ -25,15 +25,15 @@ module.exports = {
     `gatsby-plugin-sharp`,
     "gatsby-transformer-remark",
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: `portfolio-interior-design`,
       options: {
         name: `gatsby-starter-default`,
-        short_name: `starter`,
+        short_name: `designer`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon-tab.png`, // This path is relative to the root of the site.
       },
     },
     {

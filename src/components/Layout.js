@@ -8,7 +8,7 @@ import Footer from "./Footer"
 
 const MainWrapper = styled.div`
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
