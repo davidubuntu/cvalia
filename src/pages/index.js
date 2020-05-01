@@ -5,8 +5,14 @@ import media from "../styles/media"
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 import Image from "../components/Image_Fluid"
+import Map from "../components/Map"
 
 const Section = styled.section``
+const SectionMap = styled.section`
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem;
+`
 const DescriptionWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -34,9 +40,24 @@ const Description = styled.p`
 const DescriptionTitle = styled.span`
   font-weight: bold;
 `
+const MapText = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+const MapDescription = styled.div`
+  width: 30%;
+`
+const MapTitle = styled.div`
+  font-weight: bold;
+`
+const MapContainer = styled.div`
+  width: 50vw;
+  height: 400px;
+`
+
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-  const { image, mainheader } = frontmatter
+  const { map, image, mainheader } = frontmatter
   return (
     <Layout>
       <SEO title="About" />
@@ -51,11 +72,13 @@ const IndexPage = ({ data }) => {
           </Description>
         </DescriptionWrapper>
       </Section>
-      <Section>
-        <div style={{ maxWidth: `300px` }}>
-          <Image alt="linkedin-image" filename="linkedin.jpg" />
-        </div>
-      </Section>
+      <SectionMap>
+        <MapText>
+          <MapTitle>{map.title}</MapTitle>
+          <MapDescription>{map.description}</MapDescription>
+        </MapText>
+        <Map width={"100%"} height={"400px"} />
+      </SectionMap>
       <Link to="/projects/">Go to page 2</Link>
     </Layout>
   )
@@ -69,6 +92,10 @@ export const query = graphql`
       frontmatter {
         image
         mainheader {
+          description
+          title
+        }
+        map {
           description
           title
         }
