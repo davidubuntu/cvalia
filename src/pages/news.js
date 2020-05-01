@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
-
-import { Layout, SEO } from "../components"
+import Layout from "../components/Layout"
+import SEO from "../components/SEO"
 
 const News = () => (
   <Layout>

@@ -1,10 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-
-import { Navbar, Footer } from "../components"
 import "../styles/index.scss"
 
+import Navbar from "./Navbar/Navbar"
+import Footer from "./Footer"
 const MainWrapper = styled.div`
   margin: 0 auto;
   padding: 0 1rem;

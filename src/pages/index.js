@@ -2,7 +2,9 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import styled from "styled-components"
 import media from "../styles/media"
-import { Layout, SEO, Image } from "../components"
+import Layout from "../components/Layout"
+import SEO from "../components/SEO"
+import Image from "../components/Image"
 
 const Section = styled.section``
 const DescriptionWrapper = styled.div`

@@ -1,9 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
+import Layout from "../components/Layout"
+import SEO from "../components/SEO"
 
-import { Layout, SEO } from "../components"
-
-const SecondPage = () => (
+const Projects = () => (
   <Layout>
     <SEO title="Projects" />
     <h1>Projects</h1>
@@ -12,4 +12,4 @@ const SecondPage = () => (
   </Layout>
 )
 
-export default SecondPage
+export default Projects
