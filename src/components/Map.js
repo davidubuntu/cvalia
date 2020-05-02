@@ -9,8 +9,8 @@ const Map = ({ width, height }) => {
     createMap()
   })
   const createMap = () => {
-    const zoom = 0.5
-    const coordinates = [40, 40.520007]
+    const zoom = 0.9
+    const coordinates = [14, 40.520007]
     const map = new mapboxgl.Map({
       center: coordinates,
       container: "map",

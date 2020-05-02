@@ -42,7 +42,7 @@ module.exports = {
         height: 3,
         prependToBody: false,
         excludePaths: ["/contact", "/news"],
-        color: `#f48593`,
+        color: `#ebbea8`,
       },
     },
     {
