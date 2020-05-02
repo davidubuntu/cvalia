@@ -6,7 +6,6 @@ import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 import Image from "../components/Image_Fluid"
 import Map from "../components/Map"
-import MapboxGLMap from "../components/MapboxGLMap"
 
 const Section = styled.section``
 const ImageBgWrapper = styled.div`
@@ -80,9 +79,8 @@ const IndexPage = ({ data }) => {
           <MapTitle>{map.title}</MapTitle>
           <MapDescription>{map.description}</MapDescription>
         </MapTextContainer>
-        {/* <Map width={"100%"} height={"500px"} /> */}
         <main>
-          <MapboxGLMap width={"40vw"} height={"480px"} />
+          <Map width={"40vw"} height={"480px"} />
         </main>
       </SectionTravel>
       {/* <Link to="/projects/">Go to page 2</Link> */}
