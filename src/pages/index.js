@@ -6,6 +6,7 @@ import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 import Image from "../components/Image_Fluid"
 import Map from "../components/Map"
+import MapboxGLMap from "../components/MapboxGLMap"
 
 const Section = styled.section``
 const ImageBgWrapper = styled.div`
@@ -45,8 +46,9 @@ const MapTextContainer = styled.div`
 `
 const MapDescription = styled.p`
   font-family: "Montserrat-Light";
-  padding: 2em 12em 2em 0;
-  font-weight: 200;
+  padding: 2rem 12rem 2rem 0;
+
+  line-height: 2;
 `
 const MapTitle = styled.div`
   font-family: "Montserrat-Bold";
@@ -75,9 +77,12 @@ const IndexPage = ({ data }) => {
           <MapTitle>{map.title}</MapTitle>
           <MapDescription>{map.description}</MapDescription>
         </MapTextContainer>
-        <Map width={"100%"} height={"500px"} />
+        {/* <Map width={"100%"} height={"500px"} /> */}
+        <main>
+          <MapboxGLMap width={"40vw"} height={"480px"} />
+        </main>
       </SectionTravel>
-      <Link to="/projects/">Go to page 2</Link>
+      {/* <Link to="/projects/">Go to page 2</Link> */}
     </Layout>
   )
 }
