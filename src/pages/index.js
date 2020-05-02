@@ -28,6 +28,9 @@ const DescriptionWrapper = styled.div`
 const SectionTravel = styled.section`
   display: flex;
   padding: 0 calc((0.4rem + 0.5vw) * 17.5);
+  ${media.tablet`
+    flex-direction: column;
+  `}
 `
 
 const Description = styled.p`
