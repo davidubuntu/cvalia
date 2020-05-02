@@ -22,25 +22,26 @@ const Map = ({ width, height }) => {
     // map.scrollZoom.disable()
 
     map.on("load", function () {
+      map.resize()
       //On map load, we want to do some stuff
       map.addLayer({
         //here we are adding a layer containing the tileset we just uploaded
         id: "countries", //this is the name of our layer, which we will need later
         source: {
           type: "vector",
-          url: "mapbox://byfrost-articles.74qv0xp0", // <--- Add the Map ID you copied here
+          url: "mapbox://ddiezr.1w76x30d", // <--- Add the Map ID you copied here
         },
-        "source-layer": "ne_10m_admin_0_countries-76t9ly", // <--- Add the source layer name you copied here
+        "source-layer": "ne_10m_admin_0_countries-6zc8lv", // <--- Add the source layer name you copied here
         type: "fill",
         paint: {
-          "fill-color": "#52489C", //this is the color you want your tileset to have (I used a nice purple color)
-          "fill-outline-color": "#F2F2F2", //this helps us distinguish individual countries a bit better by giving them an outline
+          "fill-color": "#ebbea8", //this is the color you want your tileset to have (I used a nice purple color)
+          // "fill-outline-color": "#F2F2F2", //this helps us distinguish individual countries a bit better by giving them an outline
         },
       })
 
       map.setFilter(
         "countries",
-        ["in", "ADM0_A3_IS"].concat(["USA", "AUS", "PH"])
+        ["in", "ADM0_A3_IS"].concat(["PHL", "THA", "IRL", "DEU"])
       ) // This line lets us filter by country codes.
 
       map.on("click", "countries", function (mapElement) {

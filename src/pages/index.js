@@ -8,28 +8,27 @@ import Image from "../components/Image_Fluid"
 import Map from "../components/Map"
 
 const Section = styled.section``
-const SectionMap = styled.section`
-  display: flex;
-  padding: 3rem;
+const ImageBgWrapper = styled.div`
+  maxwidth: 100vw;
+  padding: 0 0 calc((0.4rem + 0.5vw) * 12);
 `
 const DescriptionWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  padding: 7.5rem 25vw calc((.4rem + .5vw) * 13.5);
+  padding: 0 26.573vw calc((0.4rem + 0.5vw) * 13.5);
   text-align: center;
   line-height: 2;
-  ${media.laptop`
-    padding: 6rem 10vw calc((.4rem + .5vw) * 12);
-  `}
   ${media.tablet`
-    padding: 5rem 5vw calc((.4rem + .5vw) * 12);
-  `}
-  ${media.mobileL`
-    padding: 5rem 11vw calc((.4rem + .5vw) * 12);
+    padding:  0 5vw calc((.4rem + .5vw) * 12);;
   `}
 `
+const SectionTravel = styled.section`
+  display: flex;
+  padding: 0 calc((0.4rem + 0.5vw) * 17.5);
+`
+
 const Description = styled.p`
   font-size: 14px;
   opacity: 1;
@@ -42,19 +41,16 @@ const DescriptionTitle = styled.span`
 const MapTextContainer = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
 `
 const MapDescription = styled.p`
-  font-family: "Lato-Light";
-  margin-top: 3em;
-  padding: 2em 2em 2em 0;
+  font-family: "Montserrat-Light";
+  padding: 2em 12em 2em 0;
   font-weight: 200;
 `
 const MapTitle = styled.div`
+  font-family: "Montserrat-Bold";
   font-weight: bold;
-`
-const MapContainer = styled.div`
-  width: 50vw;
-  height: 400px;
 `
 
 const IndexPage = ({ data }) => {
@@ -63,9 +59,9 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="About" />
-      <div style={{ maxWidth: `100vw` }}>
+      <ImageBgWrapper>
         <Image alt="home-image" filename={image} />
-      </div>
+      </ImageBgWrapper>
       <Section>
         <DescriptionWrapper>
           <Description>
@@ -74,13 +70,13 @@ const IndexPage = ({ data }) => {
           </Description>
         </DescriptionWrapper>
       </Section>
-      <SectionMap>
+      <SectionTravel>
         <MapTextContainer>
           <MapTitle>{map.title}</MapTitle>
           <MapDescription>{map.description}</MapDescription>
         </MapTextContainer>
-        <Map width={"100%"} height={"570px"} />
-      </SectionMap>
+        <Map width={"100%"} height={"500px"} />
+      </SectionTravel>
       <Link to="/projects/">Go to page 2</Link>
     </Layout>
   )
