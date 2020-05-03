@@ -5,9 +5,20 @@ const Footer = () => {
   const { author } = useSiteMetadata()
 
   const FooterWrap = styled.footer`
-    p {
-      font-size: 0.8rem;
-    }
+    position: relative;
+    background: #f2f2f2;
+    height: auto;
+    font-family: brandon-grotesque, sans-serif;
+    font-weight: 400;
+    font-size: calc(-0.104166666666667vw + 0.9rem);
+    line-height: 1.4rem;
+    letter-spacing: 0.125em;
+    text-transform: none;
+    writing-mode: horizontal-tb;
+    transform: inherit;
+    padding: calc((0.4rem + 0.5vw) * 1.75) 6rem;
+    align-items: center;
+    margin-top: 12rem;
   `
 
   return (
