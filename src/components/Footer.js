@@ -18,7 +18,7 @@ const Footer = () => {
     transform: inherit;
     padding: calc((0.4rem + 0.5vw) * 1.75) 6rem;
     align-items: center;
-    margin-top: 12rem;
+    margin-top: 11rem;
   `
 
   return (
