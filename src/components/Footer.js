@@ -17,7 +17,6 @@ const Footer = () => {
     line-height: 1.4rem;
     letter-spacing: 0.125em;
     text-transform: none;
-    writing-mode: horizontal-tb;
     transform: inherit;
     text-align: center;
     padding: calc((0.4rem + 0.5vw) * 6) 2rem;

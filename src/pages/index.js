@@ -6,8 +6,9 @@ import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 import Image from "../components/Image_Fluid"
 import Map from "../components/Map"
+import ProgressBar from "../components/ProgressBar"
 
-const Section = styled.section``
+const SectionMain = styled.section``
 const ImageBgWrapper = styled.div`
   maxwidth: 100vw;
   padding: 0 0 calc((0.4rem + 0.5vw) * 12);
@@ -48,6 +49,19 @@ const SectionTravel = styled.section`
     }
   `}
 `
+const SectionSkills = styled.section`
+  display: flex;
+
+  padding: 0 5vw calc((0.4rem + 0.5vw) * 12);
+  ${media.tablet`
+
+    padding: 0 12.5vw calc((0.4rem + 0.5vw) * 12);
+  `}
+  ${media.laptopL`
+    padding: 0 12.5vw calc((0.4rem + 0.5vw) * 12);
+
+  `}
+`
 
 const Description = styled.p`
   font-size: 14px;
@@ -73,7 +87,7 @@ const MapDescription = styled.p`
     text-align: left;
   `}
   ${media.laptopL`
-    padding: 2rem 12rem 2rem 0;
+    padding: 2rem 8rem 2rem 0;
     text-align: left;
   `}
 `
@@ -94,24 +108,61 @@ const MapMain = styled.main`
     padding: 0 4rem;
   `};
 `
+const SkillsProgress = styled.div`
+  width: 50%;
+  text-align: center;
+  ${media.tablet`
+  text-align: left;
+`}
+  ${media.laptopL`
+  text-align: left;
+`}
+`
+const SkillsDescription = styled.div`
+  width: 50%;
+  padding: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 2;
+`
+const SkillsTitle = styled.div`
+  font-family: "Montserrat-Bold";
+  font-weight: bold;
+`
+
+const ProgressBarWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+`
+const ProgressSet = styled.div`
+  display: flex;
+  margin: 1.2rem 0;
+  align-items: center;
+`
+const SkillName = styled.span`
+  margin: 0 3rem;
+`
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-  const { map, image, mainheader } = frontmatter
+  const { skills, map, image, mainheader } = frontmatter
   return (
     <Layout>
       <SEO title="About" />
       <ImageBgWrapper>
         <Image alt="home-image" filename={image} />
       </ImageBgWrapper>
-      <Section>
+      <SectionMain>
         <DescriptionWrapper>
           <Description>
             <DescriptionTitle>{mainheader.title} </DescriptionTitle>
             {mainheader.description}
           </Description>
         </DescriptionWrapper>
-      </Section>
+      </SectionMain>
       <SectionTravel>
         <MapTextContainer>
           <MapTitle>{map.title}</MapTitle>
@@ -121,6 +172,34 @@ const IndexPage = ({ data }) => {
           <Map />
         </MapMain>
       </SectionTravel>
+      <SectionSkills>
+        <SkillsProgress>
+          <SkillsTitle>{skills.title}</SkillsTitle>
+          <ProgressBarWrapper>
+            <ProgressSet>
+              <ProgressBar completed={60} />
+              <SkillName>ILUSTRATOR</SkillName>
+            </ProgressSet>
+            <ProgressSet>
+              <ProgressBar completed={80} />
+              <SkillName>ILUSTRATOR</SkillName>
+            </ProgressSet>
+            <ProgressSet>
+              <ProgressBar completed={30} />
+              <SkillName>ILUSTRATOR</SkillName>
+            </ProgressSet>
+            <ProgressSet>
+              <ProgressBar completed={60} />
+              <SkillName>ILUSTRATOR</SkillName>
+            </ProgressSet>
+            <ProgressSet>
+              <ProgressBar completed={90} />
+              <SkillName>ILUSTRATOR</SkillName>
+            </ProgressSet>
+          </ProgressBarWrapper>
+        </SkillsProgress>
+        <SkillsDescription>{skills.description}</SkillsDescription>
+      </SectionSkills>
       {/* <Link to="/projects/">Go to page 2</Link> */}
     </Layout>
   )
@@ -134,12 +213,16 @@ export const query = graphql`
       frontmatter {
         image
         mainheader {
-          description
           title
+          description
         }
         map {
-          description
           title
+          description
+        }
+        skills {
+          title
+          description
         }
       }
     }

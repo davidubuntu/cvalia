@@ -10,4 +10,7 @@ mainheader:
 map:
   title: MAP OF TRAVEL
   description: I Love to travel and be in constant movememnt, I see it as a way of nourish myself with other cultures and ways of life. My experiences are used in the future in my designs.
+skills:
+  title: MY SKILLS
+  description: I Love to travel and be in constant movememnt, I see it as a way of nourish myself with other cultures and ways of life. My experiences are used in the future in my designs.
 ---
