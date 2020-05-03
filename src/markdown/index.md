@@ -12,7 +12,9 @@ map:
   description: I Love to travel and be in constant movememnt, I see it as a way of nourish myself with other cultures and ways of life. My experiences are used in the future in my designs.
 skills:
   title: MY SKILLS
-  description: I Love to travel and be in constant movememnt, I see it as a way of nourish myself with other cultures and ways of life. My experiences are used in the future in my designs.
+  description:
+    I am good working with tech new tools sketching. I reall like collage, conceptualising and comercial space design.
+    ... I love Asthanga yoga, plants based food!
   tools:
     tool1:
       name: ILLUSTRATOR
@@ -22,7 +24,7 @@ skills:
       percentage: 90
     tool3:
       name: AUTOCAD
-      percentage: 85
+      percentage: 60
     tool4:
       name: SKETCHUP / VRAY
       percentage: 85

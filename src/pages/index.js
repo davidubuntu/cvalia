@@ -34,14 +34,14 @@ const SectionTravel = styled.section`
     height: 200px;
   }
   ${media.tablet`
-    flex-direction: row;
     padding: 0 12.5vw calc((0.4rem + 0.5vw) * 12);
     #map {
-     width:40vw;
+     width: 100%;
      height: 300px;
     }
   `}
   ${media.laptopL`
+    flex-direction: row;
     padding: 0 12.5vw calc((0.4rem + 0.5vw) * 12);
     #map{
       width: 40vw;
@@ -153,7 +153,10 @@ const SkillName = styled.span`
   font-size: 13px;
 `
 const SkillNameDiv = styled.div`
+  padding-left: 2rem;
+  ${media.tablet`
   padding-left: 5rem;
+  `}
 `
 
 const IndexPage = ({ data }) => {

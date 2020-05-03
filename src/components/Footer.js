@@ -39,7 +39,6 @@ const Footer = () => {
       white-space: nowrap;
       transition: all 200ms ease-in;
       position: relative;
-      text-transform: uppercase;
       font-size: 10px;
       margin: 0 1.5vw;
       letter-spacing: 0.25em;
@@ -69,12 +68,13 @@ const Footer = () => {
     <Footer>
       <FooterMain>
         <div>
-          Made by {author}, {new Date().getFullYear()}
+          Email:<a href="mailto:cvalia@gmail.com">cvalia@gmail.com</a>{" "}
+        </div>
+        <div>
+          {" "}
+          Instagram <a href="mailto:cvalia@gmail.com"></a>{" "}
         </div>
         <div>© 2020 CValia Interior Design. All Rights Reserved.</div>
-        <div>
-          Email : <a href="mailto:cvalia@gmail.com">cvalia@gmail.com</a>{" "}
-        </div>
       </FooterMain>
     </Footer>
   )
