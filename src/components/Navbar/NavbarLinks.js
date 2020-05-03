@@ -3,9 +3,9 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 const links = [
-  { slug: "/", page: "About", status: false },
-  { slug: "/projects", page: "Projects", status: true },
-  { slug: "/news", page: "News", status: true },
+  { slug: "/", page: "About", status: true },
+  { slug: "/projects", page: "Projects", status: false },
+  { slug: "/news", page: "News", status: false },
 ]
 const NavbarLinks = () => {
   return (
