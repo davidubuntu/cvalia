@@ -51,15 +51,14 @@ const SectionTravel = styled.section`
 `
 const SectionSkills = styled.section`
   display: flex;
-
+  flex-direction: column;
   padding: 0 5vw calc((0.4rem + 0.5vw) * 12);
   ${media.tablet`
-
     padding: 0 12.5vw calc((0.4rem + 0.5vw) * 12);
   `}
   ${media.laptopL`
+    flex-direction: row;
     padding: 0 12.5vw calc((0.4rem + 0.5vw) * 12);
-
   `}
 `
 
@@ -109,23 +108,27 @@ const MapMain = styled.main`
   `};
 `
 const SkillsProgress = styled.div`
-  width: 50%;
+  width: 100%;
   text-align: center;
   ${media.tablet`
-  text-align: left;
-`}
+    text-align: left;
+  `}
   ${media.laptopL`
-  text-align: left;
-`}
+    width: 50%;
+    text-align: left;
+  `}
 `
 const SkillsDescription = styled.div`
-  width: 50%;
+  width: 100%;
   padding: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   line-height: 2;
+  ${media.laptopL`
+    width: 50%;
+  `}
 `
 const SkillsTitle = styled.div`
   font-family: "Montserrat-Bold";
@@ -146,7 +149,9 @@ const ProgressSet = styled.div`
   margin: 1.2rem 0;
   align-items: center;
 `
-const SkillName = styled.span``
+const SkillName = styled.span`
+  font-size: 13px;
+`
 const SkillNameDiv = styled.div`
   padding-left: 5rem;
 `
