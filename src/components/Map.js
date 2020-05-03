@@ -2,13 +2,6 @@ import React, { useEffect, useRef, useState } from "react"
 import mapboxgl from "mapbox-gl"
 import "mapbox-gl/dist/mapbox-gl.css"
 
-const styles = {
-  position: "absolute",
-  top: 0,
-  bottom: 0,
-  width: "100%",
-}
-
 const Map = ({ width, height }) => {
   const [map, setMap] = useState(null)
   const mapContainer = useRef(null)

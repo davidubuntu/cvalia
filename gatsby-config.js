@@ -27,8 +27,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Claudia Interior Design`,
+        short_name: `CValia Interior Design`,
         start_url: `/`,
         background_color: `#ebbea8`,
         theme_color: `#ebbea8`,
