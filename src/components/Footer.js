@@ -1,10 +1,15 @@
 import React from "react"
 import styled from "styled-components"
 import useSiteMetadata from "../hooks/useSiteMetadata"
+import media from "../styles/media"
+
 const Footer = () => {
   const { author } = useSiteMetadata()
 
   const Footer = styled.footer`
+    position: relative;
+    bottom: 0px;
+    width: 100vw;
     background: #f2f2f2;
     height: auto;
     font-weight: 400;
@@ -14,14 +19,21 @@ const Footer = () => {
     text-transform: none;
     writing-mode: horizontal-tb;
     transform: inherit;
-    padding: calc((0.4rem + 0.5vw) * 1.75) 6rem;
     text-align: center;
+    padding: calc((0.4rem + 0.5vw) * 6) 2rem;
+    ${media.tablet`
+    padding: calc((0.4rem + 0.5vw) * 1.75) 6rem;
+    `}
   `
   const FooterMain = styled.div`
     display: flex;
     justify-content: space-between;
     text-align: center;
     font-size: 0.6rem;
+    flex-direction: column;
+    ${media.tablet`
+      flex-direction:row;
+    `}
     a {
       text-decoration: none;
       display: inline-block;

@@ -69,7 +69,7 @@ const MapDescription = styled.p`
   line-height: 2;
   text-align: center;
   ${media.tablet`
-    padding: 2rem  0;
+    padding:  2rem 2rem 2rem 0;
     text-align: left;
   `}
   ${media.laptopL`
