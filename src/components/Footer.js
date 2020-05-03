@@ -5,10 +5,8 @@ const Footer = () => {
   const { author } = useSiteMetadata()
 
   const FooterWrap = styled.footer`
-    position: relative;
     background: #f2f2f2;
     height: auto;
-    font-family: brandon-grotesque, sans-serif;
     font-weight: 400;
     font-size: calc(-0.104166666666667vw + 0.9rem);
     line-height: 1.4rem;
@@ -17,8 +15,7 @@ const Footer = () => {
     writing-mode: horizontal-tb;
     transform: inherit;
     padding: calc((0.4rem + 0.5vw) * 1.75) 6rem;
-    align-items: center;
-    margin-top: 11rem;
+    text-align: center;
   `
 
   return (

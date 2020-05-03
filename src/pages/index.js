@@ -26,14 +26,14 @@ const DescriptionWrapper = styled.div`
 `
 const SectionTravel = styled.section`
   display: flex;
-  padding: 0 calc((0.4rem + 0.5vw) * 17.5);
+  padding: 0 12.5vw calc((0.4rem + 0.5vw) * 12);
   #map {
     width: 40vw;
     height: 400px;
   }
   ${media.laptopL`
     flex-direction: column;
-    padding: 0 calc((0.2rem + 0.5vw) * 17.5);
+    padding: 0 5vw calc((.4rem + .5vw) * 12);
     #map{
       width:100%;
       height: 300px;
@@ -69,9 +69,11 @@ const MapDescription = styled.p`
   line-height: 2;
   ${media.laptopL`
     padding: 3rem;
+    text-align: center;
   `}
   ${media.tablet`
     padding: 2rem;
+    text-align: center;
   `}
 `
 const MapTitle = styled.div`
