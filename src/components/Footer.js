@@ -4,7 +4,7 @@ import useSiteMetadata from "../hooks/useSiteMetadata"
 import media from "../styles/media"
 
 const Footer = () => {
-  const { author } = useSiteMetadata()
+  const { title } = useSiteMetadata()
 
   const Footer = styled.footer`
     position: relative;
@@ -67,12 +67,12 @@ const Footer = () => {
   return (
     <Footer>
       <FooterMain>
+        <div>{title}</div>
         <div>
           Email:<a href="mailto:cvalia@gmail.com">cvalia@gmail.com</a>{" "}
         </div>
         <div>
-          {" "}
-          Instagram <a href="mailto:cvalia@gmail.com"></a>{" "}
+          <a href="mailto:cvalia@gmail.com">Instagram</a>{" "}
         </div>
         <div>© 2020 CValia Interior Design. All Rights Reserved.</div>
       </FooterMain>

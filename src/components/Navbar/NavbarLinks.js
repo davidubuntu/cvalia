@@ -7,16 +7,18 @@ const links = [
   { slug: "/projects", page: "Projects", status: false },
   { slug: "/news", page: "News", status: false },
 ]
+const activeStyle = {
+  // color: "var(--salmon)",
+  // fontFamily: "Montserrat-bold",
+  textDecoration: "underline",
+}
 const NavbarLinks = () => {
   return (
     <>
       {links.map(({ slug, page, status }) => (
         <NavItem
           key={slug}
-          activeStyle={{
-            color: "var(--salmon)",
-            fontFamily: "Montserrat-bold",
-          }}
+          activeStyle={activeStyle}
           partiallyActive={status}
           to={slug}
         >
@@ -41,7 +43,7 @@ const NavItem = styled(Link)`
   letter-spacing: 0.25em;
   :after {
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     left: 0;
     right: 0;
     width: 0%;
