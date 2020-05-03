@@ -1,11 +1,5 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
-
 //www.gatsbyjs.org/docs/debugging-html-builds/
-https: const path = require("path")
+const path = require("path")
 //Enable absolute imports with `/src` as root.
 
 exports.onCreateWebpackConfig = ({ actions, stage, loaders }) => {
