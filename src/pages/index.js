@@ -139,6 +139,7 @@ const ProgressBarWrapper = styled.div`
 `
 const ProgressBarDiv = styled.div`
   width: 50%;
+  height: 5px;
 `
 const ProgressSet = styled.div`
   display: flex;
