@@ -17,34 +17,34 @@ const DescriptionWrapper = styled.div`
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  padding: 0 26.573vw calc((0.4rem + 0.5vw) * 13.5);
+  padding: 0 5vw calc((0.4rem + 0.5vw) * 12);
   text-align: center;
   line-height: 2;
   ${media.tablet`
-    padding:  0 5vw calc((.4rem + .5vw) * 12);;
+    padding: 0 26.573vw calc((0.4rem + 0.5vw) * 13.5);
   `}
 `
 const SectionTravel = styled.section`
   display: flex;
-  padding: 0 12.5vw calc((0.4rem + 0.5vw) * 12);
+  flex-direction: column;
+  padding: 0 5vw calc((0.4rem + 0.5vw) * 12);
   #map {
-    width: 40vw;
-    height: 400px;
+    width: 100%;
+    height: 200px;
   }
-  ${media.laptopL`
-    flex-direction: column;
-    padding: 0 5vw calc((.4rem + .5vw) * 12);
-    #map{
-      width:100%;
-      height: 300px;
+  ${media.tablet`
+    flex-direction: row;
+    padding: 0 12.5vw calc((0.4rem + 0.5vw) * 12);
+    #map {
+     width:40vw;
+     height: 300px;
     }
   `}
-  ${media.tablet`
-    flex-direction: column;
-    padding: 0 5vw calc((.4rem + .5vw) * 12);
+  ${media.laptopL`
+    padding: 0 12.5vw calc((0.4rem + 0.5vw) * 12);
     #map{
-      width:100%;
-      height: 200px;
+      width: 40vw;
+      height: 400px;
     }
   `}
 `
@@ -65,31 +65,34 @@ const MapTextContainer = styled.div`
 `
 const MapDescription = styled.p`
   font-family: "Montserrat-Light";
-  padding: 2rem 12rem 2rem 0;
+  padding: 2rem;
   line-height: 2;
-  ${media.laptopL`
-    padding: 3rem;
-    text-align: center;
-  `}
+  text-align: center;
   ${media.tablet`
-    padding: 2rem;
-    text-align: center;
+    padding: 2rem  0;
+    text-align: left;
+  `}
+  ${media.laptopL`
+    padding: 2rem 12rem 2rem 0;
+    text-align: left;
   `}
 `
 const MapTitle = styled.div`
   font-family: "Montserrat-Bold";
   font-weight: bold;
+  text-align: center;
+  ${media.tablet`
+    text-align: left;
+  `}
   ${media.laptopL`
-    text-align: center;
+    text-align: left;
   `}
 `
 const MapMain = styled.main`
+  padding: 0;
   ${media.laptopL`
     padding: 0 4rem;
-  `}
-  ${media.tablet`
-    padding: 0;
-  `}
+  `};
 `
 
 const IndexPage = ({ data }) => {

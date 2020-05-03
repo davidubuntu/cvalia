@@ -53,13 +53,14 @@ a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   color: var(--textNormal);
-}
-// a:active,
-a:hover {
-  outline-width: 0;
-  color: var(--textLink);
   text-decoration: none;
 }
+// a:active,
+// a:hover {
+//   outline-width: 0;
+//   color: var(--textLink);
+//   text-decoration: none;
+// }
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
@@ -527,11 +528,6 @@ pre code:after,
 pre tt:before,
 pre tt:after {
   content: "";
-}
-@media only screen and (max-width: 480px) {
-  html {
-    font-size: 100%;
-  }
 }
 
 .mapboxgl-ctrl {

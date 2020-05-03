@@ -10,13 +10,7 @@ const Navigation = styled.nav`
   align-items: center;
   z-index: 2;
   transition: all 0.5s cubic-bezier(0.79, 0.14, 0.15, 0.86);
-  /* background: #fff;
-  padding: 3.6rem 6rem;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  transition: all 0.5s cubic-bezier(0.79, 0.14, 0.15, 0.86);
-  z-index: 9999; */
+
   @media (max-width: 768px) {
     justify-content: space-between;
     padding: 2rem;
