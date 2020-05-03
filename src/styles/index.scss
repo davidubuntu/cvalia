@@ -537,3 +537,7 @@ pre tt:after {
 .mapboxgl-ctrl {
   display: none !important;
 }
+.mapboxgl-canvas {
+  width: 100% !important;
+  height: 100% !important;
+}

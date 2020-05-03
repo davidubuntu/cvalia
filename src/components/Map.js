@@ -3,8 +3,10 @@ import mapboxgl from "mapbox-gl"
 import "mapbox-gl/dist/mapbox-gl.css"
 
 const styles = {
-  width: "50vw",
-  height: "400px",
+  position: "absolute",
+  top: 0,
+  bottom: 0,
+  width: "100%",
 }
 
 const Map = ({ width, height }) => {
@@ -25,6 +27,7 @@ const Map = ({ width, height }) => {
         minZoom: 0,
         maxZoom: 7,
       })
+
       map.on("load", () => {
         setMap(map)
         map.resize()
@@ -80,12 +83,7 @@ const Map = ({ width, height }) => {
     if (!map) initializeMap({ setMap, mapContainer })
   }, [map])
 
-  return (
-    <div
-      ref={el => (mapContainer.current = el)}
-      style={{ width: width, height: height }}
-    />
-  )
+  return <div id="map" ref={el => (mapContainer.current = el)} />
 }
 
 export default Map

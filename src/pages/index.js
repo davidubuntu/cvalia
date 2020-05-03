@@ -27,8 +27,25 @@ const DescriptionWrapper = styled.div`
 const SectionTravel = styled.section`
   display: flex;
   padding: 0 calc((0.4rem + 0.5vw) * 17.5);
+  #map {
+    width: 40vw;
+    height: 400px;
+  }
+  ${media.laptopL`
+    flex-direction: column;
+    padding: 0 calc((0.2rem + 0.5vw) * 17.5);
+    #map{
+      width:100%;
+      height: 300px;
+    }
+  `}
   ${media.tablet`
     flex-direction: column;
+    padding: 0 5vw calc((.4rem + .5vw) * 12);
+    #map{
+      width:100%;
+      height: 200px;
+    }
   `}
 `
 
@@ -49,12 +66,28 @@ const MapTextContainer = styled.div`
 const MapDescription = styled.p`
   font-family: "Montserrat-Light";
   padding: 2rem 12rem 2rem 0;
-
   line-height: 2;
+  ${media.laptopL`
+    padding: 3rem;
+  `}
+  ${media.tablet`
+    padding: 2rem;
+  `}
 `
 const MapTitle = styled.div`
   font-family: "Montserrat-Bold";
   font-weight: bold;
+  ${media.laptopL`
+    text-align: center;
+  `}
+`
+const MapMain = styled.main`
+  ${media.laptopL`
+    padding: 0 4rem;
+  `}
+  ${media.tablet`
+    padding: 0;
+  `}
 `
 
 const IndexPage = ({ data }) => {
@@ -79,9 +112,9 @@ const IndexPage = ({ data }) => {
           <MapTitle>{map.title}</MapTitle>
           <MapDescription>{map.description}</MapDescription>
         </MapTextContainer>
-        <main>
-          <Map width={"40vw"} height={"480px"} />
-        </main>
+        <MapMain>
+          <Map />
+        </MapMain>
       </SectionTravel>
       {/* <Link to="/projects/">Go to page 2</Link> */}
     </Layout>
