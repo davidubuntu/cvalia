@@ -149,6 +149,8 @@ const SkillName = styled.span`
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
   const { skills, map, image, mainheader } = frontmatter
+  const { tools } = skills
+  const toolsItems = Object.values(tools)
   return (
     <Layout>
       <SEO title="About" />
@@ -176,26 +178,12 @@ const IndexPage = ({ data }) => {
         <SkillsProgress>
           <SkillsTitle>{skills.title}</SkillsTitle>
           <ProgressBarWrapper>
-            <ProgressSet>
-              <ProgressBar completed={60} />
-              <SkillName>ILUSTRATOR</SkillName>
-            </ProgressSet>
-            <ProgressSet>
-              <ProgressBar completed={80} />
-              <SkillName>ILUSTRATOR</SkillName>
-            </ProgressSet>
-            <ProgressSet>
-              <ProgressBar completed={30} />
-              <SkillName>ILUSTRATOR</SkillName>
-            </ProgressSet>
-            <ProgressSet>
-              <ProgressBar completed={60} />
-              <SkillName>ILUSTRATOR</SkillName>
-            </ProgressSet>
-            <ProgressSet>
-              <ProgressBar completed={90} />
-              <SkillName>ILUSTRATOR</SkillName>
-            </ProgressSet>
+            {toolsItems.map(tool => (
+              <ProgressSet>
+                <ProgressBar completed={tool.percentage} />
+                <SkillName>{tool.name}</SkillName>
+              </ProgressSet>
+            ))}
           </ProgressBarWrapper>
         </SkillsProgress>
         <SkillsDescription>{skills.description}</SkillsDescription>
@@ -223,6 +211,28 @@ export const query = graphql`
         skills {
           title
           description
+          tools {
+            tool1 {
+              name
+              percentage
+            }
+            tool2 {
+              name
+              percentage
+            }
+            tool3 {
+              name
+              percentage
+            }
+            tool4 {
+              name
+              percentage
+            }
+            tool5 {
+              name
+              percentage
+            }
+          }
         }
       }
     }

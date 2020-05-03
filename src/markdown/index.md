@@ -13,4 +13,20 @@ map:
 skills:
   title: MY SKILLS
   description: I Love to travel and be in constant movememnt, I see it as a way of nourish myself with other cultures and ways of life. My experiences are used in the future in my designs.
+  tools:
+    tool1:
+      name: ILUSTRATOR
+      percentage: 80
+    tool2:
+      name: PHOTOSHOP
+      percentage: 90
+    tool3:
+      name: AUTOCAD
+      percentage: 85
+    tool4:
+      name: SKETCHUP / VRAY
+      percentage: 80
+    tool5:
+      name: INDESIGN
+      percentage: 60
 ---
