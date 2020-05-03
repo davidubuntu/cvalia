@@ -137,13 +137,17 @@ const ProgressBarWrapper = styled.div`
   flex-direction: column;
   margin-top: 2rem;
 `
+const ProgressBarDiv = styled.div`
+  width: 50%;
+`
 const ProgressSet = styled.div`
   display: flex;
   margin: 1.2rem 0;
   align-items: center;
 `
-const SkillName = styled.span`
-  margin: 0 3rem;
+const SkillName = styled.span``
+const SkillNameDiv = styled.div`
+  padding-left: 5rem;
 `
 
 const IndexPage = ({ data }) => {
@@ -179,9 +183,13 @@ const IndexPage = ({ data }) => {
           <SkillsTitle>{skills.title}</SkillsTitle>
           <ProgressBarWrapper>
             {toolsItems.map(tool => (
-              <ProgressSet>
-                <ProgressBar completed={tool.percentage} />
-                <SkillName>{tool.name}</SkillName>
+              <ProgressSet key={tool.name}>
+                <ProgressBarDiv>
+                  <ProgressBar width={100} completed={tool.percentage} />
+                </ProgressBarDiv>
+                <SkillNameDiv>
+                  <SkillName>{tool.name}</SkillName>
+                </SkillNameDiv>
               </ProgressSet>
             ))}
           </ProgressBarWrapper>

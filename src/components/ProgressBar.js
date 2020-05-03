@@ -2,13 +2,15 @@ import React from "react"
 import styled from "styled-components"
 
 const ProgressBar = props => {
-  const { bgcolor, completed } = props
+  const { bgcolor, completed, width } = props
+  const progressBarWith = `${width}%`
   const completedWidth = `${completed}%`
   const ProgressBarContainer = styled.div`
-    width: 100%;
+    width: ${props => props.width || "auto"};
     height: 5px;
     background-color: #e0e0de;
     border-radius: 50px;
+    }
   `
 
   const Filter = styled.div`
@@ -34,7 +36,7 @@ const ProgressBar = props => {
   `
 
   return (
-    <ProgressBarContainer>
+    <ProgressBarContainer width={progressBarWith}>
       <Filter width={completedWidth} bgcolor={bgcolor}>
         <CircleSpan></CircleSpan>
       </Filter>
