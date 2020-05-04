@@ -32,7 +32,10 @@ const Toggle = styled.div`
     display: flex;
   }
 `
-
+const ToggleBox = styled.div`
+  height: 30px;
+  width: 30px;
+`
 const Navbox = styled.div`
   display: flex;
   height: 100%;
@@ -93,11 +96,11 @@ const Navbar = () => {
   return (
     <Navigation>
       <Logo />
-      <div onClick={() => setNavbarOpen(!navbarOpen)}>
+      <ToggleBox onClick={() => setNavbarOpen(!navbarOpen)}>
         <Toggle navbarOpen={navbarOpen}>
           {navbarOpen ? <Hamburger open /> : <Hamburger />}
         </Toggle>
-      </div>
+      </ToggleBox>
 
       {navbarOpen ? (
         <Navbox>
