@@ -10,7 +10,7 @@ const links = [
 const activeStyle = {
   // color: "var(--salmon)",
   // fontFamily: "Montserrat-bold",
-  textDecoration: "underline",
+  borderBottom: "1px solid black",
 }
 const NavbarLinks = () => {
   return (
@@ -18,11 +18,12 @@ const NavbarLinks = () => {
       {links.map(({ slug, page, status }) => (
         <NavItem
           key={slug}
-          activeStyle={activeStyle}
+          activeClassName="activeLink"
           partiallyActive={status}
           to={slug}
         >
           {page}
+          <Line className="line"></Line>
         </NavItem>
       ))}
     </>
@@ -43,7 +44,7 @@ const NavItem = styled(Link)`
   letter-spacing: 0.25em;
   :after {
     position: absolute;
-    bottom: 0px;
+    bottom: -4.2px;
     left: 0;
     right: 0;
     width: 0%;
@@ -66,4 +67,12 @@ const NavItem = styled(Link)`
     font-size: 1.2rem;
     z-index: 6;
   }
+`
+const Line = styled.span`
+  display: none;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  border-bottom: 1px solid black;
+  width: 100%;
 `

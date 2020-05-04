@@ -60,6 +60,7 @@ a {
 //   color: var(--salmon);
 //   text-decoration: underline;
 // }
+
 a:hover {
   outline-width: 0;
   color: var(--textLink);
@@ -267,4 +268,9 @@ pre tt:after {
 .mapboxgl-canvas {
   width: 100% !important;
   height: 100% !important;
+}
+.activeLink {
+  span {
+    display: block;
+  }
 }
