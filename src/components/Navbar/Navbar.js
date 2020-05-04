@@ -38,7 +38,6 @@ const Navbox = styled.div`
   height: 100%;
   justify-content: space-around;
   align-items: center;
-  /* transition: left 0.5s; */
   transition: all 0.5s cubic-bezier(0.79, 0.14, 0.15, 0.86);
   overflow: hidden;
 
@@ -46,8 +45,8 @@ const Navbox = styled.div`
     flex-direction: column;
     position: fixed;
     width: 100vw;
-    justify-content: flex-start;
-    padding-top: 10vh;
+    justify-content: center;
+    padding-bottom: 8vh;
     background-color: var(--bg);
     top: 8vh;
     left: ${props => (props.open ? "-100%" : "0")};
@@ -94,12 +93,12 @@ const Navbar = () => {
   return (
     <Navigation>
       <Logo />
-      <Toggle
-        navbarOpen={navbarOpen}
-        onClick={() => setNavbarOpen(!navbarOpen)}
-      >
-        {navbarOpen ? <Hamburger open /> : <Hamburger />}
-      </Toggle>
+      <div onClick={() => setNavbarOpen(!navbarOpen)}>
+        <Toggle navbarOpen={navbarOpen}>
+          {navbarOpen ? <Hamburger open /> : <Hamburger />}
+        </Toggle>
+      </div>
+
       {navbarOpen ? (
         <Navbox>
           <NavbarLinks />
