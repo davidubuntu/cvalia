@@ -56,16 +56,7 @@ a {
   color: var(--textNormal);
   text-decoration: none;
 }
-// a:active {
-//   color: var(--salmon);
-//   text-decoration: underline;
-// }
 
-a:hover {
-  outline-width: 0;
-  color: var(--textLink);
-  text-decoration: none;
-}
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;

@@ -37,28 +37,28 @@ const Footer = () => {
       text-decoration: none;
       display: inline-block;
       white-space: nowrap;
-      transition: all 200ms ease-in;
       position: relative;
       font-size: 10px;
-      margin: 0 1.5vw;
+      margin-left: 1.5vw;
+      margin-right: 1.5vw;
       letter-spacing: 0.25em;
       :after {
+        content: "";
         position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: 0%;
-        content: ".";
-        color: transparent;
-        background: var(--textNormal);
+        width: 0;
         height: 1px;
-        transition: all 0.4s ease-in;
+        display: block;
+        margin-bottom: 1px;
+        right: 0;
+        background: var(--textNormal);
+        transition: all 0.6s ease-in-out;
+        -webkit-transition: all 0.6s ease-in-out;
       }
-
       :hover {
         color: var(--textNormal);
         ::after {
           width: 100%;
+          left: 0;
         }
       }
     }
