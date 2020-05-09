@@ -9,8 +9,8 @@ import Map from "../components/Map"
 import ProgressBar from "../components/ProgressBar"
 
 const SectionMain = styled.section``
-const ImageBgWrapper = styled.div`
-  maxwidth: 100vw;
+
+const SectionImageHome = styled.div`
   padding: 0 0 calc((0.4rem + 0.5vw) * 12);
 `
 const DescriptionWrapper = styled.div`
@@ -167,9 +167,13 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="About" />
-      <ImageBgWrapper>
-        <Image filename={image} />
-      </ImageBgWrapper>
+      <SectionImageHome>
+        <Image
+          alt="background-cvalia-home"
+          filename={image}
+          maxWidth={"100vw"}
+        />
+      </SectionImageHome>
       <SectionMain>
         <DescriptionWrapper>
           <Description>
