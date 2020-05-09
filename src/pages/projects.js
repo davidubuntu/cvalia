@@ -16,6 +16,7 @@ const Grid = styled.div`
 `
 const Filters = styled.div`
   grid-area: filters;
+
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   padding: 0 6rem;
@@ -54,8 +55,9 @@ const ProjectInfo = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 1px 1px;
+  gap: 1rem;
   font-family: "Montserrat-Light";
+  padding: 2rem 0;
 `
 
 const Projects = () => (
@@ -112,7 +114,6 @@ const Projects = () => (
         </Project6>
       </Main>
     </Grid>
-    {/* <Link to="/">Go back to the homepage</Link> */}
   </Layout>
 )
 
