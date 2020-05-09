@@ -1,6 +1,6 @@
 ---
 pageKey: index
-image: bg-home.jpg
+image: bgHome
 mainheader:
   title: HELLO ! I AM CLAUDIA  PEREZ VALIA
   description: >

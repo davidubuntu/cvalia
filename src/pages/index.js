@@ -4,7 +4,7 @@ import styled from "styled-components"
 import media from "../styles/media"
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
-import Image from "../components/Image_Fluid"
+import Image from "../components/Image"
 import Map from "../components/Map"
 import ProgressBar from "../components/ProgressBar"
 
@@ -168,7 +168,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <SEO title="About" />
       <ImageBgWrapper>
-        <Image alt="home-image" filename={image} />
+        <Image filename={image} />
       </ImageBgWrapper>
       <SectionMain>
         <DescriptionWrapper>
@@ -187,7 +187,7 @@ const IndexPage = ({ data }) => {
           <Map />
         </MapMain>
       </SectionTravel>
-      <SectionSkills>
+      <SectionSkills className="slide-top">
         <SkillsProgress>
           <SkillsTitle>{skills.title}</SkillsTitle>
           <ProgressBarWrapper>
