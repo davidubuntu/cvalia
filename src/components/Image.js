@@ -16,10 +16,14 @@ import styled from "styled-components"
 const ImageWrapper = styled.div`
   max-width: ${props => props.maxWidth};
   max-height: ${props => props.maxHeight};
+  .gatsby-image-wrapper {
+    width: ${props => props.width};
+    height: ${props => props.height};
+  }
 `
 
 const Image = props => {
-  const { alt, filename, maxWidth, maxHeight } = props
+  const { alt, filename, maxWidth, maxHeight, width, height } = props
   const data = useStaticQuery(graphql`
     query {
       bgHome: file(relativePath: { eq: "bg-home.jpg" }) {
@@ -66,8 +70,14 @@ const Image = props => {
       }
     }
   `)
+  console.log(width, height)
   return (
-    <ImageWrapper maxWidth={maxWidth} maxHeight={maxHeight}>
+    <ImageWrapper
+      maxWidth={maxWidth}
+      maxHeight={maxHeight}
+      height={height}
+      width={width}
+    >
       <Img alt={alt} fluid={data[`${filename}`].childImageSharp.fluid} />
     </ImageWrapper>
   )

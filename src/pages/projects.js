@@ -1,5 +1,6 @@
 import React from "react"
 // import { Link } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 import styled from "styled-components"
@@ -12,13 +13,13 @@ const Grid = styled.div`
   grid-template-areas:
     "filters . ."
     "main main main";
-  margin-bottom: 6rem;
+  margin: 6rem 0;
+  gap: 6rem;
 `
 const Filters = styled.div`
   grid-area: filters;
-
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 2rem 2rem 2rem;
   padding: 0 6rem;
   font-family: "Montserrat-Light";
 `
@@ -31,26 +32,30 @@ const Main = styled.div`
   grid-template-areas:
     "project1 project2 project3"
     "project4 project5 project6";
-  padding: 0 10rem;
+  justify-self: center;
+  .project1 {
+    grid-area: project1;
+  }
+
+  .project2 {
+    grid-area: project2;
+  }
+  .project3 {
+    grid-area: project3;
+  }
+  .project4 {
+    grid-area: project4;
+  }
+  .project5 {
+    grid-area: project5;
+  }
+  .project6 {
+    grid-area: project6;
+  }
 `
-const Project1 = styled.div`
-  grid-area: project1;
-`
-const Project2 = styled.div`
-  grid-area: project2;
-`
-const Project3 = styled.div`
-  grid-area: project3;
-`
-const Project4 = styled.div`
-  grid-area: project4;
-`
-const Project5 = styled.div`
-  grid-area: project5;
-`
-const Project6 = styled.div`
-  grid-area: project6;
-`
+
+const Project = styled.div``
+
 const ProjectInfo = styled.div`
   display: grid;
   grid-template-columns: 1fr;
@@ -59,62 +64,109 @@ const ProjectInfo = styled.div`
   font-family: "Montserrat-Light";
   padding: 2rem 0;
 `
-
-const Projects = () => (
-  <Layout>
-    <SEO title="Projects" />
-    <Grid>
-      <Filters>
-        <h4>Residencial</h4>
-        <h4>Contract</h4>
-        <h4>All</h4>
-      </Filters>
-      <Main>
-        <Project1>
-          <Image alt="imperial-salon" filename={"imperial1"} />
-          <ProjectInfo>
-            <span>Imperial</span>
-            <span>Madrid</span>
-          </ProjectInfo>
-        </Project1>
-        <Project2>
-          <Image alt="margot-room" filename={"margot5"} />
-          <ProjectInfo>
-            <span>Margot House</span>
-            <span>California</span>
-          </ProjectInfo>
-        </Project2>
-        <Project3>
-          <Image alt="yoga-room" filename={"yoga23"} />
-          <ProjectInfo>
-            <span>Yoga Shala</span>
-            <span>Madrid</span>
-          </ProjectInfo>
-        </Project3>
-        <Project4>
-          <Image alt="spa-room" filename={"spa3"} />
-          <ProjectInfo>
-            <span>Imperial</span>
-            <span>Madrid</span>
-          </ProjectInfo>
-        </Project4>
-        <Project5>
-          <Image alt="yoga-room" filename={"yoga23"} />
-          <ProjectInfo>
-            <span>Imperial</span>
-            <span>Madrid</span>
-          </ProjectInfo>
-        </Project5>
-        <Project6>
-          <Image alt="highschool" filename={"highSchool3"} />
-          <ProjectInfo>
-            <span>Imperial</span>
-            <span>Madrid</span>
-          </ProjectInfo>
-        </Project6>
-      </Main>
-    </Grid>
-  </Layout>
-)
+const FilterName = styled.h4`
+  align-self: center;
+`
+const Projects = ({ data }) => {
+  const { frontmatter } = data.allMarkdownRemark.edges[0].node
+  const { filters, projects } = frontmatter
+  return (
+    <Layout>
+      <SEO title="Projects" />
+      <Grid>
+        <Filters>
+          {filters.map(f => {
+            return <FilterName key={f.name}>{f.name}</FilterName>
+          })}
+        </Filters>
+        <Main>
+          {projects.map((p, i) => {
+            return (
+              <Project key={i} className={`project${i + 1}`}>
+                <Image
+                  width={"22rem"}
+                  height={"22rem"}
+                  alt="imperial-salon"
+                  filename={p.image}
+                />
+                <ProjectInfo>
+                  <span>{p.name}</span>
+                  <span>{p.place}</span>
+                </ProjectInfo>
+              </Project>
+            )
+          })}
+          {/* <Project className={"project1"}>
+            <Image alt="imperial-salon" filename={"imperial1"} />
+            <ProjectInfo>
+              <span>Imperial</span>
+              <span>Madrid</span>
+            </ProjectInfo>
+          </Project>
+          <Project className={"project2"}>
+            <Image alt="margot-room" filename={"margot5"} />
+            <ProjectInfo>
+              <span>Margot House</span>
+              <span>California</span>
+            </ProjectInfo>
+          </Project>
+          <Project className={"project3"}>
+            <Image alt="yoga-room" filename={"yoga23"} />
+            <ProjectInfo>
+              <span>Yoga Shala</span>
+              <span>Madrid</span>
+            </ProjectInfo>
+          </Project>
+          <Project className={"project4"}>
+            <Image alt="spa-room" filename={"spa3"} />
+            <ProjectInfo>
+              <span>Spa</span>
+              <span>Madrid</span>
+            </ProjectInfo>
+          </Project>
+          <Project className={"project5"}>
+            <Image alt="yoga-room" filename={"yoga23"} />
+            <ProjectInfo>
+              <span>Imperial</span>
+              <span>Madrid</span>
+            </ProjectInfo>
+          </Project>
+          <Project className={"project6"}>
+            <Image alt="highschool" filename={"highSchool3"} />
+            <ProjectInfo>
+              <span>Imperial</span>
+              <span>Madrid</span>
+            </ProjectInfo>
+          </Project> */}
+        </Main>
+      </Grid>
+    </Layout>
+  )
+}
 
 export default Projects
+
+export const query = graphql`
+  query {
+    allMarkdownRemark(
+      filter: { frontmatter: { pageKey: { eq: "projects" } } }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            projects {
+              image
+              name
+              place
+            }
+            filters {
+              name
+              type
+            }
+          }
+        }
+      }
+    }
+  }
+`
