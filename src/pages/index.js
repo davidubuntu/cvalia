@@ -208,7 +208,6 @@ const IndexPage = ({ data }) => {
         </SkillsProgress>
         <SkillsDescription>{skills.description}</SkillsDescription>
       </SectionSkills>
-      {/* <Link to="/projects/">Go to page 2</Link> */}
     </Layout>
   )
 }

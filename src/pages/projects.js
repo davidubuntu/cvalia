@@ -5,16 +5,32 @@ import SEO from "../components/Seo"
 import styled from "styled-components"
 import Image from "../components/Image"
 import { StyledLink, StyledButton } from "../components/common/StyledLink"
+import media from "../styles/media"
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-template-areas:
+    "filters"
+    "main";
+  margin: 3rem 0;
+  ${media.tablet`
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "filters ."
+    "main main";
+    gap: 1rem;
+    margin: 6rem 0;
+  `};
+  ${media.laptop`
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
     "filters . ."
     "main main main";
-  margin: 6rem 0;
-  gap: 6rem;
+    gap: 1rem;
+    margin: 6rem 0;
+  `};
 `
 const Filters = styled.div`
   grid-area: filters;
@@ -22,21 +38,43 @@ const Filters = styled.div`
   padding: 0 6rem;
   gap: 0.8rem;
   font-family: "Montserrat-Light";
+  margin-bottom: 3rem;
 `
 const Main = styled.div`
   grid-area: main;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 6rem 6rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 3rem 3rem;
   grid-template-areas:
-    "project1 project2 project3"
-    "project4 project5 project6";
+    "project1"
+    "project2"
+    "project3"
+    "project4"
+    "project5"
+    "project6";
   justify-self: center;
+  ${media.tablet`
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 4rem 4rem;
+    grid-template-areas:
+      "project1 project2"
+      "project4 project3"
+      "project5 project6";
+  `};
+  ${media.laptop`
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 6rem 6rem;
+    grid-template-areas:
+      "project1 project2 project3"
+      "project4 project5 project6";
+  `};
+
   .project1 {
     grid-area: project1;
   }
-
   .project2 {
     grid-area: project2;
   }
