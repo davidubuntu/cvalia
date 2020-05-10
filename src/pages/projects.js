@@ -116,6 +116,7 @@ const Projects = ({ data }) => {
     )
     setProjects(initialProjects)
     setFilteredProjects(initialProjects)
+    console.log(initialProjects)
   }, [data.projectDetail.edges])
 
   const filters = data.projects.edges[0].node.frontmatter.filters
@@ -126,7 +127,7 @@ const Projects = ({ data }) => {
       setFilteredProjects(projects)
     } else {
       const filteredProjects = projects.filter(
-        project => project.type.toUpperCase() === filterType
+        project => project.info.type.toUpperCase() === filterType
       )
       setFilteredProjects(filteredProjects)
     }
@@ -147,7 +148,7 @@ const Projects = ({ data }) => {
         <Main>
           {filteredProjects.map((p, i) => {
             return (
-              <Project key={i} className={`project${i + 1}`}>
+              <Project key={p.title} className={`project${i + 1}`}>
                 <Image
                   width={"22rem"}
                   height={"22rem"}
@@ -156,53 +157,11 @@ const Projects = ({ data }) => {
                 />
                 <ProjectInfo>
                   <StyledLink to={`/projects/${p.slug}`}>{p.title}</StyledLink>
-                  <span>{p.place}</span>
+                  <span>{p.info.place}</span>
                 </ProjectInfo>
               </Project>
             )
           })}
-          {/* <Project className={"project1"}>
-            <Image alt="imperial-salon" filename={"imperial1"} />
-            <ProjectInfo>
-              <span>Imperial</span>
-              <span>Madrid</span>
-            </ProjectInfo>
-          </Project>
-          <Project className={"project2"}>
-            <Image alt="margot-room" filename={"margot5"} />
-            <ProjectInfo>
-              <span>Margot House</span>
-              <span>California</span>
-            </ProjectInfo>
-          </Project>
-          <Project className={"project3"}>
-            <Image alt="yoga-room" filename={"yoga23"} />
-            <ProjectInfo>
-              <span>Yoga Shala</span>
-              <span>Madrid</span>
-            </ProjectInfo>
-          </Project>
-          <Project className={"project4"}>
-            <Image alt="spa-room" filename={"spa3"} />
-            <ProjectInfo>
-              <span>Spa</span>
-              <span>Madrid</span>
-            </ProjectInfo>
-          </Project>
-          <Project className={"project5"}>
-            <Image alt="yoga-room" filename={"yoga23"} />
-            <ProjectInfo>
-              <span>Imperial</span>
-              <span>Madrid</span>
-            </ProjectInfo>
-          </Project>
-          <Project className={"project6"}>
-            <Image alt="highschool" filename={"highSchool3"} />
-            <ProjectInfo>
-              <span>Imperial</span>
-              <span>Madrid</span>
-            </ProjectInfo>
-          </Project> */}
         </Main>
       </Grid>
     </Layout>
@@ -225,8 +184,10 @@ export const query = graphql`
             title
             image
             slug
-            place
-            type
+            info {
+              place
+              type
+            }
           }
         }
       }
