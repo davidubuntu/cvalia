@@ -26,6 +26,7 @@ exports.onCreateWebpackConfig = ({ actions, stage, loaders }) => {
 }
 
 const { createFilePath } = require(`gatsby-source-filesystem`)
+
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === `MarkdownRemark`) {
@@ -41,11 +42,16 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 exports.createPages = async function ({ actions, graphql }) {
   const { data } = await graphql(`
     query {
-      allMarkdownRemark {
+      allMarkdownRemark(
+        filter: { frontmatter: { pageKey: { eq: "project-detail" } } }
+      ) {
         edges {
           node {
             fields {
               slug
+            }
+            frontmatter {
+              title
             }
           }
         }
@@ -55,8 +61,8 @@ exports.createPages = async function ({ actions, graphql }) {
   data.allMarkdownRemark.edges.forEach(edge => {
     const slug = edge.node.fields.slug
     actions.createPage({
-      path: slug,
-      component: require.resolve(`./src/templates/project-detail.js`),
+      path: `projects${slug}`,
+      component: require.resolve(`./src/templates/projects.js`),
       context: { slug: slug },
     })
   })

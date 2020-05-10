@@ -24,7 +24,7 @@ const Image = props => {
   const image = data.images.edges.find(n => {
     return n.node.relativePath.includes(filename)
   })
-  console.log(image)
+
   if (!image) {
     return null
   }

@@ -163,7 +163,6 @@ const IndexPage = ({ data }) => {
   const { frontmatter } = data.allMarkdownRemark.edges[0].node
   const { skills, map, image, mainheader } = frontmatter
   const { tools } = skills
-
   return (
     <Layout>
       <SEO title="About" />

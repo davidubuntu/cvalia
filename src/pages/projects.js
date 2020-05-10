@@ -1,5 +1,5 @@
 import React from "react"
-// import { Link } from "gatsby"
+import { Link } from "gatsby"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
@@ -92,6 +92,7 @@ const Projects = ({ data }) => {
                 <ProjectInfo>
                   <span>{p.name}</span>
                   <span>{p.place}</span>
+                  <Link to={`/projects/${p.slug}`}>{p.name}</Link>
                 </ProjectInfo>
               </Project>
             )
@@ -159,6 +160,7 @@ export const query = graphql`
               image
               name
               place
+              slug
             }
             filters {
               name

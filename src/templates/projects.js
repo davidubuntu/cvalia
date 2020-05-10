@@ -1,10 +1,12 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 export default function ProjectDetail({ data }) {
-  // const post = data.markdownRemark
+  const project = data.markdownRemark.frontmatter
+  console.log(data)
   return (
     <Layout>
+      <h1>{project.title}</h1>
       {/* <div>
         <h1>{post.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />

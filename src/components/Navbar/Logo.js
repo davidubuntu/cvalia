@@ -21,7 +21,7 @@ const Logo = () => {
       }
     }
   `)
-  console.log(data)
+
   return (
     <LogoWrap as={Link} to="/">
       <Img fixed={data.logoImage.childImageSharp.fixed} alt="logo" />
