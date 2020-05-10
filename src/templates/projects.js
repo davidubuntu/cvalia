@@ -5,13 +5,17 @@ import styled from "styled-components"
 
 const ProjectDetail = ({ data }) => {
   const project = data.markdownRemark.frontmatter
+  console.log(data)
 
   const Grid = styled.div`
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: "ProjectInfo" "ProjectMedia";
-    gap: 1px 1px;
+    grid-template-areas:
+      "ProjectInfo"
+      "ProjectMedia";
+    gap: 3px 3px;
+    padding: 6rem;
   `
   const ProjectInfo = styled.div`
     grid-area: ProjectInfo;
@@ -25,7 +29,7 @@ const ProjectDetail = ({ data }) => {
       <Grid>
         <ProjectInfo>
           <h1>{project.title}</h1>
-          <p>{project.description}</p>
+          <p>{project.info.description}</p>
         </ProjectInfo>
         <ProjectMedia></ProjectMedia>
       </Grid>
@@ -44,6 +48,7 @@ export const query = graphql`
         info {
           type
           place
+          description
         }
       }
     }

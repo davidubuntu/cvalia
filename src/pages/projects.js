@@ -23,7 +23,7 @@ const Grid = styled.div`
     gap: 1rem;
     margin: 6rem 0;
   `};
-  ${media.laptop`
+  ${media.laptopL`
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
     "filters . ."
@@ -63,7 +63,7 @@ const Main = styled.div`
       "project4 project3"
       "project5 project6";
   `};
-  ${media.laptop`
+  ${media.laptopL`
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 6rem 6rem;
@@ -116,7 +116,6 @@ const Projects = ({ data }) => {
     )
     setProjects(initialProjects)
     setFilteredProjects(initialProjects)
-    console.log(initialProjects)
   }, [data.projectDetail.edges])
 
   const filters = data.projects.edges[0].node.frontmatter.filters
