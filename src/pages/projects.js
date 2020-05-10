@@ -4,7 +4,7 @@ import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 import styled from "styled-components"
 import Image from "../components/Image"
-import StyledLink from "../components/common/StyledLink"
+import { StyledLink, StyledButton } from "../components/common/StyledLink"
 
 const Grid = styled.div`
   display: grid;
@@ -19,8 +19,8 @@ const Grid = styled.div`
 const Filters = styled.div`
   grid-area: filters;
   display: grid;
-  grid-template-rows: 2rem 2rem 2rem;
   padding: 0 6rem;
+  gap: 0.8rem;
   font-family: "Montserrat-Light";
 `
 const Main = styled.div`
@@ -63,24 +63,28 @@ const ProjectInfo = styled.div`
   gap: 1rem;
   font-family: "Montserrat-Light";
   padding: 2rem 0;
+  a {
+    font-family: "Montserrat-Bold";
+  }
+  font-size: 13px;
 `
-const FilterName = styled.span`
-  align-self: center;
-`
+
 const Projects = ({ data }) => {
   const [projects, setProjects] = useState([])
   const [filteredProjects, setFilteredProjects] = useState([])
   useEffect(() => {
-    const projects = data.projectDetail.edges.map(e => e.node.frontmatter)
-    setProjects(projects)
-    setFilteredProjects(projects)
+    const initialProjects = data.projectDetail.edges.map(
+      e => e.node.frontmatter
+    )
+    setProjects(initialProjects)
+    setFilteredProjects(initialProjects)
   }, [data.projectDetail.edges])
 
   const filters = data.projects.edges[0].node.frontmatter.filters
   const handleFilter = filter => {
     const filterType = filter.toUpperCase()
 
-    if (filterType == "ALL") {
+    if (filterType === "ALL") {
       setFilteredProjects(projects)
     } else {
       const filteredProjects = projects.filter(
@@ -96,13 +100,9 @@ const Projects = ({ data }) => {
         <Filters>
           {filters.map(f => {
             return (
-              <FilterName
-                role={"button"}
-                key={f.name}
-                onClick={() => handleFilter(f.name)}
-              >
+              <StyledButton key={f.type} onClick={() => handleFilter(f.type)}>
                 {f.name}
-              </FilterName>
+              </StyledButton>
             )
           })}
         </Filters>
@@ -117,7 +117,7 @@ const Projects = ({ data }) => {
                   filename={p.image}
                 />
                 <ProjectInfo>
-                  <StyledLink to={`/projects/${p.slug}`}>{p.name}</StyledLink>
+                  <StyledLink to={`/projects/${p.slug}`}>{p.title}</StyledLink>
                   <span>{p.place}</span>
                 </ProjectInfo>
               </Project>
@@ -185,7 +185,6 @@ export const query = graphql`
           }
           frontmatter {
             title
-            name
             image
             slug
             place

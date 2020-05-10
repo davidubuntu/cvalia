@@ -1,10 +1,12 @@
 ---
 pageKey: projects
 filters:
-  - type: residencial
-    name: Residencial
+  - type: residential
+    name: Residential
   - type: contract
     name: Contract
+  - type: education
+    name: Education
   - type: all
     name: All
 ---
