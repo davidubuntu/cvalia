@@ -1,10 +1,10 @@
-import React from "react"
-import { Link } from "gatsby"
+import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 import styled from "styled-components"
 import Image from "../components/Image"
+import StyledLink from "../components/common/StyledLink"
 
 const Grid = styled.div`
   display: grid;
@@ -64,23 +64,50 @@ const ProjectInfo = styled.div`
   font-family: "Montserrat-Light";
   padding: 2rem 0;
 `
-const FilterName = styled.h4`
+const FilterName = styled.span`
   align-self: center;
 `
 const Projects = ({ data }) => {
-  const { frontmatter } = data.allMarkdownRemark.edges[0].node
-  const { filters, projects } = frontmatter
+  const [projects, setProjects] = useState([])
+  const [filteredProjects, setFilteredProjects] = useState([])
+  useEffect(() => {
+    const projects = data.projectDetail.edges.map(e => e.node.frontmatter)
+    setProjects(projects)
+    setFilteredProjects(projects)
+  }, [data.projectDetail.edges])
+
+  const filters = data.projects.edges[0].node.frontmatter.filters
+  const handleFilter = filter => {
+    const filterType = filter.toUpperCase()
+
+    if (filterType == "ALL") {
+      setFilteredProjects(projects)
+    } else {
+      const filteredProjects = projects.filter(
+        project => project.type.toUpperCase() === filterType
+      )
+      setFilteredProjects(filteredProjects)
+    }
+  }
   return (
     <Layout>
       <SEO title="Projects" />
       <Grid>
         <Filters>
           {filters.map(f => {
-            return <FilterName key={f.name}>{f.name}</FilterName>
+            return (
+              <FilterName
+                role={"button"}
+                key={f.name}
+                onClick={() => handleFilter(f.name)}
+              >
+                {f.name}
+              </FilterName>
+            )
           })}
         </Filters>
         <Main>
-          {projects.map((p, i) => {
+          {filteredProjects.map((p, i) => {
             return (
               <Project key={i} className={`project${i + 1}`}>
                 <Image
@@ -90,9 +117,8 @@ const Projects = ({ data }) => {
                   filename={p.image}
                 />
                 <ProjectInfo>
-                  <span>{p.name}</span>
+                  <StyledLink to={`/projects/${p.slug}`}>{p.name}</StyledLink>
                   <span>{p.place}</span>
-                  <Link to={`/projects/${p.slug}`}>{p.name}</Link>
                 </ProjectInfo>
               </Project>
             )
@@ -149,19 +175,32 @@ export default Projects
 
 export const query = graphql`
   query {
-    allMarkdownRemark(
+    projectDetail: allMarkdownRemark(
+      filter: { frontmatter: { pageKey: { eq: "project-detail" } } }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            name
+            image
+            slug
+            place
+            type
+          }
+        }
+      }
+    }
+    projects: allMarkdownRemark(
       filter: { frontmatter: { pageKey: { eq: "projects" } } }
     ) {
       edges {
         node {
           id
           frontmatter {
-            projects {
-              image
-              name
-              place
-              slug
-            }
             filters {
               name
               type
