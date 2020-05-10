@@ -16,19 +16,19 @@ skills:
     I am good working with tech new tools sketching. I reall like collage, conceptualising and comercial space design.
     ... I love Asthanga yoga, plants based food!
   tools:
-    tool1:
+    - tool: tool1
       name: ILLUSTRATOR
       percentage: 70
-    tool2:
+    - tool: tool2
       name: PHOTOSHOP
       percentage: 90
-    tool3:
+    - tool: tool3
       name: AUTOCAD
       percentage: 60
-    tool4:
+    - tool: tool4
       name: SKETCHUP / VRAY
       percentage: 85
-    tool5:
+    - tool: tool5
       name: INDESIGN
-      percentage: 60
+      spercentage: 60
 ---

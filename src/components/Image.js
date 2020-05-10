@@ -70,7 +70,7 @@ const Image = props => {
       }
     }
   `)
-  console.log(width, height)
+
   return (
     <ImageWrapper
       maxWidth={maxWidth}

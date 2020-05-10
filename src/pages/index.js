@@ -160,10 +160,10 @@ const SkillNameDiv = styled.div`
 `
 
 const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const { frontmatter } = data.allMarkdownRemark.edges[0].node
   const { skills, map, image, mainheader } = frontmatter
   const { tools } = skills
-  const toolsItems = Object.values(tools)
+
   return (
     <Layout>
       <SEO title="About" />
@@ -195,7 +195,7 @@ const IndexPage = ({ data }) => {
         <SkillsProgress>
           <SkillsTitle>{skills.title}</SkillsTitle>
           <ProgressBarWrapper>
-            {toolsItems.map(tool => (
+            {tools.map(tool => (
               <ProgressSet key={tool.name}>
                 <ProgressBarDiv>
                   <ProgressBar width={100} completed={tool.percentage} />
@@ -217,41 +217,28 @@ export default IndexPage
 
 export const query = graphql`
   query {
-    markdownRemark(frontmatter: { pageKey: { eq: "index" } }) {
-      id
-      frontmatter {
-        image
-        mainheader {
-          title
-          description
-        }
-        map {
-          title
-          description
-        }
-        skills {
-          title
-          description
-          tools {
-            tool1 {
-              name
-              percentage
+    allMarkdownRemark(filter: { frontmatter: { pageKey: { eq: "index" } } }) {
+      edges {
+        node {
+          id
+          frontmatter {
+            image
+            mainheader {
+              title
+              description
             }
-            tool2 {
-              name
-              percentage
+            map {
+              title
+              description
             }
-            tool3 {
-              name
-              percentage
-            }
-            tool4 {
-              name
-              percentage
-            }
-            tool5 {
-              name
-              percentage
+            skills {
+              title
+              description
+              tools {
+                tool
+                name
+                percentage
+              }
             }
           }
         }
