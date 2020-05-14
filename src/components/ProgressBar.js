@@ -5,12 +5,12 @@ const ProgressBar = props => {
   const { bgcolor, completed, width } = props
   const progressBarWith = `${width}%`
   const completedWidth = `${completed}%`
+    
   const ProgressBarContainer = styled.div`
     width: ${props => props.width || "auto"};
     height: 5px;
     background-color: #e0e0de;
     border-radius: 50px;
-    }
   `
 
   const Filter = styled.div`
