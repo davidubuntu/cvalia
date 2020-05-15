@@ -14,14 +14,14 @@ const Grid = styled.div`
   grid-template-areas:
     "filters"
     "main";
-  margin: 3rem 0;
+  padding: 0 3rem 3rem;
   ${media.tablet`
     /* grid-template-columns: 1fr 1fr;
     grid-template-areas:
     "filters ."
     "main main"; */
     gap: 1rem;
-    margin: 6rem 0;
+    padding: 0 5rem 5rem;
   `};
   ${media.laptopL`
     /* grid-template-columns: 1fr 1fr 1fr;
@@ -29,16 +29,15 @@ const Grid = styled.div`
     "filters . ."
     "main main main"; */
     gap: 1rem;
-    margin: 6rem 0;
+    padding: 0 10rem 10rem;
   `};
 `
 const Filters = styled.div`
   grid-area: filters;
   display: grid;
-  padding: 0 6rem;
   gap: 0.8rem;
   font-family: "Montserrat-Light";
-  margin-bottom: 3rem;
+  margin: 3rem 0;
 `
 const Main = styled.div`
   grid-area: main;
@@ -46,7 +45,6 @@ const Main = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows: repeat(6, 1fr);
   gap: 3rem 3rem;
-  padding: 6rem;
   /* grid-template-areas:
     "project1"
     "project2"
