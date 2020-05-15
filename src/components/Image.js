@@ -149,6 +149,105 @@ const Image = props => {
           }
         }
       }
+      highSchoolBuffet1: file(
+        relativePath: { eq: "high-school/high-school-buffet-1.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      highSchoolBuffet2: file(
+        relativePath: { eq: "high-school/high-school-buffet-2.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      highSchoolClassRoomEntrance: file(
+        relativePath: { eq: "high-school/high-school-classroom-entrance.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      highSchoolClassRoom: file(
+        relativePath: { eq: "high-school/high-school-classroom.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      highSchoolGarden: file(
+        relativePath: { eq: "high-school/high-school-garden.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      highSchoolLaboratory1: file(
+        relativePath: { eq: "high-school/high-school-laboratory-1.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      highSchoolLaboratory2: file(
+        relativePath: { eq: "high-school/high-school-laboratory-2.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      highSchoolLibrary: file(
+        relativePath: { eq: "high-school/high-school-library.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      highSchoolRestRoom1: file(
+        relativePath: { eq: "high-school/high-school-rest-room-1.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      highSchoolRestRoom2: file(
+        relativePath: { eq: "high-school/high-school-rest-room-2.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      highSchoolWorkshop: file(
+        relativePath: { eq: "high-school/high-school-workshop.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
   console.log("filenamww", filename)
