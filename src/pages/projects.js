@@ -46,6 +46,7 @@ const Main = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows: repeat(6, 1fr);
   gap: 3rem 3rem;
+  padding: 6rem;
   /* grid-template-areas:
     "project1"
     "project2"
@@ -53,7 +54,6 @@ const Main = styled.div`
     "project4"
     "project5"
     "project6"; */
-  justify-self: center;
   ${media.tablet`
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -146,12 +146,7 @@ const Projects = ({ data }) => {
           {filteredProjects.map((project, i) => {
             return (
               <Project key={project.title} className={`project${i + 1}`}>
-                <Image
-                  width={"22rem"}
-                  height={"22rem"}
-                  alt="imperial-salon"
-                  filename={project.image}
-                />
+                <Image alt={project.title} filename={project.image} />
                 <ProjectInfo>
                   <StyledLink to={`/projects/${project.slug}`}>
                     {project.title}

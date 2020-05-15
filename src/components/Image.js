@@ -35,36 +35,36 @@ const Image = props => {
       }
       imperial1: file(relativePath: { eq: "imperial-1.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 800, quality: 100) {
-            ...GatsbyImageSharpFluid
+          fixed(width: 500, height: 500) {
+            ...GatsbyImageSharpFixed
           }
         }
       }
       margot5: file(relativePath: { eq: "margot-5.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 800, quality: 100) {
-            ...GatsbyImageSharpFluid
+          fixed(width: 500, height: 500) {
+            ...GatsbyImageSharpFixed
           }
         }
       }
       yoga23: file(relativePath: { eq: "yoga-23.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 800, quality: 100) {
-            ...GatsbyImageSharpFluid
+          fixed(width: 500, height: 500) {
+            ...GatsbyImageSharpFixed
           }
         }
       }
       spa3: file(relativePath: { eq: "spa-3.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 800, quality: 100) {
-            ...GatsbyImageSharpFluid
+          fixed(width: 500, height: 500) {
+            ...GatsbyImageSharpFixed
           }
         }
       }
       highSchool3: file(relativePath: { eq: "high-school-3.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 800, quality: 100) {
-            ...GatsbyImageSharpFluid
+          fixed(width: 500, height: 500) {
+            ...GatsbyImageSharpFixed
           }
         }
       }
@@ -143,6 +143,9 @@ const Image = props => {
     }
   `)
   console.log("filenamww", filename)
+  const imageObject = data[`${filename}`].childImageSharp
+  const typeImage = imageObject.hasOwnProperty("fluid") ? "fluid" : "fixed"
+
   return (
     <ImageWrapper
       maxWidth={maxWidth}
@@ -150,7 +153,11 @@ const Image = props => {
       height={height}
       width={width}
     >
-      <Img alt={alt} fluid={data[`${filename}`].childImageSharp.fluid} />
+      {typeImage === "fluid" ? (
+        <Img alt={alt} fluid={data[`${filename}`].childImageSharp.fluid} />
+      ) : (
+        <Img alt={alt} fixed={data[`${filename}`].childImageSharp.fixed} />
+      )}
     </ImageWrapper>
   )
 }
