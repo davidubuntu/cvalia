@@ -27,7 +27,7 @@ const CustomSlideButton = styled.div`
 `
 
 const NextArrow = props => {
-  const { className, style, onClick } = props
+  const { className, onClick } = props
   return (
     <CustomSlideButton className={className} onClick={onClick} right={"-10rem"}>
       <FontAwesomeIcon icon={faChevronRight} />
@@ -35,7 +35,7 @@ const NextArrow = props => {
   )
 }
 const PrevArrow = props => {
-  const { className, style, onClick } = props
+  const { className, onClick } = props
   return (
     <CustomSlideButton className={className} onClick={onClick} left={"-10rem"}>
       <FontAwesomeIcon icon={faChevronLeft} />

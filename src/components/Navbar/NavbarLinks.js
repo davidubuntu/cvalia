@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { StyledLink } from "../common/StyledLink"
 
 const links = [
   { slug: "/", page: "About", status: false },

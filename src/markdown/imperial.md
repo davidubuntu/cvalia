@@ -12,4 +12,8 @@ images:
   - name: imperialKitchen2
   - name: imperialKitchen3
   - name: imperialKitchen4
+  - name: imperialLivingRoom1
+  - name: imperialLivingRoom2
+  - name: imperialLivingRoom3
+  - name: imperialLivingRoom4
 ---

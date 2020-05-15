@@ -104,6 +104,42 @@ const Image = props => {
           }
         }
       }
+      imperialLivingRoom1: file(
+        relativePath: { eq: "imperial/imperial-living-room-1.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      imperialLivingRoom2: file(
+        relativePath: { eq: "imperial/imperial-living-room-2.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      imperialLivingRoom3: file(
+        relativePath: { eq: "imperial/imperial-living-room-3.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      imperialLivingRoom4: file(
+        relativePath: { eq: "imperial/imperial-living-room-4.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
   console.log("filenamww", filename)
