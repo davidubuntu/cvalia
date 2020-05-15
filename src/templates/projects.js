@@ -52,6 +52,7 @@ const settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   accessibility: false,
+  draggable: true,
   centerMode: false,
   nextArrow: <NextArrow />,
   prevArrow: <PrevArrow />,
@@ -80,7 +81,7 @@ const ProjectDetail = ({ data }) => {
     justify-self: center;
   `
   const SliderWrapper = styled.div`
-    width: 50vw;
+    width: 60vw;
     align-self: center;
     justify-self: center;
   `
