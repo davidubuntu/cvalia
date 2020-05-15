@@ -68,9 +68,45 @@ const Image = props => {
           }
         }
       }
+      imperialKitchen1: file(
+        relativePath: { eq: "imperial/imperial-kitchen-1.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      imperialKitchen2: file(
+        relativePath: { eq: "imperial/imperial-kitchen-2.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      imperialKitchen3: file(
+        relativePath: { eq: "imperial/imperial-kitchen-3.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      imperialKitchen4: file(
+        relativePath: { eq: "imperial/imperial-kitchen-4.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
-
+  console.log("filenamww", filename)
   return (
     <ImageWrapper
       maxWidth={maxWidth}

@@ -31,6 +31,7 @@ const StyledLink = styled(Link)`
 `
 
 const StyledButton = styled.span`
+  cursor: pointer;
   text-decoration: none;
   display: inline-block;
   white-space: nowrap;

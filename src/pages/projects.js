@@ -44,7 +44,7 @@ const Main = styled.div`
   grid-area: main;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(6,1fr);
+  grid-template-rows: repeat(6, 1fr);
   gap: 3rem 3rem;
   /* grid-template-areas:
     "project1"
@@ -136,27 +136,27 @@ const Projects = ({ data }) => {
       <SEO title="Projects" />
       <Grid>
         <Filters>
-          {filters.map(f => {
-            return (
-              <StyledButton key={f.type} onClick={() => handleFilter(f.type)}>
-                {f.name}
-              </StyledButton>
-            )
-          })}
+          {filters.map(f => (
+            <StyledButton key={f.type} onClick={() => handleFilter(f.type)}>
+              {f.name}
+            </StyledButton>
+          ))}
         </Filters>
         <Main>
-          {filteredProjects.map((p, i) => {
+          {filteredProjects.map((project, i) => {
             return (
-              <Project key={p.title} className={`project${i + 1}`}>
+              <Project key={project.title} className={`project${i + 1}`}>
                 <Image
                   width={"22rem"}
                   height={"22rem"}
                   alt="imperial-salon"
-                  filename={p.image}
+                  filename={project.image}
                 />
                 <ProjectInfo>
-                  <StyledLink to={`/projects/${p.slug}`}>{p.title}</StyledLink>
-                  <span>{p.info.place}</span>
+                  <StyledLink to={`/projects/${project.slug}`}>
+                    {project.title}
+                  </StyledLink>
+                  <span>{project.info.place}</span>
                 </ProjectInfo>
               </Project>
             )
