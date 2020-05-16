@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Image from "../components/Image"
 import styled from "styled-components"
+import media from "../styles/media"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faChevronRight,
@@ -14,8 +15,7 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
 const CustomSlideButton = styled.div`
-  right: ${props => props.right};
-  left: ${props => props.left};
+  display: none;
   .svg-inline--fa.fa-w-10 {
     color: #41413c;
     height: 20px;
@@ -24,12 +24,22 @@ const CustomSlideButton = styled.div`
   :before {
     font-size: 0;
   }
+  ${media.tablet`
+   display: block;
+   right: ${props => props.right && "-6rem"};
+   left: ${props => props.left && "-6rem"};
+ `};
+  ${media.laptopL`
+    display: block;
+    right: ${props => props.right && "-10rem"};
+    left: ${props => props.left && "-10rem"};
+ `};
 `
 
 const NextArrow = props => {
   const { className, onClick } = props
   return (
-    <CustomSlideButton className={className} onClick={onClick} right={"-10rem"}>
+    <CustomSlideButton className={className} onClick={onClick} right>
       <FontAwesomeIcon icon={faChevronRight} />
     </CustomSlideButton>
   )
@@ -37,7 +47,7 @@ const NextArrow = props => {
 const PrevArrow = props => {
   const { className, onClick } = props
   return (
-    <CustomSlideButton className={className} onClick={onClick} left={"-10rem"}>
+    <CustomSlideButton className={className} onClick={onClick} left>
       <FontAwesomeIcon icon={faChevronLeft} />
     </CustomSlideButton>
   )
@@ -54,6 +64,7 @@ const settings = {
   accessibility: false,
   draggable: true,
   centerMode: false,
+  arrows: true,
   nextArrow: <NextArrow />,
   prevArrow: <PrevArrow />,
 }
@@ -68,8 +79,14 @@ const ProjectDetail = ({ data }) => {
     grid-template-areas:
       "ProjectInfo"
       "ProjectMedia";
-    gap: 3px 3px;
-    padding: 6rem;
+    gap: 3rem 0rem;
+    padding: 0 3rem 3rem;
+    ${media.tablet`
+      padding: 0 5rem 5rem;
+    `};
+    ${media.laptopL`
+      padding: 0 10rem 10rem;
+    `};
   `
   const ProjectInfo = styled.div`
     grid-area: ProjectInfo;
