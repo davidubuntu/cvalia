@@ -259,6 +259,42 @@ const Image = props => {
           }
         }
       }
+      highSchoolPlan1: file(
+        relativePath: { eq: "high-school/high-school-plan-1.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      highSchoolPlan2: file(
+        relativePath: { eq: "high-school/high-school-plan-2.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      highSchoolPlan3: file(
+        relativePath: { eq: "high-school/high-school-plan-3.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      highSchoolPlan4: file(
+        relativePath: { eq: "high-school/high-school-plan-4.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
   console.log("filenamww", filename)

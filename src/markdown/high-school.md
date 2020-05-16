@@ -19,4 +19,8 @@ images:
   - name: highSchoolRestRoom1
   - name: highSchoolRestRoom2
   - name: highSchoolWorkshop
+  - name: highSchoolPlan1
+  - name: highSchoolPlan2
+  - name: highSchoolPlan3
+  - name: highSchoolPlan4
 ---
