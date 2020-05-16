@@ -68,8 +68,8 @@ const settings = {
   autoplaySpeed: 2000,
   nextArrow: <NextArrow />,
   prevArrow: <PrevArrow />,
-  slidesToShow: 2,
-  slidesToScroll: 2,
+  slidesToShow: 1,
+  slidesToScroll: 1,
   responsive: [
     {
       breakpoint: 768,
@@ -89,8 +89,8 @@ const ProjectDetail = ({ data }) => {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-      "ProjectInfo"
-      "ProjectMedia";
+      "ProjectMedia"
+      "ProjectInfo";
     gap: 3rem 0rem;
     padding: 0 2rem 2rem;
     ${media.tablet`
@@ -115,17 +115,13 @@ const ProjectDetail = ({ data }) => {
       width: 75vw;
     `};
     ${media.laptopL`
-      width: 70vw;
+      width: 52vw;
     `};
   `
 
   return (
     <Layout>
       <Grid>
-        <ProjectInfo>
-          <h3>{project.title}</h3>
-          <p>{project.info.description}</p>
-        </ProjectInfo>
         <ProjectMedia>
           <SliderWrapper>
             <Slider {...settings} className="overflow-hidden">
@@ -135,6 +131,10 @@ const ProjectDetail = ({ data }) => {
             </Slider>
           </SliderWrapper>
         </ProjectMedia>
+        <ProjectInfo>
+          <h3>{project.title}</h3>
+          <p>{project.info.description}</p>
+        </ProjectInfo>
       </Grid>
     </Layout>
   )
