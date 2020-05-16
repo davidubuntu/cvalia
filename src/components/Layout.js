@@ -14,7 +14,7 @@ const MainWrapper = styled.div`
   min-height: 100vh;
   color: var(--textNormal);
   flex-grow: 1;
-  justify-content: space-around;
+  justify-content: space-between;
 `
 
 const Layout = ({ children }) => {

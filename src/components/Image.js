@@ -20,10 +20,21 @@ const ImageWrapper = styled.div`
     width: ${props => props.width};
     height: ${props => props.height};
   }
+  img {
+    border-radius: ${props => props.borderRadius};
+  }
 `
 
 const Image = props => {
-  const { alt, filename, maxWidth, maxHeight, width, height } = props
+  const {
+    alt,
+    filename,
+    maxWidth,
+    maxHeight,
+    width,
+    height,
+    borderRadius,
+  } = props
   const data = useStaticQuery(graphql`
     query {
       bgHome: file(relativePath: { eq: "bg-home.jpg" }) {
@@ -260,6 +271,7 @@ const Image = props => {
       maxHeight={maxHeight}
       height={height}
       width={width}
+      borderRadius={borderRadius}
     >
       {typeImage === "fluid" ? (
         <Img alt={alt} fluid={data[`${filename}`].childImageSharp.fluid} />

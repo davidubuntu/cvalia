@@ -59,14 +59,26 @@ const settings = {
   infinite: true,
   autoplay: false,
   lazyLoad: true,
-  slidesToShow: 1,
-  slidesToScroll: 1,
   accessibility: false,
   draggable: true,
   centerMode: false,
   arrows: true,
+  autoplay: false,
+  pauseOnHover: true,
+  autoplaySpeed: 2000,
   nextArrow: <NextArrow />,
   prevArrow: <PrevArrow />,
+  slidesToShow: 2,
+  slidesToScroll: 2,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
 }
 
 const ProjectDetail = ({ data }) => {
@@ -80,7 +92,7 @@ const ProjectDetail = ({ data }) => {
       "ProjectInfo"
       "ProjectMedia";
     gap: 3rem 0rem;
-    padding: 0 3rem 3rem;
+    padding: 0 2rem 2rem;
     ${media.tablet`
       padding: 0 5rem 5rem;
     `};
@@ -90,24 +102,28 @@ const ProjectDetail = ({ data }) => {
   `
   const ProjectInfo = styled.div`
     grid-area: ProjectInfo;
+    display: grid;
     justify-self: center;
   `
   const ProjectMedia = styled.div`
     grid-area: ProjectMedia;
-    align-items: center;
     justify-self: center;
   `
   const SliderWrapper = styled.div`
-    width: 60vw;
-    align-self: center;
-    justify-self: center;
+    width: 80vw;
+    ${media.tablet`
+      width: 75vw;
+    `};
+    ${media.laptopL`
+      width: 70vw;
+    `};
   `
 
   return (
     <Layout>
       <Grid>
         <ProjectInfo>
-          <h1>{project.title}</h1>
+          <h3>{project.title}</h3>
           <p>{project.info.description}</p>
         </ProjectInfo>
         <ProjectMedia>
