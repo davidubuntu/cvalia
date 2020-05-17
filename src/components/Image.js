@@ -401,105 +401,105 @@ const Image = props => {
           }
         }
       }
-      yoga1: file(relativePath: { eq: "yoga/yoga-1.jpg" }) {
+      yogaShop1: file(relativePath: { eq: "yoga/yoga-shop-1.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2048, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      yoga2: file(relativePath: { eq: "yoga/yoga-2.jpg" }) {
+      yogaShop2: file(relativePath: { eq: "yoga/yoga-shop-2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2048, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      yoga3: file(relativePath: { eq: "yoga/yoga-3.jpg" }) {
+      yogaShop3: file(relativePath: { eq: "yoga/yoga-shop-3.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2048, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      yoga4: file(relativePath: { eq: "yoga/yoga-4.jpg" }) {
+      yogaShop4: file(relativePath: { eq: "yoga/yoga-shop-4.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2048, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      yoga5: file(relativePath: { eq: "yoga/yoga-5.jpg" }) {
+      yogaHall1: file(relativePath: { eq: "yoga/yoga-hall-1.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2048, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      yoga6: file(relativePath: { eq: "yoga/yoga-6.jpg" }) {
+      yogaHall2: file(relativePath: { eq: "yoga/yoga-hall-2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2048, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      yoga7: file(relativePath: { eq: "yoga/yoga-7.jpg" }) {
+      yogaHall3: file(relativePath: { eq: "yoga/yoga-hall-3.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2048, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      yoga8: file(relativePath: { eq: "yoga/yoga-8.jpg" }) {
+      yogaShala1: file(relativePath: { eq: "yoga/yoga-shala-1.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2048, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      yoga9: file(relativePath: { eq: "yoga/yoga-9.jpg" }) {
+      yogaShala2: file(relativePath: { eq: "yoga/yoga-shala-2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2048, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      yoga10: file(relativePath: { eq: "yoga/yoga-10.jpg" }) {
+      yogaShala3: file(relativePath: { eq: "yoga/yoga-shala-3.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2048, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      yoga11: file(relativePath: { eq: "yoga/yoga-11.jpg" }) {
+      yogaShala4: file(relativePath: { eq: "yoga/yoga-shala-4.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2048, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      yoga12: file(relativePath: { eq: "yoga/yoga-12.jpg" }) {
+      yogaTea1: file(relativePath: { eq: "yoga/yoga-tea-1.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2048, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      yoga13: file(relativePath: { eq: "yoga/yoga-13.jpg" }) {
+      yogaTea2: file(relativePath: { eq: "yoga/yoga-tea-2.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2048, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      yoga14: file(relativePath: { eq: "yoga/yoga-14.jpg" }) {
+      yogaTea3: file(relativePath: { eq: "yoga/yoga-tea-3.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2048, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      yoga15: file(relativePath: { eq: "yoga/yoga-15.jpg" }) {
+      yogaTea4: file(relativePath: { eq: "yoga/yoga-tea-4.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2048, quality: 100) {
             ...GatsbyImageSharpFluid
