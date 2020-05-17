@@ -1,6 +1,7 @@
 ---
 pageKey: project-detail
 slug: margot
+position: 3
 title: Margot House
 image: margot5
 info:

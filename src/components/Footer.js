@@ -18,8 +18,8 @@ const FooterWrapper = styled.footer`
   text-align: center;
   padding: calc((0.4rem + 0.5vw) * 6) 2rem;
   ${media.tablet`
-padding: calc((0.4rem + 0.5vw) * 1.75) 6rem;
-`}
+    padding: calc((0.4rem + 0.5vw) * 1.75) 6rem;
+ `}
 `
 const FooterMain = styled.div`
   display: flex;

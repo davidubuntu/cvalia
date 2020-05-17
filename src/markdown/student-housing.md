@@ -1,6 +1,7 @@
 ---
 pageKey: project-detail
 slug: student-housing
+position: 6
 title: Student Housing
 image: studentHouseSharingRoom
 info:

@@ -1,6 +1,7 @@
 ---
 pageKey: project-detail
 slug: yoga
+position: 2
 title: Yoga Shala
 image: yoga23
 info:

@@ -1,6 +1,7 @@
 ---
 pageKey: project-detail
 slug: imperial
+position: 1
 title: Imperial Flat
 image: imperial1
 info:

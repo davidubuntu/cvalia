@@ -1,6 +1,7 @@
 ---
 pageKey: project-detail
 slug: high-school
+position: 4
 title: High School
 image: highSchool3
 info:

@@ -1,6 +1,7 @@
 ---
 pageKey: project-detail
 slug: spa
+position: 5
 title: Spa Balneary
 image: spa3
 info:
