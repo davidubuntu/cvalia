@@ -62,7 +62,7 @@ const ProjectDetail = ({ data }) => {
   useEffect(() => {
     setInitialImages(images)
     setFilteredImages(images)
-  }, [])
+  }, [images])
 
   const handleFilter = filter => {
     const filterType = filter.toUpperCase()
