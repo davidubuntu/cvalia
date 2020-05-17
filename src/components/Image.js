@@ -394,6 +394,111 @@ const Image = props => {
           }
         }
       }
+      yoga1: file(relativePath: { eq: "yoga/yoga-1.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      yoga2: file(relativePath: { eq: "yoga/yoga-2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      yoga3: file(relativePath: { eq: "yoga/yoga-3.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      yoga4: file(relativePath: { eq: "yoga/yoga-4.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      yoga5: file(relativePath: { eq: "yoga/yoga-5.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      yoga6: file(relativePath: { eq: "yoga/yoga-6.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      yoga7: file(relativePath: { eq: "yoga/yoga-7.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      yoga8: file(relativePath: { eq: "yoga/yoga-8.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      yoga9: file(relativePath: { eq: "yoga/yoga-9.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      yoga10: file(relativePath: { eq: "yoga/yoga-10.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      yoga11: file(relativePath: { eq: "yoga/yoga-11.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      yoga12: file(relativePath: { eq: "yoga/yoga-12.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      yoga13: file(relativePath: { eq: "yoga/yoga-13.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      yoga14: file(relativePath: { eq: "yoga/yoga-14.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      yoga15: file(relativePath: { eq: "yoga/yoga-15.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
   console.log("filenamww", filename)
