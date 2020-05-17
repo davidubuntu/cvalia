@@ -24,4 +24,13 @@ images:
   - name: yogaTea2
   - name: yogaTea3
   - name: yogaTea4
+filters:
+  - type: shop
+    name: Entrance Shop
+  - type: hall
+    name: Hall
+  - type: shala
+    name: Shala Yoga
+  - type: tea
+    name: Tea Room
 ---

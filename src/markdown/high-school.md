@@ -24,4 +24,19 @@ images:
   - name: highSchoolPlan2
   - name: highSchoolPlan3
   - name: highSchoolPlan4
+filters:
+  - type: Buffet
+    name: Buffet
+  - type: ClassRoom
+    name: Class Room
+  - type: Laboratory
+    name: Laboratory
+  - type: Library
+    name: Library
+  - type: RestRoom
+    name: Rest room
+  - type: Workshop
+    name: Work Shop
+  - type: Plan
+    name: Plan
 ---

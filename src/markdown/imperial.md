@@ -17,16 +17,29 @@ images:
   - name: imperialLivingRoom2
   - name: imperialLivingRoom3
   - name: imperialLivingRoom4
-  - name: imperialRoom1
-  - name: imperialRoom2
-  - name: imperialRoom3
-  - name: imperialRoom4
-  - name: imperialRoom5
-  - name: imperialRoom6
-  - name: imperialRoom7
+  - name: imperialBedRoom1
+  - name: imperialBedRoom2
+  - name: imperialBedRoom3
+  - name: imperialBedRoom4
+  - name: imperialBedRoom5
+  - name: imperialBedRoom6
+  - name: imperialBedRoom7
   - name: imperialBathroom1
   - name: imperialBathroom2
   - name: imperialBathroom3
   - name: imperialToilet
   - name: imperialPlan
+filters:
+  - type: bathroom
+    name: Bath
+  - type: kitchen
+    name: kitchen
+  - type: livingroom
+    name: Living Room
+  - type: bedroom
+    name: Room
+  - type: toilet
+    name: Toilet
+  - type: plan
+    name: Plan
 ---

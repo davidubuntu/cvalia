@@ -17,18 +17,10 @@ const Grid = styled.div`
     "main";
   padding: 0 3rem 3rem;
   ${media.tablet`
-    /* grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-    "filters ."
-    "main main"; */
     gap: 1rem;
     padding: 0 5rem 5rem;
   `};
   ${media.laptopL`
-    /* grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-    "filters . ."
-    "main main main"; */
     gap: 1rem;
     padding: 0 10rem 10rem;
   `};
@@ -46,49 +38,16 @@ const Main = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows: repeat(6, 1fr);
   gap: 3rem 3rem;
-  /* grid-template-areas:
-    "project1"
-    "project2"
-    "project3"
-    "project4"
-    "project5"
-    "project6"; */
   ${media.tablet`
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 4rem 4rem;
-    /* grid-template-areas:
-      "project1 project2"
-      "project4 project3"
-      "project5 project6"; */
   `};
   ${media.laptopL`
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 6rem 6rem;
-    /* grid-template-areas:
-      "project1 project2 project3"
-      "project4 project5 project6"; */
   `};
-
-  /* .project1 {
-    grid-area: project1;
-  }
-  .project2 {
-    grid-area: project2;
-  }
-  .project3 {
-    grid-area: project3;
-  }
-  .project4 {
-    grid-area: project4;
-  }
-  .project5 {
-    grid-area: project5;
-  }
-  .project6 {
-    grid-area: project6;
-  } */
 `
 
 const Project = styled.div``

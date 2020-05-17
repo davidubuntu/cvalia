@@ -1,16 +1,18 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Image from "../components/Image"
 import styled from "styled-components"
 import media from "../styles/media"
 import SliderImages from "../components/SliderImages"
+import { StyledButton } from "../components/common/StyledLink"
 
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-template-areas:
+    "ProjectFilters"
     "ProjectMedia"
     "ProjectInfo";
   gap: 3rem 0rem;
@@ -40,17 +42,55 @@ const SliderWrapper = styled.div`
     width: 55vw;
   `};
 `
+const Filters = styled.div`
+  grid-area: ProjectFilters;
+  gap: 0.2rem;
+  font-family: "Montserrat-Light";
+  margin: 1rem 0;
+  display: grid;
+  span {
+    margin: 0 3rem;
+  }
+`
 
 const ProjectDetail = ({ data }) => {
+  const [initialImages, setInitialImages] = useState([])
+  const [filteredImages, setFilteredImages] = useState([])
   const project = data.markdownRemark.frontmatter
+  const filters = project.filters
   const images = project.images
+  useEffect(() => {
+    setInitialImages(images)
+    setFilteredImages(images)
+  }, [])
+
+  const handleFilter = filter => {
+    const filterType = filter.toUpperCase()
+    debugger
+    if (filterType === "ALL") {
+      setFilteredImages(initialImages)
+    } else {
+      const filteredImages = initialImages.filter(image => {
+        return image.name.toUpperCase().includes(filterType)
+      })
+      setFilteredImages(filteredImages)
+    }
+  }
+
   return (
     <Layout>
       <Grid>
+        <Filters>
+          {filters.map(f => (
+            <StyledButton key={f.type} onClick={() => handleFilter(f.type)}>
+              {f.name}
+            </StyledButton>
+          ))}
+        </Filters>
         <ProjectMedia>
           <SliderWrapper>
             <SliderImages>
-              {images.map(image => (
+              {filteredImages.map(image => (
                 <Image key={image.name} filename={image.name} />
               ))}
             </SliderImages>
@@ -80,6 +120,10 @@ export const query = graphql`
         }
         images {
           name
+        }
+        filters {
+          name
+          type
         }
       }
     }

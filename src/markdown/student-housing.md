@@ -17,4 +17,9 @@ images:
   - name: imperialLivingRoom2
   - name: imperialLivingRoom3
   - name: imperialLivingRoom4
+filters:
+  - type: LivingRoom
+    name: Living Room
+  - type: Kitchen
+    name: Kitchen
 ---

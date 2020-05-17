@@ -93,12 +93,12 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
 
   const handleClickNav = () => {
-    setNavbarOpen(false)
+    setNavbarOpen(!navbarOpen)
   }
   return (
     <Navigation open={navbarOpen}>
       <Logo />
-      <ToggleBox onClick={() => setNavbarOpen(!navbarOpen)}>
+      <ToggleBox onClick={handleClickNav}>
         <Toggle navbarOpen={navbarOpen}>
           {navbarOpen ? <Hamburger open /> : <Hamburger />}
         </Toggle>
@@ -110,7 +110,7 @@ const Navbar = () => {
         </Navbox>
       ) : (
         <Navbox open>
-          <NavbarLinks handleClick={handleClickNav} />
+          <NavbarLinks />
         </Navbox>
       )}
     </Navigation>
