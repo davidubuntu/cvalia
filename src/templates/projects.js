@@ -66,7 +66,6 @@ const ProjectDetail = ({ data }) => {
 
   const handleFilter = filter => {
     const filterType = filter.toUpperCase()
-    debugger
     if (filterType === "ALL") {
       setFilteredImages(initialImages)
     } else {

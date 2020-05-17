@@ -105,7 +105,7 @@ const SliderImages = ({ children }, props) => {
     speed: 500,
     infinite: true,
     autoplay: false,
-    lazyLoad: false,
+    lazyLoad: true,
     accessibility: false,
     draggable: true,
     centerMode: false,
