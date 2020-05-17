@@ -9,7 +9,7 @@ const links = [
   { slug: "/contact", page: "Contact", status: false },
 ]
 
-const NavbarLinks = () => {
+const NavbarLinks = {handleClick} => {
   return (
     <>
       {links.map(({ slug, page, status }) => (
@@ -18,6 +18,7 @@ const NavbarLinks = () => {
           activeClassName="activeLink"
           partiallyActive={status}
           to={slug}
+          onClick={handleClick}
         >
           {page}
           <Line className="line"></Line>

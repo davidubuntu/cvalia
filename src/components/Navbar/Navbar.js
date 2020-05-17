@@ -92,6 +92,9 @@ const Hamburger = styled.div`
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
 
+  const handleClickNav = () => {
+    setNavbarOpen(false)
+  }
   return (
     <Navigation open={navbarOpen}>
       <Logo />
@@ -103,11 +106,11 @@ const Navbar = () => {
 
       {navbarOpen ? (
         <Navbox>
-          <NavbarLinks />
+          <NavbarLinks handleClick={handleClickNav} />
         </Navbox>
       ) : (
         <Navbox open>
-          <NavbarLinks />
+          <NavbarLinks handleClick={handleClickNav} />
         </Navbox>
       )}
     </Navigation>
