@@ -12,7 +12,7 @@ const Navigation = styled.nav`
   transition: all 0.5s cubic-bezier(0.79, 0.14, 0.15, 0.86);
 
   @media (max-width: 768px) {
-    position: fixed;
+    position: ${props => (props.open ? "fixed" : "")};
     justify-content: space-between;
     padding: 2rem;
     height: 8vh;
@@ -93,7 +93,7 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
 
   return (
-    <Navigation>
+    <Navigation open={navbarOpen}>
       <Logo />
       <ToggleBox onClick={() => setNavbarOpen(!navbarOpen)}>
         <Toggle navbarOpen={navbarOpen}>

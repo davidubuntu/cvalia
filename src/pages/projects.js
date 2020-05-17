@@ -6,6 +6,7 @@ import styled from "styled-components"
 import Image from "../components/Image"
 import { StyledLink, StyledButton } from "../components/common/StyledLink"
 import media from "../styles/media"
+import { Link } from "gatsby"
 
 const Grid = styled.div`
   display: grid;
@@ -146,7 +147,9 @@ const Projects = ({ data }) => {
             .map((project, i) => {
               return (
                 <Project key={project.title} className={`project${i + 1}`}>
-                  <Image alt={project.title} filename={project.image} />
+                  <Link to={`/projects/${project.slug}`}>
+                    <Image alt={project.title} filename={project.image} />
+                  </Link>
                   <ProjectInfo>
                     <StyledLink to={`/projects/${project.slug}`}>
                       {project.title}

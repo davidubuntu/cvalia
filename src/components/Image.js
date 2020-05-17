@@ -557,7 +557,7 @@ const Image = props => {
       }
     }
   `)
-  console.log("filenamww", filename)
+
   const imageObject = data[`${filename}`].childImageSharp
   const typeImage = imageObject.hasOwnProperty("fluid") ? "fluid" : "fixed"
 

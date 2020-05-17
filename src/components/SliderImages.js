@@ -57,7 +57,9 @@ const SliderBox = styled.div`
     align-items: center;
   }
   .slick-dots li {
-    margin: 0;
+    margin: 0 1px;
+    height: 15px;
+    width: 15px;
   }
   ${media.tablet`
     .slick-dots li {
