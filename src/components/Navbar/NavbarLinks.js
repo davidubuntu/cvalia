@@ -9,7 +9,7 @@ const links = [
   { slug: "/contact", page: "Contact", status: false },
 ]
 
-const NavbarLinks = {handleClick} => {
+const NavbarLinks = ({ handleClick }) => {
   return (
     <>
       {links.map(({ slug, page, status }) => (
