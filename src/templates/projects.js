@@ -115,7 +115,7 @@ const ProjectDetail = ({ data }) => {
       width: 75vw;
     `};
     ${media.laptopL`
-      width: 52vw;
+      width: 55vw;
     `};
   `
 

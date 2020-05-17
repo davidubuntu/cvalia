@@ -1,4 +1,4 @@
-import React from "react"
+import React, { createRef } from "react"
 import styled from "styled-components"
 import media from "../styles/media"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -10,6 +10,8 @@ import {
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+
+const customSlider = createRef()
 
 const CustomSlideButton = styled.div`
   display: none;
@@ -32,6 +34,44 @@ const CustomSlideButton = styled.div`
     left: ${props => props.left && "-10rem"};
  `};
 `
+
+const SliderButton = styled.div`
+  display: none;
+  position: absolute;
+
+  ${media.tablet`
+    display: block;
+    right: ${props => props.right && "3rem"};
+    left: ${props => props.left && "3rem"};
+  `};
+  ${media.laptopL`
+    display: block;
+    right: ${props => props.right && "10rem"};
+    left: ${props => props.left && "10rem"};
+  `};
+`
+
+const SliderBox = styled.div`
+  .slick-track {
+    display: flex;
+    align-items: center;
+  }
+  .slick-dots li {
+    margin: 0;
+  }
+  ${media.tablet`
+    .slick-dots li {
+      margin: 0 3px;
+    }
+  `};
+
+  ${media.laptopL`
+    .slick-dots li {
+      margin: 0 5px;
+    }
+  `};
+`
+
 const NextArrow = props => {
   const { className, onClick } = props
   return (
@@ -51,10 +91,10 @@ const PrevArrow = props => {
 
 const SliderImages = ({ children }, props) => {
   const next = () => {
-    // slider.slickNext()
+    customSlider.current.slickNext()
   }
   const previous = () => {
-    // slider.slickPrev()
+    customSlider.current.slickPrev()
   }
 
   const settings = {
@@ -85,9 +125,17 @@ const SliderImages = ({ children }, props) => {
     ],
   }
   return (
-    <Slider {...settings} className="overflow-hidden">
-      {children}
-    </Slider>
+    <SliderBox>
+      <Slider {...settings} className="overflow-hidden" ref={customSlider}>
+        {children}
+      </Slider>
+      {/* <SliderButton onClick={() => previous()} left>
+        <FontAwesomeIcon icon={faChevronLeft} />
+      </SliderButton>
+      <SliderButton onClick={() => next()} right>
+        <FontAwesomeIcon icon={faChevronRight} />
+      </SliderButton> */}
+    </SliderBox>
   )
 }
 
