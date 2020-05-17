@@ -141,19 +141,21 @@ const Projects = ({ data }) => {
           ))}
         </Filters>
         <Main>
-          {filteredProjects.map((project, i) => {
-            return (
-              <Project key={project.title} className={`project${i + 1}`}>
-                <Image alt={project.title} filename={project.image} />
-                <ProjectInfo>
-                  <StyledLink to={`/projects/${project.slug}`}>
-                    {project.title}
-                  </StyledLink>
-                  <span>{project.info.place}</span>
-                </ProjectInfo>
-              </Project>
-            )
-          })}
+          {filteredProjects
+            .sort((a, b) => a.position - b.position)
+            .map((project, i) => {
+              return (
+                <Project key={project.title} className={`project${i + 1}`}>
+                  <Image alt={project.title} filename={project.image} />
+                  <ProjectInfo>
+                    <StyledLink to={`/projects/${project.slug}`}>
+                      {project.title}
+                    </StyledLink>
+                    <span>{project.info.place}</span>
+                  </ProjectInfo>
+                </Project>
+              )
+            })}
         </Main>
       </Grid>
     </Layout>
@@ -176,6 +178,7 @@ export const query = graphql`
             title
             image
             slug
+            position
             info {
               place
               type
