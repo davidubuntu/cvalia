@@ -100,6 +100,7 @@ const SliderImages = ({ children }, props) => {
   const settings = {
     dots: true,
     fade: false,
+    speed: 500,
     infinite: true,
     autoplay: false,
     lazyLoad: true,

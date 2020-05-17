@@ -160,6 +160,105 @@ const Image = props => {
           }
         }
       }
+      imperialRoom1: file(
+        relativePath: { eq: "imperial/imperial-room-1.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      imperialRoom2: file(
+        relativePath: { eq: "imperial/imperial-room-2.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      imperialRoom3: file(
+        relativePath: { eq: "imperial/imperial-room-3.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      imperialRoom4: file(
+        relativePath: { eq: "imperial/imperial-room-4.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      imperialRoom5: file(
+        relativePath: { eq: "imperial/imperial-room-5.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      imperialRoom6: file(
+        relativePath: { eq: "imperial/imperial-room-6.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      imperialBathroom1: file(
+        relativePath: { eq: "imperial/imperial-bathroom-1.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      imperialBathroom2: file(
+        relativePath: { eq: "imperial/imperial-bathroom-2.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      imperialBathroom3: file(
+        relativePath: { eq: "imperial/imperial-bathroom-3.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      imperialToilet: file(
+        relativePath: { eq: "imperial/imperial-toilet.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      imperialRoom7: file(
+        relativePath: { eq: "imperial/imperial-room-7.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       highSchoolBuffet1: file(
         relativePath: { eq: "high-school/high-school-buffet-1.jpg" }
       ) {

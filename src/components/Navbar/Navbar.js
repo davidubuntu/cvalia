@@ -12,6 +12,7 @@ const Navigation = styled.nav`
   transition: all 0.5s cubic-bezier(0.79, 0.14, 0.15, 0.86);
 
   @media (max-width: 768px) {
+    position: fixed;
     justify-content: space-between;
     padding: 2rem;
     height: 8vh;

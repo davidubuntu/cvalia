@@ -16,4 +16,15 @@ images:
   - name: imperialLivingRoom2
   - name: imperialLivingRoom3
   - name: imperialLivingRoom4
+  - name: imperialRoom1
+  - name: imperialRoom2
+  - name: imperialRoom3
+  - name: imperialRoom4
+  - name: imperialRoom5
+  - name: imperialRoom6
+  - name: imperialRoom7
+  - name: imperialBathroom1
+  - name: imperialBathroom2
+  - name: imperialBathroom3
+  - name: imperialToilet
 ---

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Claduia Valia Portfolio`,
+    title: `Claudia Valia Portfolio`,
     description: `Interior Designer Portfolio`,
     author: `David Diez`,
   },
