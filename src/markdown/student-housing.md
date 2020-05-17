@@ -3,7 +3,7 @@ pageKey: project-detail
 slug: student-housing
 position: 6
 title: Student Housing
-image: studentHouseSharingRoom
+image: studentHousingMain
 info:
   type: education
   place: Segovia

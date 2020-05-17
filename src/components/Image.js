@@ -44,43 +44,43 @@ const Image = props => {
           }
         }
       }
-      imperial1: file(relativePath: { eq: "imperial-1.jpg" }) {
+      imperialMain: file(relativePath: { eq: "imperial-main.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2048, maxHeight: 2048, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      margot5: file(relativePath: { eq: "margot-5.jpg" }) {
+      margotMain: file(relativePath: { eq: "margot-main.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2048, maxHeight: 2048, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      yoga23: file(relativePath: { eq: "yoga-23.jpg" }) {
+      yogaMain: file(relativePath: { eq: "yoga-main.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2048, maxHeight: 2048, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      spa3: file(relativePath: { eq: "spa-3.jpg" }) {
+      spaMain: file(relativePath: { eq: "spa-main.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2048, maxHeight: 2048, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      highSchool3: file(relativePath: { eq: "high-school-3.jpg" }) {
+      highSchoolMain: file(relativePath: { eq: "high-school-main.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2048, maxHeight: 2048, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      studentHouseSharingRoom: file(
-        relativePath: { eq: "student-house-sharing-room.jpg" }
+      studentHousingMain: file(
+        relativePath: { eq: "student-housing-main.jpg" }
       ) {
         childImageSharp {
           fluid(maxWidth: 2048, maxHeight: 2048, quality: 100) {
@@ -244,6 +244,13 @@ const Image = props => {
       imperialToilet: file(
         relativePath: { eq: "imperial/imperial-toilet.jpg" }
       ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      imperialPlan: file(relativePath: { eq: "imperial/imperial-plan.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2048, quality: 100) {
             ...GatsbyImageSharpFluid
@@ -493,6 +500,55 @@ const Image = props => {
         }
       }
       yoga15: file(relativePath: { eq: "yoga/yoga-15.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      margot1: file(relativePath: { eq: "margot/margot-1.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      margot2: file(relativePath: { eq: "margot/margot-2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      margot3: file(relativePath: { eq: "margot/margot-3.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      margot4: file(relativePath: { eq: "margot/margot-4.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      margot5: file(relativePath: { eq: "margot/margot-5.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      margot6: file(relativePath: { eq: "margot/margot-6.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      spa1: file(relativePath: { eq: "spa/spa-1.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2048, quality: 100) {
             ...GatsbyImageSharpFluid

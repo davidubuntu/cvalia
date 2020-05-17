@@ -3,7 +3,7 @@ pageKey: project-detail
 slug: imperial
 position: 1
 title: Imperial Flat
-image: imperial1
+image: imperialMain
 info:
   type: residential
   place: Madrid
@@ -28,4 +28,5 @@ images:
   - name: imperialBathroom2
   - name: imperialBathroom3
   - name: imperialToilet
+  - name: imperialPlan
 ---
