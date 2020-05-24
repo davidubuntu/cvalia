@@ -106,19 +106,26 @@ const FilterButton = styled.a`
   text-align: center;
   min-width: max-content;
   border: none;
-  padding: 0.8rem;
+  padding: 0.2rem;
   letter-spacing: 0.2rem;
   cursor: pointer;
-  font-family: "Montserrat-SemiBold";
   &:hover {
     border: none;
   }
+  ${props =>
+    props.selected &&
+    css`
+      font-family: "Montserrat-SemiBold";
+    `}
   ${media.tablet`
     font-size: 10px; 
     border: 1px solid #c1bab0;
     border-radius: 0.5rem;
     padding: 0.5rem 0.9rem;
     font-family: "Montserrat-Light";
+    &:hover {
+      border: none;
+    }
     ${props =>
       props.selected &&
       css`
@@ -134,6 +141,9 @@ const FilterButton = styled.a`
     border-radius: 0.5rem;
     padding: 0.5rem 0.9rem;  
     font-family: "Montserrat-Light";
+    &:hover {
+      border: none;
+    }
     ${props =>
       props.selected &&
       css`
