@@ -13,4 +13,6 @@ images:
 filters:
   - type: spa
     name: Spa
+  - type: All
+    name: All
 ---

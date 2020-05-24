@@ -42,4 +42,6 @@ filters:
     name: Toilet
   - type: plan
     name: Plan
+  - type: All
+    name: All
 ---

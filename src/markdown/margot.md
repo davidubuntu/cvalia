@@ -26,4 +26,6 @@ filters:
     name: Living Room
   - type: PlaySpace
     name: Play Space
+  - type: All
+    name: All
 ---

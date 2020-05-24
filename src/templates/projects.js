@@ -123,7 +123,7 @@ const FilterButton = styled.a`
       props.selected &&
       css`
         border-radius: 0.5rem;
-        background-color: #b2afac;
+        background-color: #676665;
         color: white;
         font-family: "Montserrat-SemiBold";
       `}
@@ -139,7 +139,7 @@ const FilterButton = styled.a`
       css`
         border-radius: 0.5rem;
         border: none;
-        background-color: #b2afac;
+        background-color: #676665;
         color: white;
         font-family: "Montserrat-SemiBold";
       `}

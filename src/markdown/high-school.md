@@ -39,4 +39,6 @@ filters:
     name: Work Shop
   - type: Plan
     name: Plan
+  - type: All
+    name: All
 ---

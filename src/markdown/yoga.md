@@ -33,4 +33,6 @@ filters:
     name: Shala Yoga
   - type: tea
     name: Tea Room
+  - type: All
+    name: All
 ---

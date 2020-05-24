@@ -565,6 +565,219 @@ const Image = props => {
           }
         }
       }
+      studentHousingRoom1: file(
+        relativePath: { eq: "student-housing/student-housing-room-1.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      studentHousingRoom2: file(
+        relativePath: { eq: "student-housing/student-housing-room-2.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      studentHousingRoom3: file(
+        relativePath: { eq: "student-housing/student-housing-room-3.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      studentHousingRoom4: file(
+        relativePath: { eq: "student-housing/student-housing-room-4.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      studentHousingCanteen1: file(
+        relativePath: { eq: "student-housing/student-housing-canteen-1.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      studentHousingCanteen2: file(
+        relativePath: { eq: "student-housing/student-housing-canteen-2.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      studentHousingCanteen3: file(
+        relativePath: { eq: "student-housing/student-housing-canteen-3.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      studentHousingPlan1: file(
+        relativePath: { eq: "student-housing/student-housing-plan-1.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      studentHousingPlan2: file(
+        relativePath: { eq: "student-housing/student-housing-plan-2.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      studentHousingPlan3: file(
+        relativePath: { eq: "student-housing/student-housing-plan-3.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      studentHousingPlan4: file(
+        relativePath: { eq: "student-housing/student-housing-plan-4.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      studentHousingPlan5: file(
+        relativePath: { eq: "student-housing/student-housing-plan-5.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      studentHousingPlan6: file(
+        relativePath: { eq: "student-housing/student-housing-plan-6.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      studentHousingPlan7: file(
+        relativePath: { eq: "student-housing/student-housing-plan-7.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      studentHousingHall1: file(
+        relativePath: { eq: "student-housing/student-housing-hall-1.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      studentHousingHall2: file(
+        relativePath: { eq: "student-housing/student-housing-hall-2.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      studentHousingHall3: file(
+        relativePath: { eq: "student-housing/student-housing-hall-3.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      studentHousingCommonArea1: file(
+        relativePath: {
+          eq: "student-housing/student-housing-common-area-1.jpg"
+        }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      studentHousingCommonArea2: file(
+        relativePath: {
+          eq: "student-housing/student-housing-common-area-2.jpg"
+        }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      studentHousingCommonArea3: file(
+        relativePath: {
+          eq: "student-housing/student-housing-common-area-3.jpg"
+        }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      studentHousingBoxRoom1: file(
+        relativePath: { eq: "student-housing/student-housing-box-room-1.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      studentHousingBoxRoom2: file(
+        relativePath: { eq: "student-housing/student-housing-box-room-2.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      studentHousingBoxRoom3: file(
+        relativePath: { eq: "student-housing/student-housing-box-room-3.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
