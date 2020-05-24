@@ -15,7 +15,7 @@ const Grid = styled.div`
     "media"
     "title"
     "info";
-  padding: 0 2rem 2rem;
+  padding: 1rem 2rem 0;
   gap: 3rem;
   ${media.tablet`
       gap: 4rem 0rem;

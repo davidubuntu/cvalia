@@ -9,10 +9,10 @@ info:
   place: Segovia
   description: Irony, humor and some eroticism are the concepts behind Marcel Wanders most recent project. An indulgent luxury hotel where guests are rejuvenated through a pampered recreation of new Iberostar Grand Hotel Portals Nous in Mallorca. Located on a magnificent beach, this luxurious design uses transparencies, whites and reflective surfaces to create a flow of openness. Emphasizing craft and modern design, the Mallorquin style is reinforced, inspiring guests with the scenery of Spain.
 images:
+  - name: studentHousingRoom4
   - name: studentHousingRoom1
   - name: studentHousingRoom2
   - name: studentHousingRoom3
-  - name: studentHousingRoom4
   - name: studentHousingCanteen1
   - name: studentHousingCanteen2
   - name: studentHousingCanteen3

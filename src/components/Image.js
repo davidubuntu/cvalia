@@ -558,7 +558,70 @@ const Image = props => {
           }
         }
       }
-      spa1: file(relativePath: { eq: "spa/spa-1.jpg" }) {
+      spaPool1: file(relativePath: { eq: "spa/spa-pool-1.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      spaPool2: file(relativePath: { eq: "spa/spa-pool-2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      spaPool3: file(relativePath: { eq: "spa/spa-pool-3.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      spaHall1: file(relativePath: { eq: "spa/spa-hall-1.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      spaHall2: file(relativePath: { eq: "spa/spa-hall-2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      spaHall3: file(relativePath: { eq: "spa/spa-hall-3.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      spaPlan1: file(relativePath: { eq: "spa/spa-plan-1.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      spaPlan2: file(relativePath: { eq: "spa/spa-plan-2.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      spaPlan3: file(relativePath: { eq: "spa/spa-plan-3.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      spaPlan4: file(relativePath: { eq: "spa/spa-plan-4.png" }) {
         childImageSharp {
           fluid(maxWidth: 2048, quality: 100) {
             ...GatsbyImageSharpFluid
