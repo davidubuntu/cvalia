@@ -16,7 +16,7 @@ const customSlider = createRef()
 const CustomSlideButton = styled.div`
   display: none;
   .svg-inline--fa.fa-w-10 {
-    color: #41413c;
+    color: #676665;
     height: 20px;
     width: 20px;
   }
@@ -58,18 +58,37 @@ const SliderBox = styled.div`
   }
   .slick-dots li {
     margin: 0;
-    height: 15px;
-    width: 15px;
+    height: 10px;
+    width: 10px;
   }
+  ${media.mobileM`
+    .slick-dots li {
+    margin: 0 0.5px;
+    height: 12px;
+    width: 12px;
+    }
+  `};
+  ${media.mobileL`
+    .slick-dots li {
+    margin: 0 1px;
+    height: 12px;
+    width: 12px;
+    }
+  `};
+
   ${media.tablet`
     .slick-dots li {
       margin: 0 3px;
+      height: 15px;
+      width: 15px;
     }
   `};
 
   ${media.laptopL`
     .slick-dots li {
       margin: 0 5px;
+      height: 15px;
+      width: 15px;
     }
   `};
 `

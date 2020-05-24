@@ -79,7 +79,7 @@ const Filters = styled.div`
   grid-area: filters;
   display: grid;
   height: 100%;
-  gap: 0rem;
+  gap: 1rem;
   grid-template-columns: auto;
   grid-auto-flow: column;
   align-items: center;
@@ -180,7 +180,7 @@ const ProjectDetail = ({ data }) => {
       setFilteredImages(filteredImages)
     }
   }
-  console.log(selectedFilter, filters)
+
   return (
     <Layout>
       <Grid>

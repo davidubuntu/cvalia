@@ -19,6 +19,8 @@
     "gatsby-plugin-sass": "^2.2.4",
     "gatsby-plugin-sharp": "^2.5.7",
     "gatsby-plugin-styled-components": "^3.3.0",
+    "gatsby-remark-images": "^3.3.8",
+    "gatsby-remark-images-zoom": "^1.1.0",
     "gatsby-source-filesystem": "^2.2.5",
     "gatsby-transformer-remark": "^2.7.5",
     "gatsby-transformer-sharp": "^2.4.7",
@@ -33,7 +35,6 @@
     "react-slick": "^0.26.1",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.1.0",
-    "typeface-lato": "0.0.75",
     "typeface-montserrat": "0.0.75"
   },
   "devDependencies": {
