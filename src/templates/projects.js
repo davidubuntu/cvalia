@@ -12,45 +12,120 @@ const Grid = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-template-areas:
-    "ProjectFilters"
-    "ProjectMedia"
-    "ProjectInfo";
-  gap: 3rem 0rem;
+    "filters"
+    "media"
+    "title"
+    "info";
   padding: 0 2rem 2rem;
+  gap: 3rem;
   ${media.tablet`
-    padding: 0 5rem 5rem;
+      gap: 4rem 0rem;
+      padding: 0 5rem 5rem;
+      grid-template-areas:
+        "title"
+        "filters"
+        "media"
+        "info";
   `};
   ${media.laptopL`
+    gap: 4rem 0rem;
     padding: 0 10rem 10rem;
+    grid-template-areas:
+        "title"
+        "filters"
+        "media"
+        "info";
+  `};
+`
+
+const ProjectTitle = styled.div`
+  grid-area: title;
+  justify-self: left;
+  font-family: "Montserrat-Medium";
+  span {
+    font-size: 1rem;
+  }
+  ${media.tablet`
+    justify-self: center;
+    span {
+      font-size: 2rem;
+    }
+  `};
+  ${media.laptopL` 
+    justify-self: center;
+    span{
+        font-size: 2rem;
+      }
   `};
 `
 const ProjectInfo = styled.div`
-  grid-area: ProjectInfo;
+  grid-area: info;
   display: grid;
   justify-self: center;
 `
 const ProjectMedia = styled.div`
-  grid-area: ProjectMedia;
+  grid-area: media;
   justify-self: center;
 `
 const SliderWrapper = styled.div`
   width: 80vw;
   ${media.tablet`
-    width: 75vw;
-  `};
+      width: 75vw;
+    `};
   ${media.laptopL`
-    width: 55vw;
-  `};
+      width: 55vw;
+    `};
 `
 const Filters = styled.div`
-  grid-area: ProjectFilters;
-  gap: 0.2rem;
-  font-family: "Montserrat-Light";
-  margin: 1rem 0;
+  grid-area: filters;
   display: grid;
-  span {
-    margin: 0 3rem;
+  height: 100%;
+  gap: 0rem;
+  grid-template-columns: auto;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-self: center;
+  width: 80vw;
+  overflow-x: scroll;
+  ${media.tablet`
+     gap: 1.5rem;
+     overflow-x: hidden;
+     width: auto;
+  `};
+  ${media.laptopL`
+    gap: 1.5rem;
+    overflow-x: hidden;
+    width: auto;
+  `};
+`
+const FilterButton = styled.a`
+  font-size: 8px;
+  text-align: center;
+  min-width: max-content;
+  border: none;
+  padding: 0.8rem;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+  font-family: "Montserrat-SemiBold";
+  &:hover {
   }
+  &:visited {
+    color: var(--salmon);
+  }
+  ${media.tablet`
+    font-size: 10px; 
+    border: 1px solid #c1bab0;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.9rem;
+    font-family: "Montserrat-Light";
+  `};
+  ${media.laptopL`
+    font-size: 10px;
+    border: 1px solid #c1bab0;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.9rem;  
+    font-family: "Montserrat-Light";
+  `};
 `
 
 const ProjectDetail = ({ data }) => {
@@ -79,11 +154,14 @@ const ProjectDetail = ({ data }) => {
   return (
     <Layout>
       <Grid>
+        <ProjectTitle>
+          <span>{project.title}</span>
+        </ProjectTitle>
         <Filters>
           {filters.map(f => (
-            <StyledButton key={f.type} onClick={() => handleFilter(f.type)}>
-              {f.name}
-            </StyledButton>
+            <FilterButton key={f.type} onClick={() => handleFilter(f.type)}>
+              {f.name.toUpperCase()}
+            </FilterButton>
           ))}
         </Filters>
         <ProjectMedia>
@@ -96,7 +174,7 @@ const ProjectDetail = ({ data }) => {
           </SliderWrapper>
         </ProjectMedia>
         <ProjectInfo>
-          <h3>{project.title}</h3>
+          {/* <h3>{project.title}</h3> */}
           <p>{project.info.description}</p>
         </ProjectInfo>
       </Grid>
