@@ -2,10 +2,9 @@ import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Image from "../components/Image"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import media from "../styles/media"
 import SliderImages from "../components/SliderImages"
-import { StyledButton } from "../components/common/StyledLink"
 
 const Grid = styled.div`
   display: grid;
@@ -97,7 +96,11 @@ const Filters = styled.div`
     overflow-x: hidden;
     width: auto;
   `};
+  a:visited {
+    border: none;
+  }
 `
+
 const FilterButton = styled.a`
   font-size: 8px;
   text-align: center;
@@ -108,9 +111,7 @@ const FilterButton = styled.a`
   cursor: pointer;
   font-family: "Montserrat-SemiBold";
   &:hover {
-  }
-  &:visited {
-    color: var(--salmon);
+    border: none;
   }
   ${media.tablet`
     font-size: 10px; 
@@ -118,6 +119,14 @@ const FilterButton = styled.a`
     border-radius: 0.5rem;
     padding: 0.5rem 0.9rem;
     font-family: "Montserrat-Light";
+    ${props =>
+      props.selected &&
+      css`
+        border-radius: 0.5rem;
+        background-color: #b2afac;
+        color: white;
+        font-family: "Montserrat-SemiBold";
+      `}
   `};
   ${media.laptopL`
     font-size: 10px;
@@ -125,12 +134,22 @@ const FilterButton = styled.a`
     border-radius: 0.5rem;
     padding: 0.5rem 0.9rem;  
     font-family: "Montserrat-Light";
+    ${props =>
+      props.selected &&
+      css`
+        border-radius: 0.5rem;
+        border: none;
+        background-color: #b2afac;
+        color: white;
+        font-family: "Montserrat-SemiBold";
+      `}
   `};
 `
 
 const ProjectDetail = ({ data }) => {
   const [initialImages, setInitialImages] = useState([])
   const [filteredImages, setFilteredImages] = useState([])
+  const [selectedFilter, setSelectedFilter] = useState("ALL")
   const project = data.markdownRemark.frontmatter
   const filters = project.filters
   const images = project.images
@@ -141,6 +160,7 @@ const ProjectDetail = ({ data }) => {
 
   const handleFilter = filter => {
     const filterType = filter.toUpperCase()
+    setSelectedFilter(filterType)
     if (filterType === "ALL") {
       setFilteredImages(initialImages)
     } else {
@@ -150,7 +170,7 @@ const ProjectDetail = ({ data }) => {
       setFilteredImages(filteredImages)
     }
   }
-
+  console.log(selectedFilter, filters)
   return (
     <Layout>
       <Grid>
@@ -159,7 +179,11 @@ const ProjectDetail = ({ data }) => {
         </ProjectTitle>
         <Filters>
           {filters.map(f => (
-            <FilterButton key={f.type} onClick={() => handleFilter(f.type)}>
+            <FilterButton
+              selected={selectedFilter === f.type.toUpperCase()}
+              key={f.type}
+              onClick={() => handleFilter(f.type)}
+            >
               {f.name.toUpperCase()}
             </FilterButton>
           ))}
@@ -174,7 +198,6 @@ const ProjectDetail = ({ data }) => {
           </SliderWrapper>
         </ProjectMedia>
         <ProjectInfo>
-          {/* <h3>{project.title}</h3> */}
           <p>{project.info.description}</p>
         </ProjectInfo>
       </Grid>
