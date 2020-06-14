@@ -781,6 +781,15 @@ const Image = props => {
           }
         }
       }
+      studentHousingHall4: file(
+        relativePath: { eq: "student-housing/student-housing-hall-4.jpg" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       studentHousingCommonArea1: file(
         relativePath: {
           eq: "student-housing/student-housing-common-area-1.jpg"

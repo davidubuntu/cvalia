@@ -26,6 +26,7 @@ images:
   - name: studentHousingHall1
   - name: studentHousingHall2
   - name: studentHousingHall3
+  - name: studentHousingHall4
   - name: studentHousingCommonArea1
   - name: studentHousingCommonArea2
   - name: studentHousingCommonArea3
