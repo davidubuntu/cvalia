@@ -115,7 +115,7 @@ const FilterButton = styled.a`
   ${props =>
     props.selected &&
     css`
-      font-family: "Montserrat-SemiBold";
+      font-family: "Montserrat-Semi-Bold";
     `}
   ${media.tablet`
     font-size: 10px; 
@@ -132,7 +132,7 @@ const FilterButton = styled.a`
         border-radius: 0.5rem;
         background-color: #676665;
         color: white;
-        font-family: "Montserrat-SemiBold";
+        font-family: "Montserrat-Semi-Bold";
       `}
   `};
   ${media.laptopL`
@@ -151,7 +151,7 @@ const FilterButton = styled.a`
         border: none;
         background-color: #676665;
         color: white;
-        font-family: "Montserrat-SemiBold";
+        font-family: "Montserrat-Semi-Bold";
       `}
   `};
 `

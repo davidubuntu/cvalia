@@ -57,13 +57,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`montserrat\:300,600,700`],
-      },
-      display: "swap",
-    },
-    {
       resolve: `gatsby-plugin-env-variables`,
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
