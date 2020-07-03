@@ -1,5 +1,5 @@
 import React from "react"
-import "typeface-montserrat"
+
 import "../styles/index.scss"
 import PropTypes from "prop-types"
 import styled from "styled-components"
