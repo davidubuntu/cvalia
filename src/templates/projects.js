@@ -115,7 +115,7 @@ const FilterButton = styled.a`
   ${props =>
     props.selected &&
     css`
-      font-family: "Montserrat-Semi-Bold";
+      font-family: "Montserrat-Bold";
     `}
   ${media.tablet`
     font-size: 10px; 
