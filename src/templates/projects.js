@@ -160,9 +160,11 @@ const ProjectDetail = ({ data }) => {
   const [initialImages, setInitialImages] = useState([])
   const [filteredImages, setFilteredImages] = useState([])
   const [selectedFilter, setSelectedFilter] = useState("ALL")
+
   const project = data.markdownRemark.frontmatter
   const filters = project.filters
   const images = project.images
+  
   useEffect(() => {
     setInitialImages(images)
     setFilteredImages(images)
