@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
+import Text from "../components/Text"
 import Image from "../components/Image"
 import styled, { css } from "styled-components"
 import media from "../styles/media"
@@ -220,8 +221,7 @@ const ProjectDetail = ({ data }) => {
           </SliderWrapper>
         </ProjectMedia>
         <ProjectInfo>
-         <TextSplit text={project.info.description} />
-          {/* <p>{project.info.description}</p> */}
+         <Text markdownText={project.info.description} />
         </ProjectInfo>
       </Grid>
     </Layout>
