@@ -65,7 +65,7 @@ const ProjectInfo = styled.div`
   font-size: 13px;
 `
 
-const Projects = ({ data }) => {
+const ProjectsPage = ({ data }) => {
   const [projects, setProjects] = useState([])
   const [filteredProjects, setFilteredProjects] = useState([])
   useEffect(() => {
@@ -124,7 +124,7 @@ const Projects = ({ data }) => {
   )
 }
 
-export default Projects
+export default ProjectsPage
 
 export const query = graphql`
   query {

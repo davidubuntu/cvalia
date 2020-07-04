@@ -5,7 +5,6 @@ import { Link } from "gatsby"
 const links = [
   { slug: "/", page: "About", status: false },
   { slug: "/projects", page: "Projects", status: false },
-  { slug: "/news", page: "News", status: false },
   { slug: "/contact", page: "Contact", status: false },
 ]
 

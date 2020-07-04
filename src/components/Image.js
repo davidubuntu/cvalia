@@ -37,6 +37,13 @@ const Image = props => {
   } = props
   const data = useStaticQuery(graphql`
     query {
+      contactPhoto: file(relativePath: { eq: "contact-claudia.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2048, quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
       bgHome: file(relativePath: { eq: "bg-home.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 2048, quality: 100) {

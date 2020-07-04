@@ -4,6 +4,7 @@ import NavbarLinks from "./NavbarLinks"
 import Logo from "./Logo"
 
 const Navigation = styled.nav`
+  border-bottom: 1px solid #f2f2f2;
   height: 12vh;
   display: flex;
   position: relative;
