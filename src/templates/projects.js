@@ -182,6 +182,16 @@ const ProjectDetail = ({ data }) => {
       setFilteredImages(filteredImages)
     }
   }
+  
+  const TextSplit = ({text})=>{
+    return (
+      <>
+      {text.split("\n").map((i,key) => {
+        return <p key={key}>{i}</p>;
+      })}
+      </>
+    ) 
+  }
 
   return (
     <Layout>
@@ -210,7 +220,8 @@ const ProjectDetail = ({ data }) => {
           </SliderWrapper>
         </ProjectMedia>
         <ProjectInfo>
-          <p>{project.info.description}</p>
+         <TextSplit text={project.info.description} />
+          {/* <p>{project.info.description}</p> */}
         </ProjectInfo>
       </Grid>
     </Layout>

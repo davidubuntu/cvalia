@@ -7,7 +7,13 @@ image: yogaMain
 info:
   type: contract
   place: Madrid
-  description: Irony, humor and some eroticism are the concepts behind Marcel Wanders most recent project. An indulgent luxury hotel where guests are rejuvenated through a pampered recreation of new Iberostar Grand Hotel Portals Nous in Mallorca. Located on a magnificent beach, this luxurious design uses transparencies, whites and reflective surfaces to create a flow of openness. Emphasizing craft and modern design, the Mallorquin style is reinforced, inspiring guests with the scenery of Spain.
+  description:
+    Ashtanga yoga and teahouse for the "YOGI TEA" brand. The concept is creating a space of coexistence for yoga lovers, where they live their passion and then read in the library area sharing their experiences while having a cup of tea.
+
+    The design of the space aims the user to stop breathing and observe himself. It's a space created for daily work in oneself, growth and calm.Access through a reception and information point and a small tea store, mats and accessories for practice. Textiles are elements which hang generating theatricality in space and enhancing the great height of the ceilings.
+
+    Three arches open different paths to a more private lobby area, this space is created so that users can leave their belongings and change.The singularity of the building is made up of a very long rectangular space, which allows us to divide it into two, the shala where yoga is practiced and, on the other hand, the tearoom, a patio, the bathrooms and changing rooms and the private store and kitchen for the staff.
+
 images:
   - name: yogaShop1
   - name: yogaShop2
