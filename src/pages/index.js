@@ -7,6 +7,7 @@ import SEO from "../components/Seo"
 import Image from "../components/Image"
 import Map from "../components/Map"
 import ProgressBar from "../components/ProgressBar"
+import Text from "../components/Text"
 
 const SectionMain = styled.section``
 
@@ -120,12 +121,15 @@ const SkillsProgress = styled.div`
 `
 const SkillsDescription = styled.div`
   width: 100%;
-  padding: 4rem;
+  padding: 3rem 4rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   line-height: 2;
+  p{
+    margin-top:0;
+  }
   ${media.laptopL`
     width: 50%;
   `}
@@ -206,7 +210,9 @@ const IndexPage = ({ data }) => {
             ))}
           </ProgressBarWrapper>
         </SkillsProgress>
-        <SkillsDescription>{skills.description}</SkillsDescription>
+        <SkillsDescription>
+          <Text markdownText={skills.description}/>
+        </SkillsDescription>
       </SectionSkills>
     </Layout>
   )

@@ -13,10 +13,9 @@ map:
 skills:
   title: MY SKILLS
   description:
-     I am currently working as an interior designer in DOCRYS&DC studio. My work is both commercial and project designer, I am involved throughout the project life, from first data collection with the client, creative design process, logistics, material orders, execution on-site until the finalization of it. 
-     
-    I am good at plans and layouts, infographics, capturing client's requirements, giving creative solutions, and conceptualizing projects, I like to work with technology but I also appreciate the manual, drawing, collage...   
-    I love Asthanga yoga, plants based food!
+    I am currently working as an interior designer in DOCRYS&DC studio. My work is both commercial and project designer, I am involved throughout the project life, from first data collection with the client, creative design process, logistics, material orders, execution on-site until the finalization of it.
+
+    I am good at plans and layouts, infographics, capturing client's requirements, giving creative solutions, and conceptualizing projects, I like to work with technology but I also appreciate the manual, drawing, collage... I love Asthanga yoga, plants based food!
   tools:
     - tool: tool1
       name: ILLUSTRATOR
