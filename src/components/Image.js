@@ -39,7 +39,7 @@ const Image = props => {
     query {
       contactPhoto: file(relativePath: { eq: "contact-claudia.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 2048, quality: 100) {
+          fluid(maxWidth: 1048, quality: 100) {
             ...GatsbyImageSharpFluid
           }
         }
