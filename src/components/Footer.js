@@ -69,10 +69,10 @@ const Footer = () => {
       <FooterMain>
         <div>{title}</div>
         <div>
-          Email:<a href="mailto:cvaliadesign@gmail.com">cvalia@gmail.com</a>{" "}
+          Email:<a href="mailto:cvaliadesign@gmail.com">cvaliadesign@gmail.com</a>{" "}
         </div>
         <div>
-          <a href="mailto:cvaliadesign@gmail.com">Instagram</a>{" "}
+          <a href="">Instagram</a>{" "}
         </div>
         <div>© 2020 CValia Interior Design. All Rights Reserved.</div>
       </FooterMain>

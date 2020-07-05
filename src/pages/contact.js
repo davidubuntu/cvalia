@@ -35,28 +35,28 @@ const ContactImage = styled.div`
   grid-area: image;
   margin: 3rem 0;
 `
-const LinkSection = styled.section`
-
-`
-const ContactPage = ({data}) => {
+const LinkSection = styled.section``
+const ContactPage = ({ data }) => {
   const { frontmatter } = data.allMarkdownRemark.edges[0].node
-  const { image, personalInfo:{title,links,number} } = frontmatter
-  console.log(image,title,links,number);
-  
+  const {
+    image,
+    personalInfo: { title, links, number }
+  } = frontmatter
+
   return (
     <Layout>
       <SEO title="Contact" />
       <Grid>
         <ContactInfo>
-        <h3>{title}:</h3>
-        {links.map(link => (
-              <LinkSection key={link.type}>
-                <h3>{link.name}</h3>
-                <p>{link.description}</p>
-                <a href={link.link}>{link.link}</a>
-              </LinkSection>
-            ))}
-        <Link to="/">Home</Link>
+          <h3>{title}:</h3>
+          {links.map(link => (
+            <LinkSection key={link.type}>
+              <h3>{link.name}</h3>
+              <p>{link.description}</p>
+              <a href={`mailto:${link.link}`}>{link.link}</a>
+            </LinkSection>
+          ))}
+          <Link to="/">Home</Link>
         </ContactInfo>
         <ContactImage>
           <Image
@@ -72,7 +72,6 @@ const ContactPage = ({data}) => {
 }
 
 export default ContactPage
-
 
 export const query = graphql`
   query {
