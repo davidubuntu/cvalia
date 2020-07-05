@@ -10,33 +10,36 @@ const FooterWrapper = styled.footer`
   background: #f2f2f2;
   height: auto;
   font-weight: 400;
-  font-size: calc(-0.104166666666667vw + 0.9rem);
-  line-height: 1.4rem;
+  font-size: 0.6rem;
+  line-height: 1.3rem;
   letter-spacing: 0.125em;
   text-transform: none;
   transform: inherit;
+
   text-align: center;
   padding: calc((0.4rem + 0.5vw) * 6) 2rem;
   ${media.tablet`
     padding: calc((0.4rem + 0.5vw) * 1.75) 6rem;
+    line-height: 0.8rem;
+ `}
+ ${media.laptopL`
+  line-height: 1.3rem;
  `}
 `
 const FooterMain = styled.div`
   display: flex;
   justify-content: space-between;
   text-align: center;
-  font-size: 0.6rem;
   flex-direction: column;
-  font-family:'Montserrat-Regular';
+  font-family: var(--main-font-light);
   ${media.tablet`
-  flex-direction:row;
-`}
+    flex-direction:row;
+  `}
   a {
     text-decoration: none;
     display: inline-block;
     white-space: nowrap;
     position: relative;
-    font-size: 10px;
     margin-left: 1.5vw;
     margin-right: 1.5vw;
     letter-spacing: 0.25em;
@@ -61,6 +64,15 @@ const FooterMain = styled.div`
     }
   }
 `
+const FooterDiv = styled.div`
+  margin-top : 1rem;
+  ${media.tablet`
+    margin-top : 0;
+  `}
+  ${media.laptopL`
+    margin-top : 0;
+  `}
+`
 
 const Footer = () => {
   const { title, email } = useSiteMetadata()
@@ -69,13 +81,13 @@ const Footer = () => {
     <FooterWrapper>
       <FooterMain>
         <div>{title}</div>
-        <div>
+        <FooterDiv>
           Email:<a href={email}>cvaliadesign@gmail.com</a>{" "}
-        </div>
-        <div>
+        </FooterDiv>
+        <FooterDiv>
           <a href="">Instagram</a>{" "}
-        </div>
-        <div>© 2020 CValia Interior Design. All Rights Reserved.</div>
+        </FooterDiv>
+        <FooterDiv>© 2020 CValia Interior Design. All Rights Reserved.</FooterDiv>
       </FooterMain>
     </FooterWrapper>
   )
