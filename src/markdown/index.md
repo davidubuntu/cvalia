@@ -25,11 +25,11 @@ skills:
       percentage: 90
     - tool: tool3
       name: AUTOCAD
-      percentage: 60
+      percentage: 90
     - tool: tool4
       name: SKETCHUP / VRAY
       percentage: 85
     - tool: tool5
       name: INDESIGN
-      spercentage: 60
+      percentage: 60
 ---
