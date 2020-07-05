@@ -35,16 +35,27 @@ const ContactImage = styled.div`
 `
 const LinkSection = styled.section``
 const LinkTitle = styled.h3`
- color: var(--textLightBlack);
- font-family:var(--main-font-regular);
+  color: var(--textLightBlack);
+  font-family: var(--main-font-regular);
 `
 const LinkDescription = styled.p`
   color: var(--textGrey);
-  font-family:var(--main-font-regular);
+  font-family: var(--main-font-regular);
 `
-const LinkUrl= styled.a`
- color: var(--textLightBlack);
+const LinkUrl = styled.a`
+  color: var(--textLightBlack);
+  font-weight: bold;
 `
+const LinkSectionComponent = ({ name, description, link }) => {
+  return (
+    <LinkSection>
+      <LinkTitle>{name}</LinkTitle>
+      {description && <LinkDescription>{description}</LinkDescription>}
+      <LinkUrl href={`mailto:${link}`}>{link}</LinkUrl>
+    </LinkSection>
+  )
+}
+
 const ContactPage = ({ data }) => {
   const { frontmatter } = data.allMarkdownRemark.edges[0].node
   const {
@@ -59,15 +70,18 @@ const ContactPage = ({ data }) => {
         <ContactInfo>
           <h3>{title}:</h3>
           {links.map(link => (
-            <LinkSection key={link.type}>
-              <LinkTitle>{link.name}</LinkTitle>
-              <LinkDescription>{link.description}</LinkDescription>
-              <LinkUrl href={`mailto:${link.link}`}>{link.link}</LinkUrl>
-            </LinkSection>
+            <LinkSectionComponent
+              key={link.type}
+              name={link.name}
+              description={link.description}
+              link={link.link}
+            />
           ))}
           <LinkSection>
-            <LinkDescription>{number.name}</LinkDescription>
-            <a href={`tel:${number.contactNumber}`}>{number.contactNumber}</a>
+            <LinkSectionComponent
+              name={number.name}
+              link={number.contactNumber}
+            />
           </LinkSection>
         </ContactInfo>
         <ContactImage>
