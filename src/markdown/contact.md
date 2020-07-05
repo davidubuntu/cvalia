@@ -9,7 +9,7 @@ personalInfo:
       description: For a project or a collaboration
       link: cvaliadesign@gmail.com
     - type: instagram
-      name: Workshop Guide
+      name: Instagram
       description: For more information on the Workshop Guide
       link: cvaliadesign@instagram
   number: 

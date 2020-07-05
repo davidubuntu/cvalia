@@ -63,13 +63,14 @@ const FooterMain = styled.div`
 `
 
 const Footer = () => {
-  const { title } = useSiteMetadata()
+  const { title, email } = useSiteMetadata()
+  console.log(title, email);
   return (
     <FooterWrapper>
       <FooterMain>
         <div>{title}</div>
         <div>
-          Email:<a href="mailto:cvaliadesign@gmail.com">cvaliadesign@gmail.com</a>{" "}
+          Email:<a href={email}>cvaliadesign@gmail.com</a>{" "}
         </div>
         <div>
           <a href="">Instagram</a>{" "}

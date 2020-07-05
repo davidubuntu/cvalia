@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `Claudia Valia Portfolio`,
     description: `Interior Designer Portfolio`,
-    author: `David Diez`,
+    email:`cvaliadesign@gmail.com`,
+    author: `David Diez`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

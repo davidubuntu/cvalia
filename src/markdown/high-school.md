@@ -6,7 +6,7 @@ title: High School
 image: highSchoolMain
 info:
   type: education
-  place: Canada
+  place: Madrid
   description: 
     CESD CENTRO DE EDUCACION SECUNDARIA DISRUPTIVA EL CESD 
     Centro de Educación Secundaria Disruptiva se trata de un centro de carácter público, que comprende los ciclos de Educación Secundaria Obligatoria.

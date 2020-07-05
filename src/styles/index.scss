@@ -1,6 +1,9 @@
 @font-face {font-family: 'Montserrat-Light';
   src:  url('../static/fonts/Montserrat/Montserrat-Light.ttf') format('truetype');
 }
+@font-face {font-family: 'Montserrat-Thin';
+  src:  url('../static/fonts/Montserrat/Montserrat-Thin.ttf') format('truetype');
+}
 @font-face {font-family: 'Montserrat-Bold';
   src:  url('../static/fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
 }
@@ -27,10 +30,20 @@ body {
   --textNormal: #222;
   --textTitle: #222;
   --textLink: #aea8a9;
+  --textGrey:#858585;
+  --textLightBlack:#292929;
   --accent: #404040;
   --hr: #00000033;
   background-color: var(--bg);
   --bgCode: #cccccc;
+  --main-font-light:'Montserrat-Light';
+  --main-font-regular:'Montserrat-Regular';
+  --main-font-bold:"Montserrat-Bold";
+  --main-font-semi-bold:"Montserrat-Semi-Bold";
+  --main-font-thin:"Montserrat-Thin";
+  --main-font-thin:"Montserrat-Thin";
+  --main-font-medium:"Montserrat-Medium";
+  --main-font-black:"Montserrat-Black";
 }
 
 ::selection {

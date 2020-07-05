@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Link } from "gatsby"
 import Layout from "../components/Layout"
 import Image from "../components/Image"
 import SEO from "../components/Seo"
@@ -12,6 +11,7 @@ const Grid = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
   gap: 1px 1px;
+  margin: 3rem 0;
   grid-template-areas:
     "info"
     "image";
@@ -29,13 +29,22 @@ const Grid = styled.div`
 `
 const ContactInfo = styled.div`
   grid-area: info;
-  margin: 3rem 0;
 `
 const ContactImage = styled.div`
   grid-area: image;
-  margin: 3rem 0;
 `
 const LinkSection = styled.section``
+const LinkTitle = styled.h3`
+ color: var(--textLightBlack);
+ font-family:var(--main-font-regular);
+`
+const LinkDescription = styled.p`
+  color: var(--textGrey);
+  font-family:var(--main-font-regular);
+`
+const LinkUrl= styled.a`
+ color: var(--textLightBlack);
+`
 const ContactPage = ({ data }) => {
   const { frontmatter } = data.allMarkdownRemark.edges[0].node
   const {
@@ -51,12 +60,15 @@ const ContactPage = ({ data }) => {
           <h3>{title}:</h3>
           {links.map(link => (
             <LinkSection key={link.type}>
-              <h3>{link.name}</h3>
-              <p>{link.description}</p>
-              <a href={`mailto:${link.link}`}>{link.link}</a>
+              <LinkTitle>{link.name}</LinkTitle>
+              <LinkDescription>{link.description}</LinkDescription>
+              <LinkUrl href={`mailto:${link.link}`}>{link.link}</LinkUrl>
             </LinkSection>
           ))}
-          <Link to="/">Home</Link>
+          <LinkSection>
+            <LinkDescription>{number.name}</LinkDescription>
+            <a href={`tel:${number.contactNumber}`}>{number.contactNumber}</a>
+          </LinkSection>
         </ContactInfo>
         <ContactImage>
           <Image
