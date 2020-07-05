@@ -33,22 +33,11 @@ const ContactInfo = styled.section`
 `
 const ContactImage = styled.section`
   grid-area: image;
-  .image-center {
-    width: 100%;
-  }
-	${media.tablet`
-			display: flex;
-	  	justify-content: center;	
-		.image-center {
-	
-			width:80%;
-		}
-  `};
 	${media.laptopL`
 			display: flex;
 	  	justify-content: center;
 		.image-center {
-			width:70%;
+			width:60%;
 		}
   `};
 `
