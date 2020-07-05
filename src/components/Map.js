@@ -18,7 +18,7 @@ const Map = ({ width, height }) => {
         style: "mapbox://styles/ddiezr/ck9ojaa353zg21ipdmolkfgg9?fresh=true",
         zoom: zoom,
         minZoom: 0,
-        maxZoom: 7,
+        maxZoom: 7
       })
 
       map.on("load", () => {
@@ -29,14 +29,14 @@ const Map = ({ width, height }) => {
           id: "countries", //this is the name of our layer, which we will need later
           source: {
             type: "vector",
-            url: "mapbox://ddiezr.1w76x30d", // <--- Add the Map ID you copied here
+            url: "mapbox://ddiezr.1w76x30d" // <--- Add the Map ID you copied here
           },
           "source-layer": "ne_10m_admin_0_countries-6zc8lv", // <--- Add the source layer name you copied here
           type: "fill",
           paint: {
-            "fill-color": "#ebbea8", //this is the color you want your tileset to have (I used a nice purple color)
+            "fill-color": "#ebbea8" //this is the color you want your tileset to have (I used a nice purple color)
             // "fill-outline-color": "#F2F2F2", //this helps us distinguish individual countries a bit better by giving them an outline
-          },
+          }
         })
 
         map.setFilter(
@@ -44,7 +44,7 @@ const Map = ({ width, height }) => {
           ["in", "ADM0_A3_IS"].concat(["PHL", "THA", "IRL", "DEU", "PRT"])
         ) // This line lets us filter by country codes.
 
-        map.on("click", "countries", function (mapElement) {
+        map.on("click", "countries", function(mapElement) {
           const countryCode = mapElement.features[0].properties.ADM0_A3_IS // Grab the country code from the map properties.
 
           fetch(`https://restcountries.eu/rest/v2/alpha/${countryCode}`) // Using tempalate tags to create the API request
@@ -52,18 +52,13 @@ const Map = ({ width, height }) => {
             .then(country => {
               //country contains the data from the API request
               // Let's build our HTML in a template tag
-              const html = ` 
-          <img src='${country.flag}' /> 
-          <ul>
-            <li><h3>${country.name}</h3></li>
-            <li><strong>Currencies:</strong> ${country.currencies
-              .map(c => c.code)
-              .join(", ")}</li>
-            <li><strong>Capital:</strong> ${country.capital}</li>
-            <li><strong>Population:</strong> ${country.population}</li>
-            <li><strong>Demonym:</strong> ${country.demonym}</li>
-          </ul>
-        ` // Now we have a good looking popup HTML segment.
+          const html = ` 
+            <div>
+                <span>Cvalia designs were inspired in ${country.capital}</span>
+                <span>${country.name}</span>
+            </div>
+         `
+              // Now we have a good looking popup HTML segment.
               new mapboxgl.Popup() //Create a new popup
                 .setLngLat(mapElement.lngLat) // Set where we want it to appear (where we clicked)
                 .setHTML(html) // Add the HTML we just made to the popup
@@ -80,3 +75,20 @@ const Map = ({ width, height }) => {
 }
 
 export default Map
+
+//Popup example
+// const html = ` 
+// <img src='${country.flag}' /> 
+// <ul>
+//   <li><h3>${country.name}</h3></li>
+//   <li><strong>Currencies:</strong> ${country.currencies
+//     .map(c => c.code)
+//     .join(", ")}</li>
+//   <li><strong>Capital:</strong> ${country.capital}</li>
+//   <li><strong>Population:</strong> ${country.population}</li>
+//   <li><strong>Demonym:</strong> ${country.demonym}</li>
+// </ul>
+// <div>
+//     <span>cvalia was inspired by${country.capital}</span>
+// </div>
+// `
