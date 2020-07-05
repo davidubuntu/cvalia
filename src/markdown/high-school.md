@@ -7,7 +7,13 @@ image: highSchoolMain
 info:
   type: education
   place: Canada
-  description: Irony, humor and some eroticism are the concepts behind Marcel Wanders most recent project. An indulgent luxury hotel where guests are rejuvenated through a pampered recreation of new Iberostar Grand Hotel Portals Nous in Mallorca. Located on a magnificent beach, this luxurious design uses transparencies, whites and reflective surfaces to create a flow of openness. Emphasizing craft and modern design, the Mallorquin style is reinforced, inspiring guests with the scenery of Spain.
+  description: 
+    CESD CENTRO DE EDUCACION SECUNDARIA DISRUPTIVA EL CESD 
+    Centro de Educación Secundaria Disruptiva se trata de un centro de carácter público, que comprende los ciclos de Educación Secundaria Obligatoria.
+    La intervención que se realiza pretende ser una respuesta a las carencias que hoy en día encontramos en este tipo de centros.
+    Este proyecto se centra en los alumnos, conociendo sus necesidades según su rango edad y utilizando el espacio como un tercer educador.
+    Se ha adoptado una actitud transformadora, partiendo de aspectos objetivos y reales, para un desarrollo integral de la persona dentro de los centros educativos.
+    Es un proyecto especulativo y experimental, acompañado de una investigación previa sobre diferentes campos relacionados con la pedagogía, el diseño, la arquitectura y  la psicología
 images:
   - name: highSchoolBuffet1
   - name: highSchoolBuffet2

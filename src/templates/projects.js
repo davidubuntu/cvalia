@@ -42,6 +42,7 @@ const ProjectTitle = styled.div`
   grid-area: title;
   justify-self: left;
   font-family: "Montserrat-Medium";
+  margin-top: 2rem;
   span {
     font-size: 1rem;
   }
@@ -62,6 +63,13 @@ const ProjectInfo = styled.div`
   grid-area: info;
   display: grid;
   justify-self: center;
+  padding: 0;
+  ${media.tablet`
+    padding: 2rem 7rem;
+  `};
+  ${media.laptopL`
+    padding: 2rem 7rem;
+  `};
 `
 const ProjectMedia = styled.div`
   grid-area: media;

@@ -7,7 +7,12 @@ image: spaMain
 info:
   type: contract
   place: Madrid
-  description: Irony, humor and some eroticism are the concepts behind Marcel Wanders most recent project. An indulgent luxury hotel where guests are rejuvenated through a pampered recreation of new Iberostar Grand Hotel Portals Nous in Mallorca. Located on a magnificent beach, this luxurious design uses transparencies, whites and reflective surfaces to create a flow of openness. Emphasizing craft and modern design, the Mallorquin style is reinforced, inspiring guests with the scenery of Spain.
+  description: 
+    Los cortes geométricos a la vista de una cantera abandonada  y la fuerza del agua como elemento de desgaste son  la inspiración radical de este proyecto. Silencio, calma, agua, sonidos o cuevas son algunos de los conceptos detrás de este diseño de cvalia.
+
+    Se pretende tansmitir sensaciones y experiencas a traves de los espacios que evoquen el contacto con la piedra natural en un ambiente relajante para el visitante
+
+    En el Spa se observa una danza entre volumenes rectos y oblicuos que se proyectan  en diferentes direcciones, haciendo que se pierda la verticalidad por la dirección inclinada de sus aristas.Se crea una variedad de oquedades donde se disponen las bañeras de contraste de temperatura. El suelo pétreo del Spa , se eleva, generando así más profundidad. Los materiales que se emplean son piedra caliza blanca, madera con tratamiento especial anti humedad y acero verde.
 images:
   - name: spaPool1
   - name: spaPool2

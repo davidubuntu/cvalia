@@ -7,7 +7,13 @@ image: studentHousingMain
 info:
   type: education
   place: Segovia
-  description: Irony, humor and some eroticism are the concepts behind Marcel Wanders most recent project. An indulgent luxury hotel where guests are rejuvenated through a pampered recreation of new Iberostar Grand Hotel Portals Nous in Mallorca. Located on a magnificent beach, this luxurious design uses transparencies, whites and reflective surfaces to create a flow of openness. Emphasizing craft and modern design, the Mallorquin style is reinforced, inspiring guests with the scenery of Spain.
+  description: 
+    El resurgir de una nueva vida a partir de la existencia previa es el motivo que inspira la rehabilitación un edificio tan singular como es el seminario conciliar jesuita en Segovia.
+
+    Se plantea dar un nuevo uso albergando una residencia de estudiantes. Como consecuencia se  respeta el edificio y su singularidad, actualizando su organización espacial y creando un nuevo modelo de convivencia para los estudiantes que rompe con el modelo de residencia de estudiantes actual. 
+    Se crea una nueva experiencia de convivencia, donde se tiende a la sociabilización y habitabilidad de los espacios coexistiendo con otras personas. 
+    
+    Dos modelos habitacionales. Espacios individuales, colonizando los pasillos que rodean al patio central y utilizando la altura y los óculos característicos que dejan pasar la luz.Por otro lado los Box room, donde el estudiante tendrá su dormitorio y pertenencias personales mientras que el resto de actividades las realizará en las zonas comunes.
 images:
   - name: studentHousingRoom4
   - name: studentHousingRoom1
