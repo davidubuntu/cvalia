@@ -8,39 +8,49 @@ import media from "../styles/media"
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
-  gap: 1px 1px;
-  margin: 3rem 0 0 0;
+  margin: 3rem 0 3rem 0;
   grid-template-areas:
     "info"
     "image";
   padding: 0 3rem;
-  ${media.tablet`
-    gap: 1rem;
-    padding: 0 5rem;
+	${media.tablet`
+	  gap:5rem;
+		padding: 0 5rem;
+		grid-template-columns: 1fr 2fr;
     grid-template-areas: "info image";
   `};
   ${media.laptopL`
-    gap: 1rem;
-    padding: 0 10rem;
+	  gap:5rem;
+		padding: 0 10rem;
+		grid-template-columns: 1fr 2fr;
     grid-template-areas: "info image";
   `};
 `
 const ContactInfo = styled.section`
   grid-area: info;
-  display:grid;
-  align-items:center;
+  display: grid;
+  align-items: center;
 `
 const ContactImage = styled.section`
   grid-area: image;
   .image-center {
-   display:flex;
-   justify-content:flex-end;
+    width: 100%;
   }
+  ${media.tablet`
+		display: flex;
+		justify-content: center;
+		width: 100%;
+  `};
+  ${media.laptopL`
+		display: flex;
+		justify-content: center;
+		.image-center {
+			width:70%;
+		}
+  `};
 `
 const LinkSection = styled.section`
- margin-bottom:3rem;
+  margin-bottom: 3rem;
 `
 const LinkTitle = styled.h3`
   color: var(--textLightBlack);
@@ -98,8 +108,8 @@ const ContactPage = ({ data }) => {
           <Image
             alt="contact-photo-cvalia"
             filename={image}
-            width={"60%"}
             className={"image-center"}
+            width={"100%"}
           />
         </ContactImage>
       </Grid>
