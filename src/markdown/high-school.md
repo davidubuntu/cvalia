@@ -9,6 +9,7 @@ info:
   place: Madrid
   description: 
     CESD CENTRO DE EDUCACION SECUNDARIA DISRUPTIVA EL CESD 
+    
     The Disruptive Secondary Education Center is a public center, which includes the Compulsory Secondary Education cycles.
 
     The intervention carried out is intended to be a response to the deficiencies that we find today in this type of center.

@@ -127,11 +127,17 @@ const SkillsDescription = styled.div`
   justify-content: center;
   align-items: center;
   line-height: 2;
+  text-align: center;
   p{
     margin-top:1rem;
   }
+  ${media.tablet`
+    text-align: center;
+    padding: 0;
+  `}
   ${media.laptopL`
     width: 50%;
+    text-align: left;
   `}
 `
 const SkillsTitle = styled.div`
