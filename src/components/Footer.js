@@ -76,16 +76,15 @@ const FooterDiv = styled.div`
 
 const Footer = () => {
   const { title, email } = useSiteMetadata()
-  console.log(title, email);
   return (
     <FooterWrapper>
       <FooterMain>
         <div>{title}</div>
         <FooterDiv>
-          Email:<a href={email}>cvaliadesign@gmail.com</a>{" "}
+          Email:<a href={`mailto:${email}`}>cvaliadesign@gmail.com</a>{" "}
         </FooterDiv>
         <FooterDiv>
-          <a href="">Instagram</a>{" "}
+          <a href={`mailto:${email}`}>Instagram</a>{" "}
         </FooterDiv>
         <FooterDiv>© 2020 CValia Interior Design. All Rights Reserved.</FooterDiv>
       </FooterMain>

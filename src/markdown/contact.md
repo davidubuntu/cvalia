@@ -14,5 +14,6 @@ personalInfo:
       link: cvaliadesign@instagram
   number: 
     name: Contact Number
-    contactNumber: 652998154
+    description: Call me if want to know  more
+    contactNumber: 0034652998154
 ---

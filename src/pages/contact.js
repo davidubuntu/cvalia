@@ -54,11 +54,12 @@ const LinkUrl = styled.a`
   color: var(--textLightBlack);
   font-family: var(--main-font-regular);
 `
-const LinkSectionComponent = ({ name, description, link }) => {
+const LinkSectionComponent = ({ name, description, link, number }) => {
   return (
     <LinkSection>
       <LinkTitle>{name}</LinkTitle>
       {description && <LinkDescription>{description}</LinkDescription>}
+      {number && <LinkUrl href={`tel:${number}`}>{number}</LinkUrl>}
       <LinkUrl href={`mailto:${link}`}>{link}</LinkUrl>
     </LinkSection>
   )
@@ -70,7 +71,7 @@ const ContactPage = ({ data }) => {
     image,
     personalInfo: { title, links, number }
   } = frontmatter
-
+  console.log(number)
   return (
     <Layout>
       <SEO title="Contact" />
@@ -88,7 +89,8 @@ const ContactPage = ({ data }) => {
           <LinkSection>
             <LinkSectionComponent
               name={number.name}
-              link={number.contactNumber}
+              description={number.description}
+              number={number.contactNumber}
             />
           </LinkSection>
         </ContactInfo>
@@ -124,6 +126,7 @@ export const query = graphql`
               }
               number {
                 contactNumber
+                description
                 name
               }
               title

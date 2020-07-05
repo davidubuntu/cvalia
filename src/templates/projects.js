@@ -191,16 +191,6 @@ const ProjectDetail = ({ data }) => {
       setFilteredImages(filteredImages)
     }
   }
-  
-  const TextSplit = ({text})=>{
-    return (
-      <>
-      {text.split("\n").map((i,key) => {
-        return <p key={key}>{i}</p>;
-      })}
-      </>
-    ) 
-  }
 
   return (
     <Layout>
