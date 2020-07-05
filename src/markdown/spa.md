@@ -25,12 +25,12 @@ images:
   - name: spaPlan3
   - name: spaPlan4
 filters:
+  - type: All
+    name: All
   - type: pool
     name: Spa
   - type: hall
     name: Hall
   - type: plan
     name: Plan
-  - type: All
-    name: All
 ---

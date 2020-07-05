@@ -34,6 +34,8 @@ images:
   - name: highSchoolPlan3
   - name: highSchoolPlan4
 filters:
+  - type: All
+    name: All
   - type: Buffet
     name: Buffet
   - type: ClassRoom
@@ -48,6 +50,4 @@ filters:
     name: Work Shop
   - type: Plan
     name: Plan
-  - type: All
-    name: All
 ---

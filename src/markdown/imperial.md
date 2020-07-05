@@ -37,6 +37,8 @@ images:
   - name: imperialToilet
   - name: imperialPlan
 filters:
+  - type: All
+    name: All
   - type: bathroom
     name: Bath
   - type: kitchen
@@ -49,6 +51,4 @@ filters:
     name: Toilet
   - type: plan
     name: Plan
-  - type: All
-    name: All
 ---

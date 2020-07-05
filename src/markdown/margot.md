@@ -21,6 +21,8 @@ images:
   - name: margotLivingRoom
   - name: margotPlaySpace
 filters:
+  - type: All
+    name: All
   - type: BedRoom
     name: Bed Room
   - type: ChildrenRoom
@@ -31,6 +33,4 @@ filters:
     name: Living Room
   - type: PlaySpace
     name: Play Space
-  - type: All
-    name: All
 ---

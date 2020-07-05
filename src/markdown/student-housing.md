@@ -39,6 +39,8 @@ images:
   - name: studentHousingBoxRoom2
   - name: studentHousingBoxRoom3
 filters:
+  - type: All
+    name: All
   - type: room
     name: Room
   - type: box
@@ -51,6 +53,4 @@ filters:
     name: Common Area
   - type: plan
     name: Plan
-  - type: All
-    name: All
 ---
