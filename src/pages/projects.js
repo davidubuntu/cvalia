@@ -29,7 +29,6 @@ const Filters = styled.div`
   grid-area: filters;
   display: grid;
   gap: 0.8rem;
-  font-family: "Montserrat-Light";
   margin: 3rem 0;
 `
 const Main = styled.div`
@@ -57,10 +56,9 @@ const ProjectInfo = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 1rem;
-  font-family: "Montserrat-Light";
   padding: 2rem 0;
   a {
-    font-family: "Montserrat-Bold";
+    font-family: var(--main-font-bold);
   }
   font-size: 13px;
 `

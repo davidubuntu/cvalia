@@ -42,7 +42,7 @@ const ProjectTitle = styled.div`
   grid-area: title;
   justify-self: left;
   font-family: "Montserrat-Medium";
-  margin-top: 2rem;
+  margin-top: 3rem;
   span {
     font-size: 1rem;
   }

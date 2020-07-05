@@ -78,7 +78,7 @@ const MapTextContainer = styled.div`
   justify-content: center;
 `
 const MapDescription = styled.p`
-  font-family: "Montserrat-Light";
+  font-family: var(--main-font-light);
   padding: 2rem;
   line-height: 2;
   text-align: center;
@@ -92,7 +92,7 @@ const MapDescription = styled.p`
   `}
 `
 const MapTitle = styled.div`
-  font-family: "Montserrat-Bold";
+  font-family: var(--main-font-bold);
   font-weight: bold;
   text-align: center;
   ${media.tablet`
@@ -141,7 +141,7 @@ const SkillsDescription = styled.div`
   `}
 `
 const SkillsTitle = styled.div`
-  font-family: "Montserrat-Bold";
+  font-family: var(--main-font-bold);
   font-weight: bold;
 `
 

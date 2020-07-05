@@ -52,7 +52,6 @@ const LinkDescription = styled.p`
 `
 const LinkUrl = styled.a`
   color: var(--textLightBlack);
-
   font-family: var(--main-font-regular);
 `
 const LinkSectionComponent = ({ name, description, link }) => {
