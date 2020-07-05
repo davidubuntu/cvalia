@@ -13,7 +13,7 @@ const Grid = styled.div`
     "info"
     "image";
   padding: 0 3rem;
-	${media.tablet`
+  ${media.tablet`
 	  gap:5rem;
 		padding: 0 5rem;
 		grid-template-columns: 1fr 2fr;
@@ -36,14 +36,17 @@ const ContactImage = styled.section`
   .image-center {
     width: 100%;
   }
-  ${media.tablet`
-		display: flex;
-		justify-content: center;
-		width: 100%;
+	${media.tablet`
+			display: flex;
+	  	justify-content: center;	
+		.image-center {
+	
+			width:80%;
+		}
   `};
-  ${media.laptopL`
-		display: flex;
-		justify-content: center;
+	${media.laptopL`
+			display: flex;
+	  	justify-content: center;
 		.image-center {
 			width:70%;
 		}
