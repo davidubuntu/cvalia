@@ -79,7 +79,7 @@ const MapTextContainer = styled.div`
 `
 const MapDescription = styled.p`
   font-family: var(--main-font-light);
-  padding: 2rem;
+  padding: 1rem;
   line-height: 2;
   text-align: center;
   ${media.tablet`
@@ -103,7 +103,10 @@ const MapTitle = styled.div`
   `}
 `
 const MapMain = styled.main`
-  padding: 0;
+  padding: 1rem;
+  ${media.tablet`
+     padding: 0rem;
+  `}
   ${media.laptopL`
     padding: 0 4rem;
   `};
@@ -111,33 +114,36 @@ const MapMain = styled.main`
 const SkillsProgress = styled.div`
   width: 100%;
   text-align: center;
+  padding: 1rem;
   ${media.tablet`
     text-align: left;
+    padding: 0rem;
   `}
   ${media.laptopL`
     width: 50%;
     text-align: left;
+    padding: 0rem;
   `}
 `
 const SkillsDescription = styled.div`
   width: 100%;
-  padding: 3rem 4rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   line-height: 2;
   text-align: center;
-  p{
-    margin-top:1rem;
-  }
+  margin-top:0;
   ${media.tablet`
     text-align: center;
     padding: 0;
+    margin-top:2rem;
   `}
   ${media.laptopL`
     width: 50%;
     text-align: left;
+    padding: 0;
+    margin-top:2rem;
   `}
 `
 const SkillsTitle = styled.div`
