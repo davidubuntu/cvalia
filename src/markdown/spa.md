@@ -8,11 +8,11 @@ info:
   type: contract
   place: Madrid
   description: 
-    Los cortes geométricos a la vista de una cantera abandonada  y la fuerza del agua como elemento de desgaste son  la inspiración radical de este proyecto. Silencio, calma, agua, sonidos o cuevas son algunos de los conceptos detrás de este diseño de cvalia.
+    The geometric cuts in view of an abandoned quarry and the force of water as an element of wear are the radical inspiration for this project. Silence, calmness, water, sounds or caves are some of the themes behind this Cvalia design.
 
-    Se pretende tansmitir sensaciones y experiencas a traves de los espacios que evoquen el contacto con la piedra natural en un ambiente relajante para el visitante
+    The intention is to transmit sensations and experiences through spaces that evoke contact with natural stone in a relaxing environment for the visitor. In the Spa, a dance between straight and oblique volumes that project in different directions is observed, causing verticality to be lost as a result of the inclined direction of its edges.
 
-    En el Spa se observa una danza entre volumenes rectos y oblicuos que se proyectan  en diferentes direcciones, haciendo que se pierda la verticalidad por la dirección inclinada de sus aristas.Se crea una variedad de oquedades donde se disponen las bañeras de contraste de temperatura. El suelo pétreo del Spa , se eleva, generando así más profundidad. Los materiales que se emplean son piedra caliza blanca, madera con tratamiento especial anti humedad y acero verde.
+    A variety of cavities are created where the temperature contrast bathtubs are arranged. The stone floor of the Spa rises, generating more depth. The materials used are white limestone, wood with special anti-humidity treatment and green steel.
 images:
   - name: spaPool1
   - name: spaPool2

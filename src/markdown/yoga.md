@@ -8,12 +8,13 @@ info:
   type: contract
   place: Madrid
   description:
-    El dinamísmo y la flexibilidad son los elementos precursores para la creación de este espacio. Inspirado en las bases del Ashtanga Yoga, se genera un lugar donde conviven amantes de esta practica milenaria para su desarrollo espiritual. La meditación , el reposo y la lectura se acompañan  de un té al finalizar la práctica.
-
-    El diseño del espacio busca que el usuario se detenga a respirar a auto-observarse. Se promueve el trabajao diario hacia uno mismo , para el crecimiento y para la búsqueda de paz interior. 
-    La entrada con un aspecto brutalista y fuera de escala con el  cemento como material principal son la motivación para el enfoque mental del usuario en este espacio previo. Una recepción con tienda de tes, esterillas y accesorios para la práctica del yoga.Los textiles son elementos que cuelgan genrendo teatralidad en el espacio, potenciando la gran altura de los techos.
-
-    Tres arcos nos abren diferentes caminos hacia una zona de vestíbulo más íntima donde los usuarios puedan dejar sus pertenencias y cambiarse. La singularidad del edificio se compone por un espacio rectangular muy alargado , lo cual nos permite dividirlo en dos , la shala donde se realiza la práctica de yoga y por otro lado la tetería, un patio , los baños y vestuarios y el almacén / cocina privada para el staff.
+    Dynamism and flexibility are the precursor elements for the creation of this space. Inspired by the bases of Ashtanga Yoga, a space is created where lovers of this ancient practice coexist for their spiritual development. Meditation, rest and reading are accompanied by tea at the end of the practice.
+    
+    The aim of the design of this space is for the user to stop to breathe and observe himself. Daily work towards oneself is promoted, for growth and for the search for inner peace.
+    The entrance, with a brutalist ascetic and an out of scale proportion, with cement as the main material are the motivation for the user's mental focus in this space. A reception hosts a store for teas, mats and other yoga accessories. Textiles hang from the ceiling adding in theatrical elements to the space, enhancing its height.
+    Three arches open different paths to a more intimate lobby area, where users can leave their belongings and change.
+    
+    What makes the building special is that it is made up of a very long rectangular space, which can be divided into two sections, the shala where yoga is practiced and, on the other hand, the tearoom, a patio, the bathrooms and changing rooms as well as the storage / kitchen for the staff.
 images:
   - name: yogaShop1
   - name: yogaShop2

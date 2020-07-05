@@ -8,12 +8,11 @@ info:
   type: education
   place: Segovia
   description: 
-    El resurgir de una nueva vida a partir de la existencia previa es el motivo que inspira la rehabilitación un edificio tan singular como es el seminario conciliar jesuita en Segovia.
+    The resurgence of a new life from previous existence is the inspiration for rehabilitating a building as unique as the Jesuit Council Seminary in Segovia.
 
-    Se plantea dar un nuevo uso albergando una residencia de estudiantes. Como consecuencia se  respeta el edificio y su singularidad, actualizando su organización espacial y creando un nuevo modelo de convivencia para los estudiantes que rompe con el modelo de residencia de estudiantes actual. 
-    Se crea una nueva experiencia de convivencia, donde se tiende a la sociabilización y habitabilidad de los espacios coexistiendo con otras personas. 
+    The proposition is to give it a new use by housing a student residence. The building and its uniqueness are to be respected, updating its spatial organization and creating a new coexistence model which aims to break with the current one. Thus, a new experience of coexistence is created, where a tendency towards socialization and habitability naturally generates.
     
-    Dos modelos habitacionales. Espacios individuales, colonizando los pasillos que rodean al patio central y utilizando la altura y los óculos característicos que dejan pasar la luz.Por otro lado los Box room, donde el estudiante tendrá su dormitorio y pertenencias personales mientras que el resto de actividades las realizará en las zonas comunes.
+    Two housing models. Individual spaces, colonizing the corridors that surround the central patio and using the height and the special lenses to let in light. On the other hand, the Box room, where students will have his / her bedroom along with their personal belongings, while the rest of the activities will be carried out in the common areas.
 images:
   - name: studentHousingRoom4
   - name: studentHousingRoom1

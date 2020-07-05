@@ -9,11 +9,13 @@ info:
   place: Madrid
   description: 
     CESD CENTRO DE EDUCACION SECUNDARIA DISRUPTIVA EL CESD 
-    Centro de Educación Secundaria Disruptiva se trata de un centro de carácter público, que comprende los ciclos de Educación Secundaria Obligatoria.
-    La intervención que se realiza pretende ser una respuesta a las carencias que hoy en día encontramos en este tipo de centros.
-    Este proyecto se centra en los alumnos, conociendo sus necesidades según su rango edad y utilizando el espacio como un tercer educador.
-    Se ha adoptado una actitud transformadora, partiendo de aspectos objetivos y reales, para un desarrollo integral de la persona dentro de los centros educativos.
-    Es un proyecto especulativo y experimental, acompañado de una investigación previa sobre diferentes campos relacionados con la pedagogía, el diseño, la arquitectura y  la psicología
+    The Disruptive Secondary Education Center is a public center, which includes the Compulsory Secondary Education cycles.
+
+    The intervention carried out is intended to be a response to the deficiencies that we find today in this type of center.
+
+    This project focuses on the students, being aware of their needs as per their age range and using the space as a third educator. A transformative attitude has been adopted, based on objective and real aspects, for an integral development of a person within an educational center.
+
+    It is a speculative and experimental project, which follows research on different fields related to pedagogy, design, architecture and psychology.
 images:
   - name: highSchoolBuffet1
   - name: highSchoolBuffet2

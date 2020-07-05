@@ -8,11 +8,11 @@ info:
   type: residential
   place: Madrid
   description: 
-    El Madrid de los Austrias con la Catedral de la Almudena y el  Palacio Real acogen a esta vivienda familiar donde se respira un sabor  a la antigua capital.
-
-    La sobriedad de las formas geométricas con los muros en bruto y paredes translucidas produce serenidad. Es un lugar armónico .La geometría  y la luz han sido los recursos de inspiración para Margot. Se crean relaciones entre los espacios habitados y los volúmenes de la vivienda. 
+    The ‘Madrid de los Austrias’, with the Almudena Cathedral and the Royal Palace host this family home where one drinks in the flavor of the old capital.
     
-    El proyecto prioriza la vida familiar y el confort en la planta baja de la vivienda y la ergonómía en la zona de oficina situada en la planta superior. Se crea un volumen hueco en el  edificio que permite ganar altura en esta zona destinada al uso común. Este volumen se ve envuelto por una piel de policarbonato traslucido construida con una serie de perfiles blancos generando un ritmo longitudinal.
+    The sobriety of geometric shapes with rough walls alongside translucent ones produces serenity. It is a harmonious place. Geometry and light have been the sources of inspiration for Margot. Relationships are created between the inhabited spaces and the volume of the house.
+
+    The project prioritizes family life and comfort on the ground floor of the house and ergonomics in the office area located on the top floor. A hollow volume is created in the building that allows to gain height in this area intended for common use. This volume is enveloped by a translucent polycarbonate skin built with a series of white profiles generating a longitudinal rhythm.
 images:
   - name: margotBedRoom1
   - name: margotBedRoom2

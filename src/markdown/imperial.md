@@ -8,12 +8,13 @@ info:
   type: residential
   place: Madrid
   description: 
-    En el corazón de Madrid se proyecta una casa para una pareja Danesa amantes del diseño y atrevidos con el color. Siendo este el elemento principal que imprima toda la vivienda.
-    
-    Dos espacios diferenciados basádos en la polaridad, externo e interno, público y privado , común e íntimo.
-    La entrada nos conduce directamente a la cocina abierta, en chapa natural de madera de Nogal que se combina con una encimera pétrea de 6 cm de grosor.El salón comedor abierto integra la cocina , se respeta la parte estructural de la vivienda, lo que nos deja pilares al desnudo con cierto ritmo y partición visual de los espacios.Dos grandes ventanales que nos dan a la Plaza Mayor de Madrid , son la principal fuente de iluminación natural de la vivienda .
+    In the heart of Madrid, a beautiful home is presented for a Danish couple who are lovers of design and with a daring taste for color, which is the main element is shown throughout the entire house.
 
-    El dormitorio se separa del baño principal por un paramento vertical traslúcido que permite vislumbrar y semi-integrar los dos ambientes y nos genera una amplitud y luminosidad a esta zona.
+    We find two different spaces based on polarity, external and internal, public and private, common and intimate.
+    The entrance leads us directly to the open kitchen, in natural walnut veneer that is combined with a 6 cm thick stone workbench. The open living room integrates the kitchen, respecting the structural features of the house by pillars bare, with a certain rhythm and visual partition of the spaces.
+    
+    Two large windows, that give us the Plaza Mayor in Madrid, are the main source of natural lighting in the house.
+    The bedroom is separated from the main bathroom by a translucent vertical facing that allows for a glimpse and semi-integration of the two environments, generating spaciousness and light.
 images:
   - name: imperialKitchen1
   - name: imperialKitchen2
