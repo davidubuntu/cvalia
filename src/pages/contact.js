@@ -11,29 +11,37 @@ const Grid = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
   gap: 1px 1px;
-  margin: 3rem 0;
+  margin: 3rem 0 0 0;
   grid-template-areas:
     "info"
     "image";
-  padding: 0 3rem 3rem;
+  padding: 0 3rem;
   ${media.tablet`
     gap: 1rem;
-    padding: 0 5rem 5rem;
+    padding: 0 5rem;
     grid-template-areas: "info image";
   `};
   ${media.laptopL`
     gap: 1rem;
-    padding: 0 10rem 10rem;
+    padding: 0 10rem;
     grid-template-areas: "info image";
   `};
 `
-const ContactInfo = styled.div`
+const ContactInfo = styled.section`
   grid-area: info;
+  display:grid;
+  align-items:center;
 `
-const ContactImage = styled.div`
+const ContactImage = styled.section`
   grid-area: image;
+  .image-center {
+   display:flex;
+   justify-content:flex-end;
+  }
 `
-const LinkSection = styled.section``
+const LinkSection = styled.section`
+ margin-bottom:3rem;
+`
 const LinkTitle = styled.h3`
   color: var(--textLightBlack);
   font-family: var(--main-font-regular);
@@ -44,7 +52,8 @@ const LinkDescription = styled.p`
 `
 const LinkUrl = styled.a`
   color: var(--textLightBlack);
-  font-weight: bold;
+
+  font-family: var(--main-font-regular);
 `
 const LinkSectionComponent = ({ name, description, link }) => {
   return (
@@ -88,8 +97,8 @@ const ContactPage = ({ data }) => {
           <Image
             alt="contact-photo-cvalia"
             filename={image}
-            height={"60%"}
             width={"60%"}
+            className={"image-center"}
           />
         </ContactImage>
       </Grid>

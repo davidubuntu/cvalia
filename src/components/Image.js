@@ -34,6 +34,7 @@ const Image = props => {
     width,
     height,
     borderRadius,
+    className
   } = props
   const data = useStaticQuery(graphql`
     query {
@@ -870,6 +871,7 @@ const Image = props => {
       height={height}
       width={width}
       borderRadius={borderRadius}
+      className={className}
     >
       {typeImage === "fluid" ? (
         <Img alt={alt} fluid={data[`${filename}`].childImageSharp.fluid} />

@@ -12,7 +12,7 @@ const MainWrapper = styled.div`
   padding: 0;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: calc(100vh - 14vh);
   color: var(--textNormal);
   flex-grow: 1;
   justify-content: space-between;
