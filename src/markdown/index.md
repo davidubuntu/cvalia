@@ -4,18 +4,21 @@ image: bgHome
 mainheader:
   title: HELLO ! I AM CLAUDIA  PEREZ VALIA
   description: >
-    , I´M A VERSATILE DESIGNER AND PASSIONATE ABOUT DESIGN IN ALL ITS ASPECTS.
+    , A VERSATILE DESIGNER AND PASSIONATE ABOUT DESIGN IN ALL ITS ASPECTS.
     I UNDERSTAND DESIGN AS AN INTERDISCIPLINARY AND COLLECTIVE EFFORT,
     WHICH RESPONSES TO CONTEMPORARY SOCIAL NEEDS.
 map:
   title: TRAVEL MAP
-  description: I Love to travel being in constant movememnt. I see it as a way to nourish myself with other cultures and ways of life. My experiences are reflected in my designs.
+  description: 
+    I love to travel and to be in constant movement. I see it as a way to nourish myself with other cultures and lifestyles. My life experiences are reflected on my designs.
 skills:
   title: MY SKILLS
   description:
-    I am currently working as an interior designer in DOCRYS&DC studio. My work is both commercial and project designer, I am involved throughout the project life, from first data collection with the client, creative design process, logistics, material orders, execution on-site until the finalization of it.
+    I a am currently working as an interior designer at DOCRYS&DC studios. My work is both as a commercial and project designer, and I am involved in the project from start to finish, from first data collection with the client, (creative design process, logistics, material orders, execution on-site...) until its completion.
 
-    I am good at plans and layouts, infographics, capturing client's requirements, giving creative solutions, and conceptualizing projects, I like to work with technology but I also appreciate the manual, drawing, collage... I love Asthanga yoga, plants based food!
+    I am good at plans and layouts, infographics, capturing client's requirements, giving creative solutions, and conceptualizing projects. I like to work with technology but I am also proficient with more organic techniques like drawing and "collage".
+
+    On a personal note, I love to practice Asthanga yoga and to cook plant-based food!
   tools:
     - tool: tool1
       name: ILLUSTRATOR

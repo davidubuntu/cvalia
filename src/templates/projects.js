@@ -65,7 +65,7 @@ const ProjectInfo = styled.div`
   justify-self: center;
   padding: 0;
   ${media.tablet`
-    padding: 2rem 7rem;
+    padding: 0;
   `};
   ${media.laptopL`
     padding: 2rem 7rem;
