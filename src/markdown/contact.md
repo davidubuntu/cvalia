@@ -7,11 +7,11 @@ personalInfo:
     - type: email
       name: General
       description: For a project or a collaboration
-      link: cvalia@gmail.com
+      link: cvaliadesign@gmail.com
     - type: instagram
       name: Workshop Guide
       description: For more information on the Workshop Guide
-      link: cvalia@instagram
+      link: cvaliadesign@instagram
   number: 
     name: Contact Number
     contactNumber: 652998154

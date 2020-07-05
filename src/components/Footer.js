@@ -27,6 +27,7 @@ const FooterMain = styled.div`
   text-align: center;
   font-size: 0.6rem;
   flex-direction: column;
+  font-family:'Montserrat-Regular';
   ${media.tablet`
   flex-direction:row;
 `}
@@ -68,10 +69,10 @@ const Footer = () => {
       <FooterMain>
         <div>{title}</div>
         <div>
-          Email:<a href="mailto:cvalia@gmail.com">cvalia@gmail.com</a>{" "}
+          Email:<a href="mailto:cvaliadesign@gmail.com">cvalia@gmail.com</a>{" "}
         </div>
         <div>
-          <a href="mailto:cvalia@gmail.com">Instagram</a>{" "}
+          <a href="mailto:cvaliadesign@gmail.com">Instagram</a>{" "}
         </div>
         <div>© 2020 CValia Interior Design. All Rights Reserved.</div>
       </FooterMain>

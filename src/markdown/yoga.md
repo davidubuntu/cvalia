@@ -8,11 +8,12 @@ info:
   type: contract
   place: Madrid
   description:
-    Ashtanga yoga and teahouse for the "YOGI TEA" brand. The concept is creating a space of coexistence for yoga lovers, where they live their passion and then read in the library area sharing their experiences while having a cup of tea.
+    El dinamísmo y la flexibilidad son los elementos precursores para la creación de este espacio. Inspirado en las bases del Ashtanga Yoga, se genera un lugar donde conviven amantes de esta practica milenaria para su desarrollo espiritual. La meditación , el reposo y la lectura se acompañan  de un té al finalizar la práctica.
 
-    The design of the space aims the user to stop breathing and observe himself. It's a space created for daily work in oneself, growth and calm.Access through a reception and information point and a small tea store, mats and accessories for practice. Textiles are elements which hang generating theatricality in space and enhancing the great height of the ceilings.
+    El diseño del espacio busca que el usuario se detenga a respirar a auto-observarse. Se promueve el trabajao diario hacia uno mismo , para el crecimiento y para la búsqueda de paz interior. 
+    La entrada con un aspecto brutalista y fuera de escala con el  cemento como material principal son la motivación para el enfoque mental del usuario en este espacio previo. Una recepción con tienda de tes, esterillas y accesorios para la práctica del yoga.Los textiles son elementos que cuelgan genrendo teatralidad en el espacio, potenciando la gran altura de los techos.
 
-    Three arches open different paths to a more private lobby area, this space is created so that users can leave their belongings and change.The singularity of the building is made up of a very long rectangular space, which allows us to divide it into two, the shala where yoga is practiced and, on the other hand, the tearoom, a patio, the bathrooms and changing rooms and the private store and kitchen for the staff.
+    Tres arcos nos abren diferentes caminos hacia una zona de vestíbulo más íntima donde los usuarios puedan dejar sus pertenencias y cambiarse. La singularidad del edificio se compone por un espacio rectangular muy alargado , lo cual nos permite dividirlo en dos , la shala donde se realiza la práctica de yoga y por otro lado la tetería, un patio , los baños y vestuarios y el almacén / cocina privada para el staff.
 images:
   - name: yogaShop1
   - name: yogaShop2

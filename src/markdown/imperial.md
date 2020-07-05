@@ -8,9 +8,12 @@ info:
   type: residential
   place: Madrid
   description: 
-    Irony, humor and some eroticism are the concepts behind Marcel Wanders most recent project. An indulgent luxury hotel where guests are rejuvenated through a pampered recreation of new Iberostar Grand Hotel Portals Nous in Mallorca.
+    En el corazón de Madrid se proyecta una casa para una pareja Danesa amantes del diseño y atrevidos con el color. Siendo este el elemento principal que imprima toda la vivienda.
     
-    Located on a magnificent beach, this luxurious design uses transparencies, whites and reflective surfaces to create a flow of openness. Emphasizing craft and modern design, the Mallorquin style is reinforced, inspiring guests with the scenery of Spain.
+    Dos espacios diferenciados basádos en la polaridad, externo e interno, público y privado , común e íntimo.
+    La entrada nos conduce directamente a la cocina abierta, en chapa natural de madera de Nogal que se combina con una encimera pétrea de 6 cm de grosor.El salón comedor abierto integra la cocina , se respeta la parte estructural de la vivienda, lo que nos deja pilares al desnudo con cierto ritmo y partición visual de los espacios.Dos grandes ventanales que nos dan a la Plaza Mayor de Madrid , son la principal fuente de iluminación natural de la vivienda .
+
+    El dormitorio se separa del baño principal por un paramento vertical traslúcido que permite vislumbrar y semi-integrar los dos ambientes y nos genera una amplitud y luminosidad a esta zona.
 images:
   - name: imperialKitchen1
   - name: imperialKitchen2

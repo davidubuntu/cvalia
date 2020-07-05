@@ -4,7 +4,7 @@
 @font-face {font-family: 'Montserrat-Bold';
   src:  url('../static/fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
 }
-@font-face {font-family: 'Montserrat-Seim-Bold';
+@font-face {font-family: 'Montserrat-Semi-Bold';
   src:  url('../static/fonts/Montserrat/Montserrat-SemiBold.ttf') format('truetype');
 }
 @font-face {font-family: 'Montserrat-Regular';
@@ -40,6 +40,8 @@ body {
 
 p {
   margin-top: 1rem;
+  margin-bottom: 0;
+  line-height: 2;
 }
 
 

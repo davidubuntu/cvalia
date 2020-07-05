@@ -128,7 +128,8 @@ const SkillsDescription = styled.div`
   align-items: center;
   line-height: 2;
   p{
-    margin-top:0;
+    margin-top:1rem;
+    margin-bottom:0;
   }
   ${media.laptopL`
     width: 50%;
