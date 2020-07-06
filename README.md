@@ -1,7 +1,7 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://cvalia.now.sh/">
-    <img alt="cvalia logo" src="./images/logo-valia-dark.png" width="60" />
+    <img alt="cvalia logo" src="./src/images/logo-valia-dark.png" width="60" />
   </a>
 </p>
 <h1 align="center">
