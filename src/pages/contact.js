@@ -33,13 +33,17 @@ const ContactInfo = styled.section`
 `
 const ContactImage = styled.section`
   grid-area: image;
-	${media.laptopL`
+  ${media.laptopL`
 			display: flex;
 	  	justify-content: center;
 		.image-center {
 			width:60%;
 		}
   `};
+`
+const Title = styled.h2`
+  color: var(--textLightBlack);
+  font-size:2rem;
 `
 const LinkSection = styled.section`
   margin-bottom: 3rem;
@@ -73,13 +77,13 @@ const ContactPage = ({ data }) => {
     image,
     personalInfo: { title, links, number }
   } = frontmatter
-  console.log(number)
+
   return (
     <Layout>
       <SEO title="Contact" />
       <Grid>
         <ContactInfo>
-          <h3>{title}:</h3>
+          <Title>{title}:</Title>
           {links.map(link => (
             <LinkSectionComponent
               key={link.type}

@@ -6,12 +6,12 @@ personalInfo:
   links:
     - type: email
       name: General
-      description: For a project or a collaboration
+      description: For a project or collaboration
       link: cvaliadesign@gmail.com
     - type: instagram
       name: Instagram
       description: For more information on the Workshop Guide
-      link: cvaliadesign@instagram
+      link: cvaliadesigninstagram
   number: 
     name: Contact Number
     description: Call me if want to know  more
