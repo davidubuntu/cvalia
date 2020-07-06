@@ -1,11 +1,11 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://cvalia.now.sh/">
-    <img alt="cvalia logo" src="./src/images/logo-valia-dark.png" width="60" />
+    <img alt="cvalia logo" src="./src/images/logo-valia-dark.png" width="140px" heigth="21px"/>
   </a>
 </p>
 <h1 align="center">
-  Claudia Valia Interior Design Portfolio
+  Claudia Valia Interior Design
 </h1>
 
 Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
