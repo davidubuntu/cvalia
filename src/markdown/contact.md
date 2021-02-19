@@ -10,7 +10,7 @@ personalInfo:
       link: cvaliadesign@gmail.com
     - type: instagram
       name: Instagram
-      description: For more information on the Workshop Guide
+      description: For more information check my social network
       link: cvaliadesigninstagram
   number: 
     name: Contact Number
