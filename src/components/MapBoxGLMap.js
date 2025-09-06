@@ -5,7 +5,7 @@ import "mapbox-gl/dist/mapbox-gl.css"
 const MapBoxGLMap = ({ width, height }) => {
   useEffect(() => {
     mapboxgl.accessToken =
-      "pk.eyJ1IjoiZGRpZXpyIiwiYSI6ImNrOW9pZzJjNjAweXYzbHJ0dDRiaGIxNWYifQ.Zycu3HxkIv6JOwJiab4tiQ"
+      "pk.eyJ1IjoiZGRpZXpyIiwiYSI6ImNtZGhuNGRyNTAzbGMycnNic2l4cjRwMTMifQ.8IzLBcEOfM2lA5iWjeFp6Q"
     createMap()
   })
   const createMap = () => {
