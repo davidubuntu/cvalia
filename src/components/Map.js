@@ -8,7 +8,7 @@ const Map = ({ width, height }) => {
 
   useEffect(() => {
     mapboxgl.accessToken =
-      "pk.eyJ1IjoiZGRpZXpyIiwiYSI6ImNrOW9pZzJjNjAweXYzbHJ0dDRiaGIxNWYifQ.Zycu3HxkIv6JOwJiab4tiQ"
+      "pk.eyJ1IjoiZGRpZXpyIiwiYSI6ImNtZGhuNGRyNTAzbGMycnNic2l4cjRwMTMifQ.8IzLBcEOfM2lA5iWjeFp6Q"
     const initializeMap = ({ setMap, mapContainer }) => {
       const zoom = 0.5
       const coordinates = [22, 40.520007]
